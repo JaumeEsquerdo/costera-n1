@@ -18,12 +18,15 @@ export default function Home() {
   // Suscribirse solo a scrollYProgress
   useEffect(() => {
     const unsubscribe = scrollY.on("change", (v) => {
-      setShowText(v < 0.2);
+      setShowText(v < 0.4);
     });
     return () => unsubscribe();
   }, [scrollY]);
 
   const headerVariants = {
+    init: {
+      opacity: 0,
+    },
     open: {
       opacity: 1,
     },
@@ -31,6 +34,7 @@ export default function Home() {
       opacity: 0,
     },
   };
+
   const maxScroll = windowSize.height * 2; // hero ocupa 2 veces la altura del viewport
   const progress = useTransform(scrollY, [0, maxScroll], [0, 1]);
   // Animar width/height
@@ -50,12 +54,13 @@ export default function Home() {
               <motion.div
                 variants={headerVariants}
                 transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
-                initial="open"
+                initial="init"
+                animate="open"
                 exit="closed"
-                className="text-center fixed top-0 z-10"
+                className="text-center fixed top-0 z-10 g-12 max-w-[90%]"
               >
-                <h1 className="font-title text-9xl">COSTERA n1</h1>
-                <h2 className="text-xl mt-4">
+                <h1 className="font-title text-6xl lg:text-9xl">COSTERA n1</h1>
+                <h2 className="text-base lg:text-xl mt-4">
                   Apartamento vacacional en el Casco Antiguo de Villajoyosa
                 </h2>
               </motion.div>
@@ -82,13 +87,14 @@ export default function Home() {
           <AnimatePresence>
             {showText && (
               <motion.div
-                className="fixed bottom-20 flex flex-col items-center"
+                className="fixed bottom-10 flex flex-col items-center justify-center gap-8 max-w-[90%]"
                 variants={headerVariants}
                 transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
-                initial="open"
+                initial="init"
+                animate="open"
                 exit={showText ? "closed" : "open"}
               >
-                <h2 className="text-lg">
+                <h2 className="text-sm lg:text-lg text-center">
                   Dentro del recinto amurallado y a un paso de la Playa Centro
                 </h2>
                 <p className="text-4xl">⬇</p>
