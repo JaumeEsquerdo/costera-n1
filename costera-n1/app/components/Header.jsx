@@ -15,7 +15,11 @@ export const Header = ({ showText }) => {
             className="fixed top-10 left-1/2 -translate-x-1/2 z-99"
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -100 }}
+            exit={{
+              opacity: 0,
+              y: -100,
+              transition: { duration: 0.5, ease: "easeIn" },
+            }}
             transition={{ duration: 2, ease: "easeOut", delay: 2 }}
           >
             <ul className="flex gap-4">
