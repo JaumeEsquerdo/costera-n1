@@ -8,19 +8,20 @@ import {
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useWindowSize } from "./hooks/useWindowSize";
+import { PresentationHouse } from "./components/PresentationHouse";
 
 export default function Home() {
   const windowSize = useWindowSize();
-  const { scrollYProgress } = useScroll();
+  const { scrollY } = useScroll();
   const [showText, setShowText] = useState(true); // estado para render condicional
 
   // Suscribirse solo a scrollYProgress
   useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (v) => {
+    const unsubscribe = scrollY.on("change", (v) => {
       setShowText(v < 0.2);
     });
     return () => unsubscribe();
-  }, [scrollYProgress]);
+  }, [scrollY]);
 
   const headerVariants = {
     open: {
@@ -30,19 +31,18 @@ export default function Home() {
       opacity: 0,
     },
   };
+  const maxScroll = windowSize.height * 2; // hero ocupa 2 veces la altura del viewport
+  const progress = useTransform(scrollY, [0, maxScroll], [0, 1]);
   // Animar width/height
-  const width = useTransform(scrollYProgress, [0, 1], [200, windowSize.width]);
-  const height = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [400, windowSize.height],
-  );
+  const width = useTransform(progress, [0, 1], [200, windowSize.width]);
+  const height = useTransform(progress, [0, 1], [400, windowSize.height]);
   // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const borderRadius = useTransform(scrollYProgress, [0, 1], ["20px", "0px"]);
+  const borderRadius = useTransform(progress, [0, 1], ["20px", "0px"]);
 
   return (
-    <main className="">
-      <div className="h-[200vh] relative">
+    <main className="min-h-screen relative">
+      {/* Hero */}
+      <div className="h-[300vh] relative">
         <motion.header className="h-screen sticky top-0 flex flex-col justify-between items-center overflow-x-hidden">
           <AnimatePresence>
             {/* Texto solo visible al inicio */}
@@ -97,6 +97,8 @@ export default function Home() {
           </AnimatePresence>
         </motion.header>
       </div>
+      {/* Presentación (sección 2) */}
+      <PresentationHouse />
     </main>
   );
 }
