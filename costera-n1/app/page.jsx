@@ -9,11 +9,12 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useWindowSize } from "./hooks/useWindowSize";
 import { PresentationHouse } from "./components/PresentationHouse";
+import { Header } from "./components/Header";
 
 export default function Home() {
   const windowSize = useWindowSize();
   const { scrollY } = useScroll();
-  const [showText, setShowText] = useState(true); // estado para render condicional
+  const [showText, setShowText] = useState(true);
 
   // Suscribirse solo a scrollYProgress
   useEffect(() => {
@@ -44,7 +45,9 @@ export default function Home() {
   const borderRadius = useTransform(progress, [0, 1], ["20px", "0px"]);
 
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative flex flex-col">
+      {/* Header */}
+      <Header showText={showText} />
       {/* Hero */}
       <div className="h-[300vh] relative">
         <motion.header className="h-screen sticky top-0 flex flex-col justify-between items-center overflow-x-hidden">
