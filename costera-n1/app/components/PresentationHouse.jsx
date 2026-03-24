@@ -84,7 +84,7 @@ export const PresentationHouse = () => {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col justify-between h-[300vh] pt-8"
+      className="relative flex flex-col justify-between h-[300vh] pt-8 "
     >
       <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
         {images.map((img, i) => (
@@ -97,11 +97,11 @@ export const PresentationHouse = () => {
         ))}
       </div>
 
-      <div className="sticky top-0 h-screen  flex flex-col">
+      <div className="sticky top-0 h-screen  flex flex-col lg:flex-row">
         <section className="flex flex-col flex-1 max-w-[90%] justify-end pb-4 mx-auto">
           <h2 className="font-title text-5xl lg:text-6xl">COSTERA n1</h2>
         </section>
-        <section className="h-1/2 bg-white ">
+        <section className="h-1/2 bg-white lg:h-screen lg:w-1/2">
           <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">
             <div className="flex flex-wrap gap-4">
               {images.map((img) => (
