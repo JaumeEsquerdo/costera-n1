@@ -2,10 +2,10 @@ import { motion, useTransform } from "framer-motion";
 import Image from "next/image";
 
 // crear un componente de motion que envuelve al Image de Next
-const MotionImage = motion(Image);
+const MotionImage = motion.create(Image);
 
 export const ParallaxImage = ({ img, i, scrollYProgress }) => {
-  const start = Math.min(0.24 + i * 0.06, 0.6); // el primer valor es para retrasar, después i * num es la separación con otros elem.
+  const start = Math.min(0.24 + i * 0.07, 0.6); // el primer valor es para retrasar, después i * num es la separación con otros elem.
   const end = start + 0.3; //duración del scroll de la img (velocidad)
 
   // 1. Movimiento del CONTENEDOR (el marco de la foto)
@@ -25,6 +25,13 @@ export const ParallaxImage = ({ img, i, scrollYProgress }) => {
     [start, start + 0.1, end - 0.15, end],
     [0, 1, 1, 0],
   );
+  const randomRotation = (i % 2 === 0 ? 1 : -1) * (i * 2 + 1); // pares giran a la izq y impares a la der
+
+  const rotate = useTransform(
+    scrollYProgress,
+    [start, end],
+    [randomRotation, 0],
+  );
 
   return (
     <motion.div
@@ -32,6 +39,7 @@ export const ParallaxImage = ({ img, i, scrollYProgress }) => {
         left: img.left,
         top: img.top,
         y: yFrame,
+        rotate: rotate,
         opacity: opacity,
         position: "absolute",
       }}

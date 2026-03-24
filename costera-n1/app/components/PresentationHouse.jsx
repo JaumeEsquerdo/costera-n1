@@ -84,7 +84,7 @@ export const PresentationHouse = () => {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col justify-between h-[300vh] pt-8 "
+      className="relative flex flex-col justify-between h-[400vh] pt-8 "
     >
       <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
         {images.map((img, i) => (
