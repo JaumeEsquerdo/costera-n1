@@ -25,7 +25,7 @@ export const ParallaxImage = ({ img, i, scrollYProgress }) => {
     [start, start + 0.1, end - 0.15, end],
     [0, 1, 1, 0],
   );
-  const randomRotation = (i % 2 === 0 ? 1 : -1) * (i * 2 + 1); // pares giran a la izq y impares a la der
+  const randomRotation = (i % 2 === 0 ? 1 : -1) * (i * 2 + 1); // Pares (positivo) derecha, Impares (negativo) izquierda
 
   const rotate = useTransform(
     scrollYProgress,
