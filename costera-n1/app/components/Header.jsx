@@ -25,7 +25,7 @@ export const Header = ({ showText }) => {
               y: -100,
               transition: { duration: 0.5, ease: "easeIn" },
             }}
-            transition={{ duration: 2, ease: "easeOut", delay: 2 }}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 2 }}
           >
             <ul className="flex gap-4">
               <li className="h-6 overflow-hidden">
