@@ -99,7 +99,9 @@ export const PresentationHouse = () => {
 
       <div className="sticky top-0 h-screen  flex flex-col lg:flex-row">
         <section className="flex flex-col flex-1 max-w-[90%] justify-end pb-4 mx-auto">
-          <h2 className="font-title text-5xl lg:text-6xl">COSTERA n1</h2>
+          <h2 className="font-title text-5xl lg:text-7xl text-center">
+            COSTERETA n1
+          </h2>
         </section>
         <section className="h-1/2 bg-white lg:h-screen lg:w-1/2">
           <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">

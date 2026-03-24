@@ -62,7 +62,9 @@ export default function Home() {
                 exit="closed"
                 className="text-center fixed top-0 z-10 g-12 max-w-[90%]"
               >
-                <h1 className="font-title text-6xl lg:text-9xl">COSTERA n1</h1>
+                <h1 className="font-title text-6xl lg:text-9xl">
+                  COSTERETA n1
+                </h1>
                 <h2 className="text-base lg:text-xl mt-4">
                   Apartamento vacacional en el Casco Antiguo de Villajoyosa
                 </h2>
