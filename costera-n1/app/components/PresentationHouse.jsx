@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { Header } from "./Header";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 export const images = [
   {
@@ -26,6 +26,7 @@ export const images = [
   },
 ];
 export const PresentationHouse = () => {
+  const ref = useRef(null);
   const [imageRendered, setImageRendered] = useState("/hotel-fachada.webp");
 
   const handleMainImg = (src) => {
@@ -33,28 +34,30 @@ export const PresentationHouse = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col pt-8">
-      <section className="flex flex-col flex-1 max-w-[90%] justify-between pb-4 mx-auto">
-        <h2 className="font-title text-5xl lg:text-6xl">COSTERA n1</h2>
-      </section>
-      <section className="h-1/2 bg-white ">
-        <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">
-          <div className="flex flex-wrap gap-4">
-            {images.map((img) => (
-              <div key={img.id} className="relative h-10 w-6">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  onClick={() => handleMainImg(img.src)}
-                  className={`object-cover object-center cursor-pointer hover:opacity-90`}
-                />
-              </div>
-            ))}
+    <div ref={ref} className="h-[300vh]  pt-8">
+      <div className="sticky top-0 h-screen flex flex-col">
+        <section className="flex flex-col flex-1 max-w-[90%] justify-end pb-4 mx-auto">
+          <h2 className="font-title text-5xl lg:text-6xl">COSTERA n1</h2>
+        </section>
+        <section className="h-1/2 bg-white ">
+          <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">
+            <div className="flex flex-wrap gap-4">
+              {images.map((img) => (
+                <div key={img.id} className="relative h-10 w-6">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    onClick={() => handleMainImg(img.src)}
+                    className={`object-cover object-center cursor-pointer hover:opacity-90`}
+                  />
+                </div>
+              ))}
+            </div>
+            <Image src={imageRendered} width={300} height={550} alt="" />
           </div>
-          <Image src={imageRendered} width={300} height={550} alt="" />
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };
