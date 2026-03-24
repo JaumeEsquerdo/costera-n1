@@ -105,26 +105,37 @@ export const PresentationHouse = () => {
         </section>
         <section className="h-1/2 bg-white lg:h-screen lg:w-1/2">
           <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">
-            <div className="flex flex-wrap gap-4">
-              {images.map((img) => (
-                <div
-                  key={img.id}
-                  className={`relative h-10 w-6 cursor-pointer`}
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    onClick={() => handleMainImg(img.src)}
-                    className={`object-cover object-center  hover:opacity-90 `}
-                  />
-                  {img.src === imageRendered && (
-                    <div className="absolute inset-0 bg-green-700/60 z-10" />
-                  )}
-                </div>
-              ))}
+            <div className="flex flex-col items-center gap-4 lg:gap-8">
+              <h3 className="text-lg text-center">
+                Piso dentro de la muralla del casco antiguo de Villajoyosa
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                {images.map((img) => (
+                  <div
+                    key={img.id}
+                    className={`relative h-10 w-6 cursor-pointer lg:w-12 lg:h-20`}
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      onClick={() => handleMainImg(img.src)}
+                      className={`object-cover object-center  hover:opacity-90 `}
+                    />
+                    {img.src === imageRendered && (
+                      <div className="absolute inset-0 bg-green-700/60 z-10" />
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
-            <Image src={imageRendered} width={300} height={550} alt="" />
+            <Image
+              src={imageRendered}
+              width={300}
+              height={550}
+              alt=""
+              className="lg:w-460 lg:h-auto"
+            />
           </div>
         </section>
       </div>

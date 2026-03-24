@@ -9,9 +9,15 @@ export default function SmoothScroll({ children }) {
     const lenis = new Lenis({
       duration: 1.2, // velocidad/suavidad
       lerp: 0.1, // inercia
-      smooth: true,
+      smoothWheel: true,
       smoothTouch: false,
     });
+
+    lenis.scrollTo(0, { immediate: true }); //hacer q al refreshear empiece de 0
+
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual"; // orden para desactivar la memoria del navegador en el refresh
+    }
 
     function raf(time) {
       lenis.raf(time); // actualiza el estado del scroll (calcula scroll, lo anima)
