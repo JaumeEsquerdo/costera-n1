@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useScroll } from "framer-motion";
 import { ParallaxImage } from "./ParallaxImage";
 
 export const PresentationHouse = () => {
