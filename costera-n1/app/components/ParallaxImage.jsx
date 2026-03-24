@@ -1,4 +1,8 @@
 import { motion, useTransform } from "framer-motion";
+import Image from "next/image";
+
+// crear un componente de motion que envuelve al Image de Next
+const MotionImage = motion(Image);
 
 export const ParallaxImage = ({ img, i, scrollYProgress }) => {
   const start = Math.min(0.24 + i * 0.06, 0.6); // el primer valor es para retrasar, después i * num es la separación con otros elem.
@@ -34,14 +38,16 @@ export const ParallaxImage = ({ img, i, scrollYProgress }) => {
       // El contenedor corta la imagen que sobra
       className="w-40 h-60 md:w-52 md:h-80 overflow-hidden rounded-lg shadow-xl"
     >
-      <motion.img
+      <MotionImage
         src={img.src}
         alt={img.alt}
+        fill
         style={{
           y: yImage, // Efecto parallax interno
           scale: 1.2, // Escalamos un poco para que haya margen para moverse y asegurar q no quede hueco en blanco
         }}
-        className="w-full h-[120%] object-cover" // La imagen es más alta que el marco
+        className="object-cover"
+        sizes="(max-width: 768px) 33vw, 20vw" // Dile al navegador qué % de pantalla ocupa la img para que descargue el peso justo (33% en móvil, 20% en PC)
       />
     </motion.div>
   );
