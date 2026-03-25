@@ -10,6 +10,10 @@ import { useState, useEffect } from "react";
 import { useWindowSize } from "./hooks/useWindowSize";
 import { PresentationHouse } from "./components/PresentationHouse";
 import { Header } from "./components/Header";
+import { DescriptionHouse } from "./components/DescriptionHouse";
+import { HorizontalScroll } from "./components/HorizontalScroll";
+import { BookingCTA } from "./components/BookingCTA";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
   const windowSize = useWindowSize();
@@ -110,6 +114,13 @@ export default function Home() {
       </div>
       {/* Presentación (sección 2) */}
       <PresentationHouse />
+      {/* Sección 3, Descripción */}
+      <DescriptionHouse />
+      {/* Sección 4, Scroll Horizontal */}
+      <HorizontalScroll />
+      {/* Sección 5, Booking CTA  */}
+      <BookingCTA />
+      <Footer />
     </main>
   );
 }

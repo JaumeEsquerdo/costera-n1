@@ -37,10 +37,10 @@ export const Header = ({ showText }) => {
                   className="flex flex-col"
                 >
                   <Link href="/" className={linkClass("/")}>
-                    Inicio
+                    INICIO
                   </Link>
                   <Link href="/" className={linkClass("/")}>
-                    Inicio
+                    INICIO
                   </Link>
                 </motion.div>
               </li>
@@ -54,10 +54,10 @@ export const Header = ({ showText }) => {
                   className="flex flex-col"
                 >
                   <Link href="/detalles" className={linkClass("/detalles")}>
-                    Detalles
+                    DETALLES
                   </Link>
                   <Link href="/detalles" className={linkClass("/detalles")}>
-                    Detalles
+                    DETALLES
                   </Link>
                 </motion.div>
               </li>
@@ -70,10 +70,10 @@ export const Header = ({ showText }) => {
                   className="flex flex-col"
                 >
                   <Link href="/contacto" className={linkClass("/contacto")}>
-                    Contacto
+                    CONTACTO
                   </Link>
                   <Link href="/contacto" className={linkClass("/contacto")}>
-                    Contacto
+                    CONTACTO
                   </Link>
                 </motion.div>
               </li>
@@ -85,8 +85,8 @@ export const Header = ({ showText }) => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="flex flex-col"
                 >
-                  <p>Idioma</p>
-                  <p>Idioma</p>
+                  <p>IDIOMA</p>
+                  <p>IDIOMA</p>
                 </motion.div>
               </li>
             </ul>
