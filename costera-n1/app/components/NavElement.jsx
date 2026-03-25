@@ -3,6 +3,8 @@ import { useState, useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
 
+/* Componente Link / p, para cambiar de color light/dark según el fondo del contenedor en el que esté */
+
 export const NavElement = ({ href, children, active, as = "link" }) => {
   const [isOverDark, setIsOverDark] = useState(false);
   const { scrollY } = useScroll();
@@ -43,7 +45,7 @@ export const NavElement = ({ href, children, active, as = "link" }) => {
     } transition-colors duration-300 px-4 whitespace-nowrap`,
   };
 
-  // Si pasas "as='p'", renderiza un párrafo, si no, un Link
+  // Si es "as='p'", renderiza un párrafo, si no, un Link
   if (as === "p") {
     return <p {...commonProps}>{children}</p>;
   }
