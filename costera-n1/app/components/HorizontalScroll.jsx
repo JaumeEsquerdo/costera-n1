@@ -34,7 +34,10 @@ export const HorizontalScroll = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex">
           {/* SECCIÓN 1: El texto que ya tenemos */}
-          <div className="w-screen h-screen shrink-0 flex flex-col justify-center p-12 text-white">
+          <div
+            className="w-screen h-screen shrink-0 flex flex-col justify-center p-12"
+            data-is-dark="true"
+          >
             <h3 className="text-3xl font-bold mb-6">
               Costera N1: El Corazón de La Vila
             </h3>
@@ -45,7 +48,7 @@ export const HorizontalScroll = () => {
           </div>
 
           {/* SECCIÓN 2: Galería o fotos */}
-          <div className="w-screen h-screen shrink-0 flex items-center justify-center bg-blue-500 rounded-l-lg">
+          <div className="w-screen h-screen shrink-0 flex items-center justify-center bg-blue-500 rounded-l-2xl">
             <h2 className="text-5xl font-black text-white">
               Fachadas de Colores
             </h2>
@@ -55,7 +58,7 @@ export const HorizontalScroll = () => {
           <div className="relative w-screen h-screen shrink-0 flex items-center justify-center bg-orange-500 ">
             <div
               aria-label="hidden "
-              className="absolute inset-y-0 left-0 w-8 -translate-x-8/12 bg-orange-500 z-10 rounded-l-lg"
+              className="absolute inset-y-0 left-0 w-8 -translate-x-8/12 bg-orange-500 z-10 rounded-l-2xl"
             />
             <h2 className="text-5xl font-black text-white">Cerca del Mar</h2>
           </div>

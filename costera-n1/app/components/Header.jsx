@@ -1,11 +1,9 @@
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { NavElement } from "./NavElement";
 
 export const Header = ({ showText }) => {
   const pathname = usePathname();
-
-  const linkClass = (path) => (pathname === path ? "font-bold underline" : "");
 
   const variantsLink = {
     initial: { y: 0 },
@@ -34,14 +32,14 @@ export const Header = ({ showText }) => {
                   initial="initial"
                   whileHover="hover"
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="flex flex-col"
+                  className={`flex flex-col`}
                 >
-                  <Link href="/" className={linkClass("/")}>
+                  <NavElement href="/" active={pathname === "/"}>
                     INICIO
-                  </Link>
-                  <Link href="/" className={linkClass("/")}>
+                  </NavElement>
+                  <NavElement href="/" active={pathname === "/"}>
                     INICIO
-                  </Link>
+                  </NavElement>
                 </motion.div>
               </li>
 
@@ -53,12 +51,18 @@ export const Header = ({ showText }) => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="flex flex-col"
                 >
-                  <Link href="/detalles" className={linkClass("/detalles")}>
+                  <NavElement
+                    href="/detalles"
+                    active={pathname === "/detalles"}
+                  >
                     DETALLES
-                  </Link>
-                  <Link href="/detalles" className={linkClass("/detalles")}>
+                  </NavElement>
+                  <NavElement
+                    href="/detalles"
+                    active={pathname === "/detalles"}
+                  >
                     DETALLES
-                  </Link>
+                  </NavElement>
                 </motion.div>
               </li>
               <li className="h-6 overflow-hidden">
@@ -69,12 +73,18 @@ export const Header = ({ showText }) => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="flex flex-col"
                 >
-                  <Link href="/contacto" className={linkClass("/contacto")}>
+                  <NavElement
+                    href="/contacto"
+                    active={pathname === "/contacto"}
+                  >
                     CONTACTO
-                  </Link>
-                  <Link href="/contacto" className={linkClass("/contacto")}>
+                  </NavElement>
+                  <NavElement
+                    href="/contacto"
+                    active={pathname === "/contacto"}
+                  >
                     CONTACTO
-                  </Link>
+                  </NavElement>
                 </motion.div>
               </li>
               <li className="h-6 overflow-hidden">
@@ -85,8 +95,8 @@ export const Header = ({ showText }) => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="flex flex-col"
                 >
-                  <p>IDIOMA</p>
-                  <p>IDIOMA</p>
+                  <NavElement as="p">IDIOMA</NavElement>
+                  <NavElement as="p">IDIOMA</NavElement>
                 </motion.div>
               </li>
             </ul>

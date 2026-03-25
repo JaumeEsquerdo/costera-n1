@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       lang="es"
       className={`${archivoBlack.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background font-body">
+      <body className="min-h-full flex flex-col bg-green-50 font-body">
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
