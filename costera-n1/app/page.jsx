@@ -46,7 +46,7 @@ export default function Home() {
   const width = useTransform(progress, [0, 1], [200, windowSize.width]);
   const height = useTransform(progress, [0, 1], [400, windowSize.height]);
   // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const borderRadius = useTransform(progress, [0, 1], ["20px", "0px"]);
+  // const borderRadius = useTransform(progress, [0, 1], ["0px", "0px"]);
 
   return (
     <main className="min-h-screen relative flex flex-col">
@@ -80,10 +80,7 @@ export default function Home() {
           <div
             className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center overflow-hidden`}
           >
-            <motion.div
-              style={{ width, height, borderRadius }}
-              className=" overflow-hidden"
-            >
+            <motion.div style={{ width, height }} className=" overflow-hidden">
               <Image
                 src="/hotel-fachada.webp"
                 width={200}

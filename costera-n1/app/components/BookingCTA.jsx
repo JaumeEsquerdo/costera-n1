@@ -2,7 +2,7 @@ import { Footer } from "./Footer";
 
 export const BookingCTA = () => {
   return (
-    <section className="h-[80vh] flex flex-col">
+    <section className="h-screen flex flex-col">
       <div>
         <h3>¿Tienes fechas para tu próxima escapada?</h3>
         <p>
