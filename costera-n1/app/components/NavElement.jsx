@@ -5,7 +5,13 @@ import Link from "next/link";
 
 /* Componente Link / p, para cambiar de color light/dark según el fondo del contenedor en el que esté */
 
-export const NavElement = ({ href, children, active, as = "link" }) => {
+export const NavElement = ({
+  href,
+  children,
+  active,
+  as = "link",
+  className = "",
+}) => {
   const [isOverDark, setIsOverDark] = useState(false);
   const { scrollY } = useScroll();
   const elementRef = useRef(null);
@@ -42,7 +48,7 @@ export const NavElement = ({ href, children, active, as = "link" }) => {
     ref: elementRef,
     className: `${isOverDark ? "text-white" : "text-black"} ${
       active ? "font-bold underline" : ""
-    } transition-colors duration-300 px-4 whitespace-nowrap`,
+    } transition-colors duration-300 px-4 whitespace-nowrap ${className}`,
   };
 
   // Si es "as='p'", renderiza un párrafo, si no, un Link

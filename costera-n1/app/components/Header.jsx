@@ -15,7 +15,7 @@ export const Header = ({ showText }) => {
       <AnimatePresence mode="wait">
         {!showText && (
           <motion.header
-            className="fixed top-10 left-1/2 -translate-x-1/2 z-99"
+            className="fixed top-10 left-1/2 -translate-x-1/2 z-99 lg:left-1/12 lg:translate-x-0"
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{
@@ -87,16 +87,25 @@ export const Header = ({ showText }) => {
                   </NavElement>
                 </motion.div>
               </li>
-              <li className="h-6 overflow-hidden">
+              <li className="h-8 overflow-hidden">
                 <motion.div
-                  variants={variantsLink}
-                  initial="initial"
-                  whileHover="hover"
+                  initial={{ y: 0 }}
+                  whileHover={{ y: -36 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="flex flex-col"
+                  className="flex flex-col gap-2 cursor-pointer"
                 >
-                  <NavElement as="p">IDIOMA</NavElement>
-                  <NavElement as="p">IDIOMA</NavElement>
+                  <NavElement
+                    as="p"
+                    className="border-2 border-b-transparent rounded-full"
+                  >
+                    IDIOMA
+                  </NavElement>
+                  <NavElement
+                    as="p"
+                    className="border-2 border-b-transparent rounded-full"
+                  >
+                    IDIOMA
+                  </NavElement>
                 </motion.div>
               </li>
             </ul>
