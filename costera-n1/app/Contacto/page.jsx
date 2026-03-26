@@ -1,3 +1,9 @@
+import { Header } from "../components/Header";
+
 export const Contacto = () => {
-  return <div>contacto</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };

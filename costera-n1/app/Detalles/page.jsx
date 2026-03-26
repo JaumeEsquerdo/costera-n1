@@ -1,3 +1,8 @@
+import { Header } from "../components/Header";
 export const Detalles = () => {
-  return <div>detalles</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
