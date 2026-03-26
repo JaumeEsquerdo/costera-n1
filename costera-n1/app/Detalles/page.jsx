@@ -1,8 +1,12 @@
 import { Header } from "../components/Header";
-export const Detalles = () => {
+import { Footer } from "../components/Footer";
+
+export default function Detalles() {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <main className="min-h-screen">Contenido Detalles</main>
+      <Footer />
+    </>
   );
-};
+}

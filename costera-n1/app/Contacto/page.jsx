@@ -1,9 +1,12 @@
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 
-export const Contacto = () => {
+export default function Contacto() {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <main className="min-h-screen">Contenido Contacto</main>
+      <Footer />
+    </>
   );
-};
+}

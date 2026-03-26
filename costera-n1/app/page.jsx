@@ -49,75 +49,80 @@ export default function Home() {
   // const borderRadius = useTransform(progress, [0, 1], ["0px", "0px"]);
 
   return (
-    <main className="min-h-screen relative flex flex-col">
-      {/* Header */}
+    <>
       <Header showText={showText} />
-      {/* Hero */}
-      <div className="h-[300vh] relative">
-        <motion.header className="h-screen sticky top-0 flex flex-col justify-between items-center overflow-x-hidden">
-          <AnimatePresence>
-            {/* Texto solo visible al inicio */}
-            {showText && (
-              <motion.div
-                variants={headerVariants}
-                transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
-                initial="init"
-                animate="open"
-                exit="closed"
-                className="text-center fixed top-0 z-10 g-12 max-w-[90%]"
-              >
-                <h1 className="font-title text-5xl lg:text-9xl">
-                  COSTERETA n1
-                </h1>
-                <h2 className="text-base lg:text-xl mt-4">
-                  Apartamento vacacional en el Casco Antiguo de Villajoyosa
-                </h2>
-              </motion.div>
-            )}
-          </AnimatePresence>
+      <main className="min-h-screen relative flex flex-col">
+        {/* Header */}
+        {/* Hero */}
+        <div className="h-[300vh] relative">
+          <motion.header className="h-screen sticky top-0 flex flex-col justify-between items-center overflow-x-hidden">
+            <AnimatePresence>
+              {/* Texto solo visible al inicio */}
+              {showText && (
+                <motion.div
+                  variants={headerVariants}
+                  transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+                  initial="init"
+                  animate="open"
+                  exit="closed"
+                  className="text-center fixed top-0 z-10 g-12 max-w-[90%]"
+                >
+                  <h1 className="font-title text-5xl lg:text-9xl">
+                    COSTERETA n1
+                  </h1>
+                  <h2 className="text-base lg:text-xl mt-4">
+                    Apartamento vacacional en el Casco Antiguo de Villajoyosa
+                  </h2>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
-          {/* WRAPPER de la imagen */}
-          <div
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center overflow-hidden`}
-          >
-            <motion.div style={{ width, height }} className=" overflow-hidden">
-              <Image
-                src="/hotel-fachada.webp"
-                width={200}
-                height={400}
-                alt=""
-                className="w-full h-full object-cover object-center"
-              />
-            </motion.div>
-          </div>
-          <AnimatePresence>
-            {showText && (
+            {/* WRAPPER de la imagen */}
+            <div
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center overflow-hidden`}
+            >
               <motion.div
-                className="fixed bottom-10 flex flex-col items-center justify-center gap-8 max-w-[90%]"
-                variants={headerVariants}
-                transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
-                initial="init"
-                animate="open"
-                exit={showText ? "closed" : "open"}
+                style={{ width, height }}
+                className=" overflow-hidden"
               >
-                <h2 className="text-sm lg:text-lg text-center">
-                  Dentro del recinto amurallado y a un paso de la Playa Centro
-                </h2>
-                <p className="text-4xl">⬇</p>
+                <Image
+                  src="/hotel-fachada.webp"
+                  width={200}
+                  height={400}
+                  alt=""
+                  className="w-full h-full object-cover object-center"
+                />
               </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.header>
-      </div>
-      {/* Presentación (sección 2) */}
-      <PresentationHouse />
-      {/* Sección 3, Descripción */}
-      <DescriptionHouse />
-      {/* Sección 4, Scroll Horizontal */}
-      <HorizontalScroll />
-      {/* Sección 5, Booking CTA  */}
-      <BookingCTA />
+            </div>
+            <AnimatePresence>
+              {showText && (
+                <motion.div
+                  className="fixed bottom-10 flex flex-col items-center justify-center gap-8 max-w-[90%]"
+                  variants={headerVariants}
+                  transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+                  initial="init"
+                  animate="open"
+                  exit={showText ? "closed" : "open"}
+                >
+                  <h2 className="text-sm lg:text-lg text-center">
+                    Dentro del recinto amurallado y a un paso de la Playa Centro
+                  </h2>
+                  <p className="text-4xl">⬇</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.header>
+        </div>
+        {/* Presentación (sección 2) */}
+        <PresentationHouse />
+        {/* Sección 3, Descripción */}
+        <DescriptionHouse />
+        {/* Sección 4, Scroll Horizontal */}
+        <HorizontalScroll />
+        {/* Sección 5, Booking CTA  */}
+        <BookingCTA />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

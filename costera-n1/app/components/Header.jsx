@@ -1,3 +1,4 @@
+"use client";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavElement } from "./NavElement";
@@ -53,13 +54,13 @@ export const Header = ({ showText }) => {
                 >
                   <NavElement
                     href="/detalles"
-                    active={pathname === "/detalles"}
+                    active={pathname.startsWith("/detalles")}
                   >
                     DETALLES
                   </NavElement>
                   <NavElement
                     href="/detalles"
-                    active={pathname === "/detalles"}
+                    active={pathname.startsWith("/detalles")}
                   >
                     DETALLES
                   </NavElement>
@@ -75,13 +76,13 @@ export const Header = ({ showText }) => {
                 >
                   <NavElement
                     href="/contacto"
-                    active={pathname === "/contacto"}
+                    active={pathname.startsWith("/contacto")}
                   >
                     CONTACTO
                   </NavElement>
                   <NavElement
                     href="/contacto"
-                    active={pathname === "/contacto"}
+                    active={pathname.startsWith("/contacto")}
                   >
                     CONTACTO
                   </NavElement>
