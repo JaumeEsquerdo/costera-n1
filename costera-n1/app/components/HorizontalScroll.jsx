@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 /**
  * FLOW DE ANIMACIÓN "SCROLL-TO-HORIZONTAL":
@@ -35,16 +36,27 @@ export const HorizontalScroll = () => {
         <motion.div style={{ x }} className="flex">
           {/* SECCIÓN 1: El texto que ya tenemos */}
           <div
-            className="w-screen h-screen shrink-0 flex flex-col justify-center p-12"
+            className="w-screen h-screen shrink-0 flex flex-col justify-center items-center p-12 text-white"
             data-is-dark="true"
           >
-            <h3 className="text-3xl font-bold mb-6">
-              Costera N1: El Corazón de La Vila
-            </h3>
-            <p className="max-w-xl text-lg opacity-80">
-              Ubicado en la zona noble del Casco Antiguo, donde las calles laten
-              a otro ritmo.
-            </p>
+            <div className="relative w-20 h-40 overflow-hidden">
+              <Image
+                alt=""
+                src="/hotel-fachada.webp"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 33vw, 20vw"
+              />
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <h3 className="text-3xl font-bold mb-6 lg:text-7xl ">
+                COSTERETA N1: El Corazón de La Vila
+              </h3>
+              <p className="max-w-xl text-lg opacity-80 lg:text-xl ">
+                Un recorrido por lo que te espera a solo unos pasos{" "}
+                <span>{"->"}</span>
+              </p>
+            </div>
           </div>
 
           {/* SECCIÓN 2: Galería o fotos */}

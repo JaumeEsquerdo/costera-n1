@@ -95,16 +95,10 @@ export const Header = ({ showText }) => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="flex flex-col gap-2 cursor-pointer"
                 >
-                  <NavElement
-                    as="p"
-                    className="border-2 border-b-transparent rounded-full"
-                  >
+                  <NavElement as="p" className="border-2  rounded-full">
                     IDIOMA
                   </NavElement>
-                  <NavElement
-                    as="p"
-                    className="border-2 border-b-transparent rounded-full"
-                  >
+                  <NavElement as="p" className="border-2 rounded-full">
                     IDIOMA
                   </NavElement>
                 </motion.div>
