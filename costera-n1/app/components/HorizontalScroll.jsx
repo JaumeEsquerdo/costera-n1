@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { SectionZero } from "./SectionZero";
 
 /**
  * FLOW DE ANIMACIÓN "SCROLL-TO-HORIZONTAL":
@@ -35,51 +36,7 @@ export const HorizontalScroll = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex">
           {/* SECCIÓN 1: El texto que ya tenemos */}
-          <div
-            className="w-screen h-screen shrink-0 flex flex-col justify-center items-center p-12 text-white"
-            data-is-dark="true"
-          >
-            <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-6 py-8">
-              <div className="relative w-20 h-40 lg:w-40 lg:h-80 overflow-hidden">
-                <Image
-                  alt=""
-                  src="/hotel-fachada.webp"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 33vw, 20vw"
-                />
-              </div>
-
-              <div className="relative w-50 h-30 lg:w-85 lg:h-50 overflow-hidden">
-                <Image
-                  alt=""
-                  src="/hotel-fachada.webp"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 33vw, 20vw"
-                />
-              </div>
-              <div className="relative w-30 h-60 lg:w-80 lg:h-120 overflow-hidden">
-                <Image
-                  alt=""
-                  src="/hotel-fachada.webp"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 33vw, 20vw"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <h3 className="text-3xl font-bold mb-6 lg:text-7xl  text-center">
-                COSTERETA N1 <br />
-                el corazón de La Vila
-              </h3>
-              <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
-                Un recorrido por lo que te espera a solo unos pasos{" "}
-                <span>{"->"}</span>
-              </p>
-            </div>
-          </div>
+          <SectionZero />
 
           {/* SECCIÓN 2: Galería o fotos */}
           <div className="w-screen h-screen shrink-0 flex items-center justify-center bg-blue-500 rounded-l-2xl">
