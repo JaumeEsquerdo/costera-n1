@@ -99,7 +99,7 @@ export const PresentationHouse = () => {
 
       <div className="sticky top-0 h-screen  flex flex-col lg:flex-row">
         <section className="flex flex-col flex-1 max-w-[90%] justify-end pb-4 mx-auto">
-          <h2 className="font-title text-5xl lg:text-7xl text-center">
+          <h2 className="font-title text-5xl lg:text-7xl text-center text-green-950">
             COSTERETA n1
           </h2>
         </section>

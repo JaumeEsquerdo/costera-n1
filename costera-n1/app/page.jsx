@@ -67,7 +67,7 @@ export default function Home() {
                   exit="closed"
                   className="text-center fixed top-0 z-10 g-12 max-w-[90%]"
                 >
-                  <h1 className="font-title text-5xl lg:text-9xl">
+                  <h1 className="font-title text-5xl lg:text-9xl text-green-950">
                     COSTERETA n1
                   </h1>
                   <h2 className="text-base lg:text-xl mt-4">
