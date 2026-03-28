@@ -47,8 +47,8 @@ export const NavElement = ({
   const commonProps = {
     ref: elementRef,
     className: `${isOverDark ? "text-white" : "text-black"} ${
-      active ? "font-bold underline" : ""
-    } transition-colors duration-300 px-2 whitespace-nowrap text-green-950 ${className}`,
+      active ? "font-bold" : ""
+    } transition-colors duration-300 px-2 whitespace-nowrap ${className}`,
   };
 
   // Si es "as='p'", renderiza un párrafo, si no, un Link
