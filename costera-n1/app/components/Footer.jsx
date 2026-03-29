@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="relative h-[calc(100vh+60vh)] -top-[100vh]">
         <div className="sticky top-[calc(100vh-40vh)] h-[40vh] flex flex-col items-center">
           <h4 className="text-4xl lg:text-9xl text-white font-bold">
-            COSTERETA N1
+            COSTERETA n1
           </h4>
         </div>
       </div>

@@ -4,7 +4,7 @@ export const DescriptionHouse = () => {
       <h3 className="text-2xl font-bold mb-8 text-center">
         La esencia de La Vila desde su historia
       </h3>
-      <div className="space-y-4 lg:max-w-1/2">
+      <div className="flex flex-col gap-4 lg:max-w-1/2">
         <p>
           <strong>Costera N1</strong> se ubica en el corazón del recinto
           amurallado, en la zona noble del Casco Antiguo. Disfruta de la

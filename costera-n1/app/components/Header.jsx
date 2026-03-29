@@ -8,7 +8,7 @@ export const Header = ({ showText }) => {
 
   const variantsLink = {
     initial: { y: 0 },
-    hover: { y: -25 },
+    hover: { y: -32 },
   };
 
   return (
@@ -26,16 +26,20 @@ export const Header = ({ showText }) => {
             }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 2 }}
           >
-            <ul className="flex gap-2 p-x4">
-              <li className="h-6 overflow-hidden">
+            <ul className="flex  gap-2 px-4">
+              <li className="h-8 overflow-hidden">
                 <motion.div
                   variants={variantsLink}
                   initial="initial"
                   whileHover="hover"
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className={`flex flex-col`}
+                  className={`flex flex-col items-center gap-2 cursor-pointer`}
                 >
-                  <NavElement href="/" active={pathname === "/"}>
+                  <NavElement
+                    href="/"
+                    active={pathname === "/"}
+                    className="mt-1"
+                  >
                     INICIO
                   </NavElement>
                   <NavElement href="/" active={pathname === "/"}>
@@ -44,17 +48,18 @@ export const Header = ({ showText }) => {
                 </motion.div>
               </li>
 
-              <li className="h-6 overflow-hidden">
+              <li className="h-8 overflow-hidden">
                 <motion.div
                   variants={variantsLink}
                   initial="initial"
                   whileHover="hover"
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="flex flex-col"
+                  className="flex flex-col  items-center gap-2 cursor-pointer"
                 >
                   <NavElement
                     href="/detalles"
                     active={pathname.startsWith("/detalles")}
+                    className="mt-1"
                   >
                     DETALLES
                   </NavElement>
@@ -66,17 +71,18 @@ export const Header = ({ showText }) => {
                   </NavElement>
                 </motion.div>
               </li>
-              <li className="h-6 overflow-hidden">
+              <li className="h-8 overflow-hidden">
                 <motion.div
                   variants={variantsLink}
                   initial="initial"
                   whileHover="hover"
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="flex flex-col"
+                  className="flex flex-col  items-center gap-2 cursor-pointer"
                 >
                   <NavElement
                     href="/contacto"
                     active={pathname.startsWith("/contacto")}
+                    className="mt-1"
                   >
                     CONTACTO
                   </NavElement>
@@ -90,15 +96,16 @@ export const Header = ({ showText }) => {
               </li>
               <li className="h-8 overflow-hidden">
                 <motion.div
-                  initial={{ y: 0 }}
-                  whileHover={{ y: -36 }}
+                  variants={variantsLink}
+                  initial="initial"
+                  whileHover="hover"
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="flex flex-col gap-2 cursor-pointer"
+                  className="flex flex-col  items-center gap-2 cursor-pointer"
                 >
-                  <NavElement as="p" className="border-2  rounded-full">
+                  <NavElement as="p" className="ring-2 mt-1  rounded-full">
                     IDIOMA
                   </NavElement>
-                  <NavElement as="p" className="border-2 rounded-full">
+                  <NavElement as="p" className="ring-2 rounded-full">
                     IDIOMA
                   </NavElement>
                 </motion.div>
