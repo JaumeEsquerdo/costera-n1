@@ -1,35 +1,21 @@
-"use client";
+// "use client";
 
-import { useEffect } from "react";
-import Lenis from "lenis";
-import "lenis/dist/lenis.css"; // para dar estilos base
+// import { ReactLenis } from "lenis/react";
 
-export default function SmoothScroll({ children }) {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2, // velocidad/suavidad
-      lerp: 0.1, // inercia
-      smoothWheel: true,
-      smoothTouch: false,
-    });
-
-    lenis.scrollTo(0, { immediate: true }); //hacer q al refreshear empiece de 0
-
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual"; // orden para desactivar la memoria del navegador en el refresh
-    }
-
-    function raf(time) {
-      lenis.raf(time); // actualiza el estado del scroll (calcula scroll, lo anima)
-      requestAnimationFrame(raf); // repite en el siguiente frame
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
-
-  return children;
-}
+// export default function SmoothScroll({ children }) {
+//   return (
+//     <ReactLenis
+//       root
+//       options={{
+//         lerp: 0.07, // Suavidad (puedes bajarlo a 0.07 si ves rebotes)
+//         duration: 0.6, // Duración de la inercia
+//         smoothWheel: true,
+//         wheelMultiplier: 1, // Sensibilidad
+//         touchMultiplier: 2,
+//         syncTouch: true, // Muy importante para evitar saltos en móviles
+//       }}
+//     >
+//       {children}
+//     </ReactLenis>
+//   );
+// }

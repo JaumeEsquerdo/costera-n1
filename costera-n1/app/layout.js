@@ -1,6 +1,6 @@
 import { DM_Sans, Archivo_Black } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "../app/components/SmoothScroll.jsx";
+// import SmoothScroll from "../app/components/SmoothScroll.jsx";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
@@ -25,7 +25,9 @@ export default function RootLayout({ children }) {
       className={`${archivoBlack.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-green-50 font-body">
-        <SmoothScroll>{children}</SmoothScroll>
+        {/* <SmoothScroll> */}
+        {children}
+        {/* </SmoothScroll> */}
       </body>
     </html>
   );

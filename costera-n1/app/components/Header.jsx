@@ -26,7 +26,7 @@ export const Header = ({ showText }) => {
             }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 2 }}
           >
-            <ul className="flex  gap-2 px-4">
+            <ul className="flex gap-0  lg:gap-2 px-4">
               <li className="h-8 overflow-hidden">
                 <motion.div
                   variants={variantsLink}

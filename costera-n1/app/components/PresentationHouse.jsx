@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 import { useScroll } from "framer-motion";
 import { ParallaxImage } from "./ParallaxImage";
+import Link from "next/link";
 
 export const PresentationHouse = () => {
   const ref = useRef(null);
@@ -103,7 +104,7 @@ export const PresentationHouse = () => {
             COSTERETA n1
           </h2>
         </section>
-        <section className="h-1/2 bg-white lg:h-screen lg:w-1/2">
+        <section className="h-2/3 bg-white lg:h-screen lg:w-1/2">
           <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">
             <div className="flex flex-col items-center gap-4 lg:gap-8">
               <h3 className="text-lg text-center">
@@ -128,6 +129,13 @@ export const PresentationHouse = () => {
                   </div>
                 ))}
               </div>
+              <Link
+                href={"/detalles"}
+                className="border-2 text-sm border-green-950 bg-green-50 rounded-4xl cursor-pointer w-fit py-1 px-3 lg:py-2 lg:px-6 shadow-[4px_4px_0px_0px_rgba(5,46,7,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5 hover:bg-green-100 transition-all"
+              >
+                {" "}
+                Ver más detalles
+              </Link>
             </div>
             <Image
               src={imageRendered}
