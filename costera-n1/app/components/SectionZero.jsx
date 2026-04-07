@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 export const SectionZero = () => {
   const containerRef = useRef();
@@ -79,10 +81,15 @@ export const SectionZero = () => {
           COSTERETA n1 <br />
           el corazón de La Vila
         </h3>
-        <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
-          Un recorrido por lo que te espera a solo unos pasos{" "}
-          <span>{"->"}</span>
-        </p>
+        <div className="flex gap-2">
+          <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
+            Un recorrido por lo que te espera a solo unos pasos{" "}
+          </p>
+          <FontAwesomeIcon
+            icon={faAngleRight}
+            className="text-3xl text-white"
+          />
+        </div>
       </div>
     </section>
   );

@@ -14,6 +14,8 @@ import { DescriptionHouse } from "./components/DescriptionHouse";
 import { HorizontalScroll } from "./components/HorizontalScroll";
 import { BookingCTA } from "./components/BookingCTA";
 import { Footer } from "./components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const windowSize = useWindowSize();
@@ -107,7 +109,10 @@ export default function Home() {
                   <h2 className="text-sm lg:text-lg text-center">
                     Dentro del recinto amurallado y a un paso de la Playa Centro
                   </h2>
-                  <p className="text-4xl">⬇</p>
+                  <FontAwesomeIcon
+                    icon={faAngleDown}
+                    className="text-3xl text-green-950"
+                  />
                 </motion.div>
               )}
             </AnimatePresence>
