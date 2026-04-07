@@ -3,6 +3,7 @@ import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+const MotionImage = motion.create(Image);
 
 export const SectionZero = () => {
   const containerRef = useRef();
@@ -23,7 +24,7 @@ export const SectionZero = () => {
   });
 
   const xFrame = useTransform(smoothProgress, [0, 1], ["-60vw", "80vw"]);
-  //   const xImage = useTransform(smoothProgress, [0, 1], ["-15%", "15%"]);
+  const xImage = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
 
   return (
     <section
@@ -41,40 +42,40 @@ export const SectionZero = () => {
         }}
         className="relative flex flex-col lg:flex-row items-center gap-2 lg:gap-6 py-40 overflow-hidden"
       >
-        <div className="relative w-40 h-60 lg:w-40 lg:h-80 overflow-hidden">
-          <Image
+        <motion.div className="relative w-40 h-60 lg:w-40 lg:h-80 overflow-hidden">
+          <MotionImage
             alt=""
+            style={{ x: xImage, scale: 1.2 }}
             src="/hotel-fachada.webp"
             fill
             priority
             className="object-cover"
             sizes="(max-width: 768px) 33vw, 20vw"
           />
-        </div>
+        </motion.div>
 
-        <div className="relative w-70 h-50 lg:w-85 lg:h-50 overflow-hidden">
-          <Image
+        <motion.div className="relative w-70 h-50 lg:w-85 lg:h-50 overflow-hidden">
+          <MotionImage
             alt=""
             src="/hotel-fachada.webp"
+            style={{ x: xImage, scale: 1.2 }}
             fill
             priority
             className="object-cover"
             sizes="(max-width: 768px) 33vw, 20vw"
           />
-        </div>
-        <div
-          style={{ x: xFrame }}
-          className="relative w-50 h-80 lg:w-80 lg:h-120 overflow-hidden"
-        >
-          <Image
+        </motion.div>
+        <motion.div className="relative w-50 h-80 lg:w-80 lg:h-120 overflow-hidden">
+          <MotionImage
             alt=""
             src="/hotel-fachada.webp"
             fill
+            style={{ x: xImage, scale: 1.2 }}
             priority
             className="object-cover"
             sizes="(max-width: 768px) 33vw, 20vw"
           />
-        </div>
+        </motion.div>
       </motion.div>
       <div className="flex flex-col justify-center items-center pb-16 px-15">
         <h3 className="text-3xl font-bold mb-6 lg:text-7xl  text-center">
