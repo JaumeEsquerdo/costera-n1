@@ -22,9 +22,10 @@ export default function Home() {
   const { scrollY } = useScroll();
   const [showText, setShowText] = useState(true);
 
-  // Suscribirse solo a scrollYProgress
+  // Escucha los cambios del scroll vertical
   useEffect(() => {
     const unsubscribe = scrollY.on("change", (v) => {
+      // Mostramos el texto solo si el scroll es menor al 40%
       setShowText(v < 0.4);
     });
     return () => unsubscribe();

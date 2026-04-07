@@ -2,6 +2,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { SectionZero } from "./SectionZero";
+import { HorizontalSection } from "./HorizontalSection";
+const MotionImage = motion.create(Image);
 
 /**
  * FLOW DE ANIMACIÓN "SCROLL-TO-HORIZONTAL":
@@ -41,42 +43,56 @@ export const HorizontalScroll = () => {
           <SectionZero />
 
           {/* SECCIÓN 1: Galería o fotos */}
-          <div className="relative w-[120vw] h-screen shrink-0 flex flex-col items-center justify-between bg-blue-300 pt-24 pr-20 pl-10 lg:flex-row">
-            <div
-              aria-label="hidden "
-              className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-blue-300  bg-blue-300 z-10 rounded-l-2xl shadow-2xl lg:w-12"
-            />
-            <div className=" flex flex-col justify-center items-start gap-20 px-10 lg:gap-40 lg:px-20 lg:w-1/2">
-              <h3 className="text-lg font-black text-white text-balance">
-                01. El Corazón del Color: Costera de la Mar
-              </h3>
-              <div className="flex flex-col gap-4 lg:gap-8">
-                <h2 className="text-4xl lg:text-5xl font-black text-white text-pretty">
-                  Vive en el icono de la Costa Blanca
-                </h2>
-                <div className="flex flex-col gap-4">
-                  <p className="text-balance">
-                    Te alojas en la Costera de la Mar, la calle más fotografiada
-                    y vibrante de Villajoyosa. Este eje histórico no es solo una
-                    dirección, es el puente que une el legado de la ciudad
-                    amurallada con el espíritu marinero.
-                  </p>
-                  <p className="text-balance">
-                    {" "}
-                    Despierta rodeado de fachadas de colores y la brisa del
-                    Mediterráneo a solo unos pasos de tu puerta.
-                  </p>
+          <HorizontalSection
+            index={1} // Qué número de sección es (empezando desde 0 o 1)
+            globalProgress={scrollYProgress}
+            bgColor={"bg-blue-300"}
+          >
+            {({ xImage }) => (
+              <>
+                <div
+                  aria-label="hidden "
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-blue-300  bg-blue-300 z-10 rounded-l-2xl shadow-2xl lg:w-12"
+                />
+                <div className=" flex flex-col justify-center items-start gap-20 px-10 lg:gap-40 lg:px-20 lg:w-1/2">
+                  <h3 className="text-lg font-black text-white text-balance">
+                    01. El Corazón del Color: Costera de la Mar
+                  </h3>
+                  <div className="flex flex-col gap-4 lg:gap-8">
+                    <h2 className="text-4xl lg:text-5xl font-black text-white text-pretty">
+                      Vive en el icono de la Costa Blanca
+                    </h2>
+                    <div className="flex flex-col gap-4">
+                      <p className="text-balance">
+                        Te alojas en la Costera de la Mar, la calle más
+                        fotografiada y vibrante de Villajoyosa. Este eje
+                        histórico no es solo una dirección, es el puente que une
+                        el legado de la ciudad amurallada con el espíritu
+                        marinero.
+                      </p>
+                      <p className="text-balance">
+                        {" "}
+                        Despierta rodeado de fachadas de colores y la brisa del
+                        Mediterráneo a solo unos pasos de tu puerta.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <Image
-              src="/hotel-fachada.webp"
-              width={1000}
-              height={800}
-              alt=""
-              className="object-cover"
-            />
-          </div>
+
+                <motion.div className=" w-full overflow-hidden lg:w-1/2 h-[60vh] relative">
+                  <MotionImage
+                    src="/hotel-fachada.webp"
+                    style={{ x: xImage, scale: 1.2 }}
+                    width={1000}
+                    height={800}
+                    alt="Fachada"
+                    priority
+                    className="object-cover w-[120%]"
+                  />
+                </motion.div>
+              </>
+            )}
+          </HorizontalSection>
 
           {/* SECCIÓN 2: bajada a la playa */}
           <div className="relative w-[120vw] h-screen shrink-0 flex flex-col items-center justify-between bg-orange-300 pt-24 pr-20 pl-10 lg:flex-row">
