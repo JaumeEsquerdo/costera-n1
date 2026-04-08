@@ -48,7 +48,7 @@ export const NavElement = ({
     ref: elementRef,
     className: `${isOverDark ? "text-white" : "text-black"} ${
       active ? "font-bold" : ""
-    } transition-colors duration-300 px-2 mx-2 whitespace-nowrap ${className}`,
+    } transition-colors duration-300  px-2 mx-1 lg:mx-2 whitespace-nowrap ${className}`,
   };
 
   // Si es "as='p'", renderiza un párrafo, si no, un Link
