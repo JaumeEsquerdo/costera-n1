@@ -40,9 +40,9 @@ export const SectionZero = () => {
           backfaceVisibility: "hidden", // Evita artefactos visuales
           perspective: 1000,
         }}
-        className="relative flex flex-col lg:flex-row items-center gap-2 lg:gap-6 py-40 overflow-hidden"
+        className="relative flex flex-col lg:flex-row items-center gap-4 lg:gap-6 pt-22 pb-6 lg:py-40 overflow-hidden"
       >
-        <motion.div className="relative w-40 h-60 lg:w-40 lg:h-80 overflow-hidden">
+        <motion.div className="relative w-40 h-70 lg:w-40 lg:h-80 overflow-hidden">
           <MotionImage
             alt=""
             style={{ x: xImage, scale: 1.2 }}

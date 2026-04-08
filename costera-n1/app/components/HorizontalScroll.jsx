@@ -54,12 +54,12 @@ export const HorizontalScroll = () => {
                   aria-label="hidden "
                   className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-blue-300  bg-blue-300 z-10 rounded-l-2xl shadow-2xl lg:w-12"
                 />
-                <div className=" flex flex-col justify-center items-start gap-20 px-10 lg:gap-40 lg:px-20 lg:w-1/2">
+                <div className=" flex flex-col justify-center items-start gap-4 md:gap-10 px-4 md:px-10 lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white text-balance">
                     01. El Corazón del Color: Costera de la Mar
                   </h3>
                   <div className="flex flex-col gap-4 lg:gap-8">
-                    <h2 className="text-4xl lg:text-5xl font-black text-white text-pretty">
+                    <h2 className="text-2xl lg:text-5xl font-black text-white text-pretty">
                       Vive en el icono de la Costa Blanca
                     </h2>
                     <div className="flex flex-col gap-4">
@@ -106,12 +106,12 @@ export const HorizontalScroll = () => {
                   aria-label="hidden"
                   className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-orange-300  bg-orange-300 z-10 rounded-l-2xl shadow-2xl lg:w-12"
                 />
-                <div className=" flex flex-col justify-center gap-20 px-10 lg:gap-40 lg:px-20 lg:w-1/2">
+                <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
                     02. Tu Conexión con el Mar
                   </h3>
                   <div className="flex flex-col gap-4 lg:gap-8">
-                    <h2 className="text-4xl lg:text-5xl font-black text-white text-pretty">
+                    <h2 className="text-2xl lg:text-5xl font-black text-white text-pretty">
                       A escasos metros de la arena
                     </h2>
                     <div className="flex flex-col gap-4">
@@ -155,12 +155,12 @@ export const HorizontalScroll = () => {
                   aria-label="hidden "
                   className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-red-300  bg-red-300 z-10 rounded-l-2xl shadow-2xl lg:w-12"
                 />
-                <div className=" flex flex-col justify-center gap-20 px-10 lg:gap-40 lg:px-20 lg:w-1/2">
+                <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
                     03. Sabores y Tradición
                   </h3>
                   <div className="flex flex-col gap-4 lg:gap-8">
-                    <h2 className="text-4xl lg:text-5xl font-black text-white text-pretty">
+                    <h2 className="text-2xl lg:text-5xl font-black text-white text-pretty">
                       Un festín para los sentidos
                     </h2>
                     <div className="flex flex-col gap-4">
