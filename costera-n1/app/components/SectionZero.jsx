@@ -54,7 +54,7 @@ export const SectionZero = () => {
           />
         </motion.div>
 
-        <motion.div className="relative w-70 h-50 lg:w-85 lg:h-50 overflow-hidden">
+        <motion.div className="hidden lg:inline relative w-70 h-50 lg:w-85 lg:h-50 overflow-hidden">
           <MotionImage
             alt=""
             src="/hotel-fachada.webp"
