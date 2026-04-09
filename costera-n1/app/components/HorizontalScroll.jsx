@@ -79,12 +79,12 @@ export const HorizontalScroll = () => {
                   </div>
                 </div>
 
-                <motion.div className=" w-full overflow-hidden lg:w-1/2 h-[60vh] relative">
+                <motion.div className=" w-2/3 h-[40vh] overflow-hidden lg:w-1/2 lg:h-[60vh] relative">
                   <MotionImage
                     src="/hotel-fachada.webp"
                     style={{ x: xImage, scale: 1.2 }}
-                    width={1000}
-                    height={800}
+                    fill
+                    sizes="(max-width: 768px) 1400px, 65vw"
                     alt="Fachada"
                     priority
                     className="object-cover"
@@ -130,11 +130,11 @@ export const HorizontalScroll = () => {
                     </div>
                   </div>
                 </div>
-                <motion.div className=" w-full overflow-hidden lg:w-1/2 h-[70vh] relative">
+                <motion.div className=" w-2/3 h-[45vh] overflow-hidden lg:w-1/2 lg:h-[70vh] relative">
                   <MotionImage
                     src="/hotel-fachada.webp"
-                    width={1000}
-                    height={800}
+                    fill
+                    sizes="(max-width: 768px) 67vw, 65vw"
                     style={{ x: xImage, scale: 1.2 }}
                     alt=""
                     className="object-cover"
