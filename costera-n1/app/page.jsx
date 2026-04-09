@@ -68,12 +68,12 @@ export default function Home() {
                   initial="init"
                   animate="open"
                   exit="closed"
-                  className="text-center fixed top-0 z-10 g-12 max-w-[90%]"
+                  className="text-center fixed top-6 lg:top-8 z-10 g-12 max-w-[90%]"
                 >
                   <h1 className="font-title text-5xl lg:text-9xl text-green-950">
                     COSTERETA n1
                   </h1>
-                  <h2 className="text-base lg:text-xl mt-4">
+                  <h2 className="text-base lg:text-xl mt-4 [@media(max-height:720px)]:hidden">
                     Apartamento vacacional en el Casco Antiguo de Villajoyosa
                   </h2>
                 </motion.div>
@@ -101,7 +101,7 @@ export default function Home() {
             <AnimatePresence>
               {showText && (
                 <motion.div
-                  className="fixed bottom-10 flex flex-col items-center justify-center gap-8 max-w-[90%]"
+                  className="fixed bottom-4 lg:bottom-10 flex flex-col items-center justify-center gap-2 lg:gap-6 max-w-[90%]"
                   variants={headerVariants}
                   transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
                   initial="init"
