@@ -176,25 +176,25 @@ export const HorizontalScroll = () => {
                     </div>
                   </div>
                 </div>
-                <motion.div className="w-full overflow-hidden lg:w-80 lg:h-140 relative">
+                <motion.div className="w-70 h-100 overflow-hidden lg:w-90 lg:h-140 relative">
                   <MotionImage
                     src="/hotel-fachada.webp"
-                    width={320}
-                    height={560}
+                    fill
                     style={{ x: xImage, scale: 1.2 }}
                     alt=""
-                    className="object-cover w-full h-full"
+                    sizes="(max-width: 768px) 700px, 1400px"
+                    className="object-cover"
                   />
                 </motion.div>
 
-                <motion.div className=" w-full overflow-hidden hidden lg:block lg:w-120 lg:h-160 relative">
+                <motion.div className="overflow-hidden hidden lg:block lg:w-120 lg:h-160 relative">
                   <MotionImage
                     src="/hotel-fachada.webp"
-                    width={480}
-                    height={640}
+                    fill
                     style={{ x: xImage, scale: 1.2 }}
+                    sizes="(max-width: 768px) 700px, 1800px"
                     alt=""
-                    className="object-cover w-full h-full"
+                    className="object-cover"
                   />
                 </motion.div>
               </>

@@ -50,7 +50,7 @@ export const SectionZero = () => {
             fill
             priority
             className="object-cover"
-            sizes="(max-width: 768px) 33vw, 20vw"
+            sizes="(max-width: 768px) 600px, 1200px"
           />
         </motion.div>
 
@@ -62,7 +62,7 @@ export const SectionZero = () => {
             fill
             priority
             className="object-cover"
-            sizes="(max-width: 768px) 33vw, 20vw"
+            sizes="(max-width: 768px) 600px, 1200px"
           />
         </motion.div>
         <motion.div className="relative w-50 h-80 lg:w-80 lg:h-120 overflow-hidden">
@@ -73,7 +73,7 @@ export const SectionZero = () => {
             style={{ x: xImage, scale: 1.2 }}
             priority
             className="object-cover"
-            sizes="(max-width: 768px) 33vw, 20vw"
+            sizes="(max-width: 768px) 600px, 1200px"
           />
         </motion.div>
       </motion.div>
