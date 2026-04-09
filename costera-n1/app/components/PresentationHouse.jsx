@@ -137,13 +137,15 @@ export const PresentationHouse = () => {
                 Ver más detalles
               </Link>
             </div>
-            <Image
-              src={imageRendered}
-              width={300}
-              height={550}
-              alt=""
-              className="lg:w-460 lg:h-auto"
-            />
+            <div className="relative overflow-hidden max-w-[80vw] lg:max-w-[40vw] w-260 aspect-video">
+              <Image
+                src={imageRendered}
+                fill
+                priority
+                alt="Imagen de presentación del piso ampliado"
+                className="object-cover"
+              />
+            </div>
           </div>
         </section>
       </div>
