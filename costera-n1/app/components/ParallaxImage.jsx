@@ -41,10 +41,9 @@ export const ParallaxImage = ({ img, i, scrollYProgress }) => {
         y: yFrame,
         rotate: rotate,
         opacity: opacity,
-        position: "absolute",
       }}
       // El contenedor corta la imagen que sobra
-      className="w-40 h-60 md:w-52 md:h-80 overflow-hidden shadow-xl"
+      className="absolute w-40 h-60 md:w-52 md:h-80 overflow-hidden shadow-xl"
     >
       <MotionImage
         src={img.src}
@@ -55,7 +54,7 @@ export const ParallaxImage = ({ img, i, scrollYProgress }) => {
           scale: 1.2, // Escalamos un poco para que haya margen para moverse y asegurar q no quede hueco en blanco
         }}
         className="object-cover"
-        sizes="(max-width: 768px) 33vw, 20vw" // Dile al navegador qué % de pantalla ocupa la img para que descargue el peso justo (33% en móvil, 20% en PC)
+        sizes="(max-width: 768px) 400px, 800px" // Dile al navegador qué % de pantalla ocupa la img para que descargue el peso justo (33% en móvil, 20% en PC)
       />
     </motion.div>
   );
