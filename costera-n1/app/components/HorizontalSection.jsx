@@ -19,7 +19,7 @@ export const HorizontalSection = ({
 
   return (
     <div
-      className={`relative w-[120vw] h-screen shrink-0 flex flex-col items-center justify-between pb-10 pt-24 pr-20 pl-10 lg:flex-row ${bgColor}`}
+      className={`relative w-[120vw] h-screen shrink-0 flex flex-col items-center justify-between pb-4 md:pb-10 pt-24  pl-10 pr-10 lg:pr-20 lg:flex-row ${bgColor} [@media(max-height:720px)]:justify-center [@media(max-height:720px)]:pr-10 rounded-l-2xl z-2 lg:rounded-none`}
     >
       {typeof children === "function" ? children({ xImage }) : children}
     </div>

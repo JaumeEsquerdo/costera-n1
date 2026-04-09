@@ -52,7 +52,11 @@ export const HorizontalScroll = () => {
               <>
                 <div
                   aria-label="hidden "
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-blue-300  bg-blue-300 z-10 rounded-l-2xl shadow-2xl lg:w-12"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-blue-300  bg-blue-300 z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
+                />
+                <div
+                  aria-label="hidden"
+                  className="absolute inset-y-0 -right-14 w-8 -translate-x-full ring-1 ring-blue-300  bg-blue-300 z-1 inline lg:hidden"
                 />
                 <div className=" flex flex-col justify-center items-start gap-4 md:gap-10 px-4 md:px-10 lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white text-balance">
@@ -79,7 +83,7 @@ export const HorizontalScroll = () => {
                   </div>
                 </div>
 
-                <motion.div className=" w-2/3 h-[40vh] overflow-hidden lg:w-1/2 lg:h-[60vh] relative">
+                <motion.div className=" w-2/3 h-[40vh] overflow-hidden lg:w-1/2 lg:h-[60vh] relative [@media(max-height:720px)]:hidden">
                   <MotionImage
                     src="/hotel-fachada.webp"
                     style={{ x: xImage, scale: 1.2 }}
@@ -104,7 +108,11 @@ export const HorizontalScroll = () => {
               <>
                 <div
                   aria-label="hidden"
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-orange-300  bg-orange-300 z-10 rounded-l-2xl shadow-2xl lg:w-12"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-orange-300  bg-orange-300 z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
+                />
+                <div
+                  aria-label="hidden"
+                  className="absolute inset-y-0 -right-14 w-8 -translate-x-full ring-1 ring-orange-300  bg-orange-300 z-1 inline lg:hidden"
                 />
                 <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
@@ -130,7 +138,7 @@ export const HorizontalScroll = () => {
                     </div>
                   </div>
                 </div>
-                <motion.div className=" w-2/3 h-[45vh] overflow-hidden lg:w-1/2 lg:h-[70vh] relative">
+                <motion.div className=" w-2/3 h-[45vh] overflow-hidden lg:w-1/2 lg:h-[70vh] relative [@media(max-height:720px)]:hidden">
                   <MotionImage
                     src="/hotel-fachada.webp"
                     fill
@@ -153,7 +161,7 @@ export const HorizontalScroll = () => {
               <>
                 <div
                   aria-label="hidden "
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-red-300  bg-red-300 z-10 rounded-l-2xl shadow-2xl lg:w-12"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-red-300  bg-red-300 z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
                 />
                 <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
@@ -176,7 +184,7 @@ export const HorizontalScroll = () => {
                     </div>
                   </div>
                 </div>
-                <motion.div className="w-70 h-100 overflow-hidden lg:w-90 lg:h-140 relative">
+                <motion.div className="w-70 h-100 overflow-hidden lg:w-90 lg:h-140 relative [@media(max-height:720px)]:hidden">
                   <MotionImage
                     src="/hotel-fachada.webp"
                     fill

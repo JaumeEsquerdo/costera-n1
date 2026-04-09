@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 import { useScroll } from "framer-motion";
 import { ParallaxImage } from "./ParallaxImage";
-import Link from "next/link";
+// import Link from "next/link";
 
 export const PresentationHouse = () => {
   const ref = useRef(null);
@@ -129,13 +129,13 @@ export const PresentationHouse = () => {
                   </div>
                 ))}
               </div>
-              <Link
+              {/* <Link
                 href={"/detalles"}
                 className="border-2 text-sm border-green-950 bg-green-50 rounded-4xl cursor-pointer w-fit py-1 px-3 lg:py-2 lg:px-6 shadow-[4px_4px_0px_0px_rgba(5,46,7,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5 hover:bg-green-100 transition-all"
               >
                 {" "}
                 Ver más detalles
-              </Link>
+              </Link> */}
             </div>
             <div className="relative overflow-hidden max-w-[80vw] lg:max-w-[40vw] w-260 aspect-video">
               <Image
