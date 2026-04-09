@@ -86,14 +86,15 @@ export default function Home() {
             >
               <motion.div
                 style={{ width, height }}
-                className=" overflow-hidden"
+                className="relative overflow-hidden"
               >
                 <Image
                   src="/hotel-fachada.webp"
-                  width={200}
-                  height={400}
-                  alt=""
-                  className="w-full h-full object-cover object-center"
+                  fill
+                  sizes="100vw"
+                  priority
+                  alt="Imagen de la fachada de la casa"
+                  className="object-cover object-center"
                 />
               </motion.div>
             </div>
