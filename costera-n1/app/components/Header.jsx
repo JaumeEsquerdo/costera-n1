@@ -1,10 +1,11 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavElement } from "./NavElement";
 
 export const Header = ({ showText }) => {
   const pathname = usePathname();
+  const { locale } = useParams();
 
   const variantsLink = {
     initial: { y: 0 },
@@ -37,12 +38,15 @@ export const Header = ({ showText }) => {
                 >
                   <NavElement
                     href="/"
-                    active={pathname === "/"}
+                    active={pathname.startsWith(`/${locale}`)}
                     className="mt-1"
                   >
                     INICIO
                   </NavElement>
-                  <NavElement href="/" active={pathname === "/"}>
+                  <NavElement
+                    href="/"
+                    active={pathname.startsWith(`/${locale}`)}
+                  >
                     INICIO
                   </NavElement>
                 </motion.div>
@@ -58,14 +62,14 @@ export const Header = ({ showText }) => {
                 >
                   <NavElement
                     href="/detalles"
-                    active={pathname.startsWith("/detalles")}
+                    active={pathname.startsWith(`/${locale}/detalles`)}
                     className="mt-1"
                   >
                     DETALLES
                   </NavElement>
                   <NavElement
                     href="/detalles"
-                    active={pathname.startsWith("/detalles")}
+                    active={pathname.startsWith(`/${locale}/detalles`)}
                   >
                     DETALLES
                   </NavElement>
@@ -81,14 +85,14 @@ export const Header = ({ showText }) => {
                 >
                   <NavElement
                     href="/contacto"
-                    active={pathname.startsWith("/contacto")}
+                    active={pathname.startsWith(`/${locale}/contacto`)}
                     className="mt-1"
                   >
                     CONTACTO
                   </NavElement>
                   <NavElement
                     href="/contacto"
-                    active={pathname.startsWith("/contacto")}
+                    active={pathname.startsWith(`/${locale}/contacto`)}
                   >
                     CONTACTO
                   </NavElement>

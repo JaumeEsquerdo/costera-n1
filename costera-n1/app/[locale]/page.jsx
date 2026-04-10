@@ -7,20 +7,33 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { useWindowSize } from "./hooks/useWindowSize";
-import { PresentationHouse } from "./components/PresentationHouse";
-import { Header } from "./components/Header";
-import { DescriptionHouse } from "./components/DescriptionHouse";
-import { HorizontalScroll } from "./components/HorizontalScroll";
-import { BookingCTA } from "./components/BookingCTA";
-import { Footer } from "./components/Footer";
+import { useWindowSize } from "../hooks/useWindowSize";
+import { PresentationHouse } from "../components/PresentationHouse";
+import { Header } from "../components/Header";
+import { DescriptionHouse } from "../components/DescriptionHouse";
+import { HorizontalScroll } from "../components/HorizontalScroll";
+import { BookingCTA } from "../components/BookingCTA";
+import { Footer } from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { useParams } from "next/navigation";
+
+import es from "../../locales/es.json";
+import en from "../../locales/en.json";
 
 export default function Home() {
   const windowSize = useWindowSize();
   const { scrollY } = useScroll();
   const [showText, setShowText] = useState(true);
+
+  /** * GESTIÓN DE TRADUCCIONES con next-i18n-router
+   * 1. Obtenemos el idioma actual desde la URL ([locale]).
+   * 2. Seleccionamos el diccionario JSON correspondiente.
+   * 3. La constante 't' contendrá los textos finales.
+   */
+  const params = useParams();
+  const locale = params.locale || "es";
+  const t = locale === "en" ? en : es;
 
   // Escucha los cambios del scroll vertical
   useEffect(() => {
@@ -71,10 +84,10 @@ export default function Home() {
                   className="text-center fixed top-6 lg:top-8 z-10 g-12 max-w-[90%]"
                 >
                   <h1 className="font-title text-5xl lg:text-9xl text-green-950">
-                    COSTERETA n1
+                    {t.Index.title}
                   </h1>
                   <h2 className="text-base lg:text-xl mt-4 [@media(max-height:720px)]:hidden">
-                    Apartamento vacacional en el Casco Antiguo de Villajoyosa
+                    {t.Index.hero.subtitle}
                   </h2>
                 </motion.div>
               )}
