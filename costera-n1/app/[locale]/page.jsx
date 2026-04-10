@@ -16,25 +16,16 @@ import { BookingCTA } from "../components/BookingCTA";
 import { Footer } from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { useParams } from "next/navigation";
 
-import es from "../../locales/es.json";
-import en from "../../locales/en.json";
+import { useI18n } from "../hooks/usei18n";
 
 export default function Home() {
+  const { t, locale } = useI18n();
   const windowSize = useWindowSize();
   const { scrollY } = useScroll();
   const [showText, setShowText] = useState(true);
 
-  /** * GESTIÓN DE TRADUCCIONES con next-i18n-router
-   * 1. Obtenemos el idioma actual desde la URL ([locale]).
-   * 2. Seleccionamos el diccionario JSON correspondiente.
-   * 3. La constante 't' contendrá los textos finales.
-   */
-  const params = useParams();
-  const locale = params.locale || "es";
-  const t = locale === "en" ? en : es;
-
+  const textsHero = t.Index.hero;
   // Escucha los cambios del scroll vertical
   useEffect(() => {
     const unsubscribe = scrollY.on("change", (v) => {
@@ -87,7 +78,7 @@ export default function Home() {
                     {t.Index.title}
                   </h1>
                   <h2 className="text-base lg:text-xl mt-4 [@media(max-height:720px)]:hidden">
-                    {t.Index.hero.subtitle}
+                    {textsHero.subtitle}
                   </h2>
                 </motion.div>
               )}
@@ -106,7 +97,7 @@ export default function Home() {
                   fill
                   sizes="100vw"
                   priority
-                  alt="Imagen de la fachada de la casa"
+                  alt={textsHero.image_alt}
                   className="object-cover object-center"
                 />
               </motion.div>
@@ -122,7 +113,7 @@ export default function Home() {
                   exit={showText ? "closed" : "open"}
                 >
                   <h2 className="text-sm lg:text-lg text-center">
-                    Dentro del recinto amurallado y a un paso de la Playa Centro
+                    {textsHero.location_info}
                   </h2>
                   <FontAwesomeIcon
                     icon={faAngleDown}

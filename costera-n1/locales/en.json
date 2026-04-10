@@ -5,6 +5,18 @@
       "subtitle": "Vacation apartment in the Old Town of Villajoyosa",
       "location_info": "Inside the walled enclosure and a stone's throw from the Main Beach",
       "image_alt": "Image of the house facade"
+    },
+    "PresentationHouse": {
+      "title": "COSTERETA n1",
+      "subtitle": "Apartment within the walls of the old town of Villajoyosa",
+      "viewMore": "View more details",
+      "mainImageAlt": "Main presentation image of the apartment",
+      "imageAlts": {
+        "fachada": "Facade",
+        "vista": "View",
+        "detalle": "Detail",
+        "casco": "Old Town"
+      }
     }
   }
 }

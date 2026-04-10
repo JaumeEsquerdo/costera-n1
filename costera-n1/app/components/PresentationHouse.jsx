@@ -4,8 +4,13 @@ import { useState, useRef } from "react";
 import { useScroll } from "framer-motion";
 import { ParallaxImage } from "./ParallaxImage";
 // import Link from "next/link";
+import { useI18n } from "../hooks/usei18n";
 
 export const PresentationHouse = () => {
+  const { t } = useI18n();
+
+  const texts = t.Index.PresentationHouse;
+
   const ref = useRef(null);
   const [imageRendered, setImageRendered] = useState("/hotel-fachada.webp");
 
@@ -22,7 +27,7 @@ export const PresentationHouse = () => {
     {
       id: 1,
       src: "/hotel-fachada.webp",
-      alt: "Fachada",
+      alt: texts.imageAlts.fachada,
 
       top: "29%",
       left: "20%",
@@ -30,7 +35,7 @@ export const PresentationHouse = () => {
     {
       id: 2,
       src: "/hotel-fachada.webp",
-      alt: "Vista",
+      alt: texts.imageAlts.vista,
 
       top: "10%",
       left: "55%",
@@ -38,7 +43,7 @@ export const PresentationHouse = () => {
     {
       id: 3,
       src: "/hotel-fachada.webp",
-      alt: "Detalle",
+      alt: texts.imageAlts.detalle,
 
       top: "40%",
       left: "10%",
@@ -46,7 +51,7 @@ export const PresentationHouse = () => {
     {
       id: 4,
       src: "/hotel-fachada.webp",
-      alt: "Casco",
+      alt: texts.imageAlts.casco,
 
       top: "30%",
       left: "70%",
@@ -54,7 +59,7 @@ export const PresentationHouse = () => {
     {
       id: 5,
       src: "/hotel-fachada.webp",
-      alt: "Vista",
+      alt: texts.imageAlts.vista,
 
       top: "10%",
       left: "55%",
@@ -62,7 +67,7 @@ export const PresentationHouse = () => {
     {
       id: 6,
       src: "/hotel-fachada.webp",
-      alt: "Detalle",
+      alt: texts.imageAlts.detalle,
 
       top: "40%",
       left: "10%",
@@ -70,7 +75,7 @@ export const PresentationHouse = () => {
     {
       id: 7,
       src: "/hotel-fachada.webp",
-      alt: "Casco",
+      alt: texts.imageAlts.casco,
 
       top: "30%",
       left: "70%",
@@ -101,15 +106,13 @@ export const PresentationHouse = () => {
       <div className="sticky top-0 h-screen  flex flex-col lg:flex-row">
         <section className="flex flex-col flex-1 max-w-[90%] justify-end pb-4 mx-auto">
           <h2 className="font-title text-5xl lg:text-7xl text-center text-green-950">
-            COSTERETA n1
+            {texts.title}
           </h2>
         </section>
         <section className="h-2/3 bg-white lg:h-screen lg:w-1/2">
           <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">
             <div className="flex flex-col items-center gap-4 lg:gap-8">
-              <h3 className="text-lg text-center">
-                Piso dentro de la muralla del casco antiguo de Villajoyosa
-              </h3>
+              <h3 className="text-lg text-center">{texts.subtitle}</h3>
               <div className="flex flex-wrap gap-4">
                 {images.map((img) => (
                   <div
@@ -134,7 +137,7 @@ export const PresentationHouse = () => {
                 className="border-2 text-sm border-green-950 bg-green-50 rounded-4xl cursor-pointer w-fit py-1 px-3 lg:py-2 lg:px-6 shadow-[4px_4px_0px_0px_rgba(5,46,7,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5 hover:bg-green-100 transition-all"
               >
                 {" "}
-                Ver más detalles
+                {texts.viewmore}
               </Link> */}
             </div>
             <div className="relative overflow-hidden max-w-[80vw] lg:max-w-[40vw] w-260 aspect-video">
@@ -142,7 +145,7 @@ export const PresentationHouse = () => {
                 src={imageRendered}
                 fill
                 priority
-                alt="Imagen de presentación del piso ampliado"
+                alt={texts.mainImageAlt}
                 className="object-cover"
               />
             </div>

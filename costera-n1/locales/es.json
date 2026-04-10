@@ -5,6 +5,18 @@
       "subtitle": "Apartamento vacacional en el Casco Antiguo de Villajoyosa",
       "location_info": "Dentro del recinto amurallado y a un paso de la Playa Centro",
       "image_alt": "Imagen de la fachada de la casa"
+    },
+    "PresentationHouse": {
+      "title": "COSTERETA n1",
+      "subtitle": "Piso dentro de la muralla del casco antiguo de Villajoyosa",
+      "viewMore": "Ver más detalles",
+      "mainImageAlt": "Imagen de presentación del piso ampliado",
+      "imageAlts": {
+        "fachada": "Fachada",
+        "vista": "Vista",
+        "detalle": "Detalle",
+        "casco": "Casco"
+      }
     }
   }
 }
