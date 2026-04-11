@@ -121,7 +121,7 @@ export const Header = ({ showText }) => {
                   className="flex flex-col  items-center gap-2 cursor-pointer"
                 >
                   <NavElement
-                    onclick={handleLangOpen}
+                    onClick={handleLangOpen}
                     as="button"
                     className="ring-2 mt-1 rounded-full"
                   >
@@ -129,7 +129,7 @@ export const Header = ({ showText }) => {
                   </NavElement>
                   <NavElement
                     as="button"
-                    onclick={handleLangOpen}
+                    onClick={handleLangOpen}
                     className="ring-2 rounded-full"
                   >
                     IDIOMA

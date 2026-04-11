@@ -11,7 +11,7 @@ export const NavElement = ({
   active,
   as = "link",
   className = "",
-  onclick,
+  onClick,
   noSpacing = false,
 }) => {
   const [isOverDark, setIsOverDark] = useState(false);
@@ -56,7 +56,7 @@ export const NavElement = ({
   // Si es "as='p'", renderiza un párrafo, si no, un Link
   if (as === "button") {
     return (
-      <button onClick={onclick} {...commonProps}>
+      <button onClick={onClick} {...commonProps}>
         {children}
       </button>
     );
