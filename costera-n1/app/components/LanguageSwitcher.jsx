@@ -1,10 +1,13 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import { useI18n } from "../hooks/usei18n";
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ variants }) {
   const pathname = usePathname();
   const router = useRouter();
+  const { locale } = useI18n();
 
   const switchLanguage = (newLang) => {
     // Reemplaza el código de idioma actual (ej. /es/...) por el nuevo
@@ -12,14 +15,31 @@ export default function LanguageSwitcher() {
     segments[1] = newLang;
     const newPath = segments.join("/");
 
-    router.push(newPath);
-    // router.push(newPath, { scroll: false }); // para no reiniciar scroll
+    // router.push(newPath);
+    router.push(newPath, { scroll: false }); // para no reiniciar scroll
   };
 
   return (
-    <div className="flex gap-2">
-      <button onClick={() => switchLanguage("es")}>🇪🇸 ES</button>
-      <button onClick={() => switchLanguage("en")}>🇺🇸 EN</button>
-    </div>
+    <motion.div
+      variants={variants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="absolute top-10 right-6 lg:right-9 flex gap-2"
+    >
+      <button
+        onClick={() => switchLanguage("es")}
+        className={`cursor-pointer ${locale === "es" ? "font-bold" : ""}`}
+      >
+        ES
+      </button>
+      <button
+        onClick={() => switchLanguage("en")}
+        className={`cursor-pointer ${locale === "en" ? "font-bold" : ""}`}
+      >
+        EN
+      </button>
+    </motion.div>
   );
 }

@@ -1,15 +1,29 @@
 "use client";
 import { usePathname, useParams } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, animate } from "framer-motion";
 import { NavElement } from "./NavElement";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useState } from "react";
 
 export const Header = ({ showText }) => {
   const pathname = usePathname();
   const { locale } = useParams();
 
+  const [langIsOpen, setLangIsOpen] = useState(false);
+
   const variantsLink = {
     initial: { y: 0 },
     hover: { y: -32 },
+  };
+
+  const variantsLanguage = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
+
+  const handleLangOpen = () => {
+    setLangIsOpen((prev) => !prev);
   };
 
   return (
@@ -27,7 +41,7 @@ export const Header = ({ showText }) => {
             }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 2 }}
           >
-            <ul className="flex gap-0 px-2 lg:gap-2 lg:px-4">
+            <ul className="relative flex gap-0 px-2 lg:gap-2 lg:px-4">
               <li className="h-8 overflow-hidden">
                 <motion.div
                   variants={variantsLink}
@@ -81,7 +95,7 @@ export const Header = ({ showText }) => {
                   initial="initial"
                   whileHover="hover"
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="flex flex-col  items-center gap-2 cursor-pointer"
+                  className="flex flex-col  items-center gap-2 "
                 >
                   <NavElement
                     href="/contacto"
@@ -106,15 +120,26 @@ export const Header = ({ showText }) => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="flex flex-col  items-center gap-2 cursor-pointer"
                 >
-                  <NavElement as="p" className="ring-2 mt-1  rounded-full">
+                  <NavElement
+                    onclick={handleLangOpen}
+                    as="button"
+                    className="ring-2 mt-1 rounded-full"
+                  >
                     IDIOMA
                   </NavElement>
-                  <NavElement as="p" className="ring-2 rounded-full">
+                  <NavElement
+                    as="button"
+                    onclick={handleLangOpen}
+                    className="ring-2 rounded-full"
+                  >
                     IDIOMA
                   </NavElement>
                 </motion.div>
               </li>
             </ul>
+            <AnimatePresence>
+              {langIsOpen && <LanguageSwitcher variants={variantsLanguage} />}
+            </AnimatePresence>
           </motion.header>
         )}
       </AnimatePresence>

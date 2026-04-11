@@ -13,7 +13,7 @@ import en from "../../locales/en.json";
 
 export const useI18n = () => {
   const params = useParams();
-  const locale = params.locale || es;
+  const locale = params.locale || "es";
 
   /* seleccionar el diccionario */
   const t = locale === "en" ? en : es;

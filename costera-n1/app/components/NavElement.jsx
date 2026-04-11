@@ -11,6 +11,7 @@ export const NavElement = ({
   active,
   as = "link",
   className = "",
+  onclick,
 }) => {
   const [isOverDark, setIsOverDark] = useState(false);
   const { scrollY } = useScroll();
@@ -48,12 +49,16 @@ export const NavElement = ({
     ref: elementRef,
     className: `${isOverDark ? "text-white" : "text-black"} ${
       active ? "font-bold" : ""
-    } transition-colors duration-300  px-2 mx-1 lg:mx-2 whitespace-nowrap ${className}`,
+    } transition-colors duration-300  px-2 mx-1 lg:mx-2 whitespace-nowrap cursor-pointer ${className}`,
   };
 
   // Si es "as='p'", renderiza un párrafo, si no, un Link
-  if (as === "p") {
-    return <p {...commonProps}>{children}</p>;
+  if (as === "button") {
+    return (
+      <button onClick={onclick} {...commonProps}>
+        {children}
+      </button>
+    );
   }
 
   return (
