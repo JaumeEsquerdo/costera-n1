@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useI18n } from "../hooks/usei18n";
+import { NavElement } from "./NavElement";
 
 export default function LanguageSwitcher({ variants }) {
   const pathname = usePathname();
@@ -28,18 +29,22 @@ export default function LanguageSwitcher({ variants }) {
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className="absolute top-10 right-6 lg:right-9 flex gap-2"
     >
-      <button
+      <NavElement
+        as="button"
+        noSpacing
         onClick={() => switchLanguage("es")}
-        className={`cursor-pointer ${locale === "es" ? "font-bold" : ""}`}
+        className={`cursor-pointer mx-0 px-0 ${locale === "es" ? "font-bold" : ""}`}
       >
         ES
-      </button>
-      <button
+      </NavElement>
+      <NavElement
+        as="button"
+        noSpacing
         onClick={() => switchLanguage("en")}
-        className={`cursor-pointer ${locale === "en" ? "font-bold" : ""}`}
+        className={`cursor-pointer mx-0 px-0 ${locale === "en" ? "font-bold" : ""}`}
       >
         EN
-      </button>
+      </NavElement>
     </motion.div>
   );
 }
