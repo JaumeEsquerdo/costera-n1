@@ -26,11 +26,17 @@ export default function Home() {
   const [showText, setShowText] = useState(true);
 
   const textsHero = t.Index.hero;
+
   // Escucha los cambios del scroll vertical
   useEffect(() => {
+    const checkScroll = () => {
+      setShowText(window.scrollY < window.innerHeight * 0.4);
+    };
+
+    checkScroll();
     const unsubscribe = scrollY.on("change", (v) => {
       // Mostramos el texto solo si el scroll es menor al 40%
-      setShowText(v < 0.4);
+      setShowText(v < window.innerHeight * 0.4);
     });
     return () => unsubscribe();
   }, [scrollY]);
