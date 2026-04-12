@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 import { useI18n } from "../hooks/usei18n";
 import { NavElement } from "./NavElement";
 
-export default function LanguageSwitcher({ variants }) {
+const variantsLanguage = {
+  initial: { opacity: 0, y: -10 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -10 },
+};
+
+export default function LanguageSwitcher() {
   const pathname = usePathname();
   const router = useRouter();
   const { locale } = useI18n();
@@ -22,7 +28,7 @@ export default function LanguageSwitcher({ variants }) {
 
   return (
     <motion.div
-      variants={variants}
+      variants={variantsLanguage}
       initial="initial"
       animate="animate"
       exit="exit"

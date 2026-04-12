@@ -5,22 +5,16 @@ import { NavElement } from "./NavElement";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useState } from "react";
 
+const variantsLink = {
+  initial: { y: 0 },
+  hover: { y: -32 },
+};
+
 export const Header = ({ showText }) => {
   const pathname = usePathname();
   const { locale } = useParams();
 
   const [langIsOpen, setLangIsOpen] = useState(false);
-
-  const variantsLink = {
-    initial: { y: 0 },
-    hover: { y: -32 },
-  };
-
-  const variantsLanguage = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-  };
 
   const handleLangOpen = () => {
     setLangIsOpen((prev) => !prev);
@@ -138,7 +132,7 @@ export const Header = ({ showText }) => {
               </li>
             </ul>
             <AnimatePresence>
-              {langIsOpen && <LanguageSwitcher variants={variantsLanguage} />}
+              {langIsOpen && <LanguageSwitcher />}
             </AnimatePresence>
           </motion.header>
         )}
