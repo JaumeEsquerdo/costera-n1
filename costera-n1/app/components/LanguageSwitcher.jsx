@@ -22,8 +22,8 @@ export default function LanguageSwitcher() {
     segments[1] = newLang;
     const newPath = segments.join("/");
 
-    // router.push(newPath);
-    router.push(newPath, { scroll: false }); // para no reiniciar scroll
+    router.push(newPath);
+    // router.push(newPath, { scroll: false }); // para no reiniciar scroll
   };
 
   return (

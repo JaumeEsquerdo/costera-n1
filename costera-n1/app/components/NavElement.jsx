@@ -18,7 +18,7 @@ export const NavElement = ({
   const { scrollY } = useScroll();
   const elementRef = useRef(null);
 
-  useMotionValueEvent(scrollY, "change", () => {
+  const checkIfOverDark = () => {
     const el = elementRef.current;
     if (!el) return;
 
@@ -43,8 +43,10 @@ export const NavElement = ({
       }
     }
 
-    if (isOverDark !== collision) setIsOverDark(collision);
-  });
+    setIsOverDark(collision);
+  };
+
+  useMotionValueEvent(scrollY, "change", checkIfOverDark);
 
   const commonProps = {
     ref: elementRef,
