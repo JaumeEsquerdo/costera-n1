@@ -58,6 +58,10 @@
       "title": "Have you picked the dates for your next getaway?",
       "description": "Costera N1 awaits you in the heart of the old town. Check availability and book securely through our official booking manager.",
       "button": "Go to booking page"
+    },
+    "Footer": {
+      "title": "COSTERETA n1",
+      "subtitle": "in Villajoyosa, Alicante"
     }
   }
 }

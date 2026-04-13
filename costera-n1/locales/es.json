@@ -58,6 +58,10 @@
       "title": "¿Tienes fechas para tu próxima escapada?",
       "description": "Costera N1 te espera en el corazón del casco antiguo. Consulta disponibilidad y reserva de forma segura a través de nuestro gestor oficial.",
       "button": "Ir a página de reservas"
+    },
+    "Footer": {
+      "title": "COSTERETA n1",
+      "subtitle": "en Villajoyosa, Alicante"
     }
   }
 }
