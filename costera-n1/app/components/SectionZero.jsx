@@ -3,10 +3,14 @@ import { useScroll, useTransform, motion, useSpring } from "framer-motion";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { useI18n } from "../hooks/usei18n";
 const MotionImage = motion.create(Image);
 
 export const SectionZero = () => {
   const containerRef = useRef();
+  const { t } = useI18n();
+
+  const textsSectionZero = t.Index.HorizontalScroll.sectionZero;
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -78,13 +82,13 @@ export const SectionZero = () => {
         </motion.div>
       </motion.div>
       <div className="flex flex-col justify-center items-center pb-16 px-15">
-        <h3 className="text-3xl font-bold mb-6 lg:text-7xl  text-center">
-          COSTERETA n1 <br />
-          el corazón de La Vila
-        </h3>
+        <h3
+          className="text-3xl font-bold mb-6 lg:text-7xl  text-center"
+          dangerouslySetInnerHTML={{ __html: textsSectionZero.title }}
+        />
         <div className="flex gap-2">
           <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
-            Un recorrido por lo que te espera a solo unos pasos{" "}
+            {textsSectionZero.subtitle}{" "}
           </p>
           <FontAwesomeIcon
             icon={faAngleRight}

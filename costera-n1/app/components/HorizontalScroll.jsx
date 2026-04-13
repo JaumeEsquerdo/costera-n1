@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { SectionZero } from "./SectionZero";
 import { HorizontalSection } from "./HorizontalSection";
+import { useI18n } from "../hooks/usei18n";
 const MotionImage = motion.create(Image);
 
 /**
@@ -27,6 +28,8 @@ const MotionImage = motion.create(Image);
 
 export const HorizontalScroll = () => {
   const targetRef = useRef(null);
+  const { t } = useI18n();
+  const textsHorizontalSections = t.Index.HorizontalScroll;
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -60,24 +63,19 @@ export const HorizontalScroll = () => {
                 />
                 <div className=" flex flex-col justify-center items-start gap-4 md:gap-10 px-4 md:px-10 lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white text-balance">
-                    01. El Corazón del Color: Costera de la Mar
+                    {textsHorizontalSections.section1.overtitle}
                   </h3>
                   <div className="flex flex-col gap-4 lg:gap-8">
                     <h2 className="text-2xl lg:text-5xl font-black text-white text-pretty">
-                      Vive en el icono de la Costa Blanca
+                      {textsHorizontalSections.section1.title}
                     </h2>
                     <div className="flex flex-col gap-4">
                       <p className="text-balance">
-                        Te alojas en la Costera de la Mar, la calle más
-                        fotografiada y vibrante de Villajoyosa. Este eje
-                        histórico no es solo una dirección, es el puente que une
-                        el legado de la ciudad amurallada con el espíritu
-                        marinero.
+                        {textsHorizontalSections.section1.p1}
                       </p>
                       <p className="text-balance">
                         {" "}
-                        Despierta rodeado de fachadas de colores y la brisa del
-                        Mediterráneo a solo unos pasos de tu puerta.
+                        {textsHorizontalSections.section1.p2}
                       </p>
                     </div>
                   </div>
@@ -116,24 +114,19 @@ export const HorizontalScroll = () => {
                 />
                 <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
-                    02. Tu Conexión con el Mar
+                    {textsHorizontalSections.section2.overtitle}
                   </h3>
                   <div className="flex flex-col gap-4 lg:gap-8">
                     <h2 className="text-2xl lg:text-5xl font-black text-white text-pretty">
-                      A escasos metros de la arena
+                      {textsHorizontalSections.section2.title}
                     </h2>
                     <div className="flex flex-col gap-4">
                       <p className="text-balance">
-                        Olvida el coche y las vueltas innecesarias. Desde el
-                        corazón del casco antiguo, una bajada directa te guía
-                        hasta el Paseo Marítimo y la Playa Centro. En menos de 5
-                        minutos pasarás del silencio de las calles empedradas al
-                        bullicio del Mediterráneo.
+                        {textsHorizontalSections.section2.p1}
                       </p>
                       <p className="text-balance">
                         {" "}
-                        Ideal para ese primer baño de la mañana o un paseo al
-                        atardecer.
+                        {textsHorizontalSections.section2.p2}
                       </p>
                     </div>
                   </div>
@@ -165,21 +158,15 @@ export const HorizontalScroll = () => {
                 />
                 <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
-                    03. Sabores y Tradición
+                    {textsHorizontalSections.section3.overtitle}
                   </h3>
                   <div className="flex flex-col gap-4 lg:gap-8">
                     <h2 className="text-2xl lg:text-5xl font-black text-white text-pretty">
-                      Un festín para los sentidos
+                      {textsHorizontalSections.section3.title}
                     </h2>
                     <div className="flex flex-col gap-4">
                       <p className="text-balance">
-                        La Vila sabe a sal y a cacao. Estás a la vuelta de la
-                        esquina de las mejores tabernas tradicionales y
-                        arrocerías del puerto. Además, el aroma a chocolate
-                        artesanal te guiará en un paseo hacia las fábricas
-                        históricas de la ciudad. Una ubicación privilegiada para
-                        los amantes de la buena mesa y la vida de barrio
-                        auténtica.
+                        {textsHorizontalSections.section3.p1}
                       </p>
                     </div>
                   </div>

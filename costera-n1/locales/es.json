@@ -1,6 +1,12 @@
 {
   "Index": {
     "title": "COSTERETA n1",
+    "header": {
+      "inicio": "INICIO",
+      "detalles": "DETALLES",
+      "contacto": "CONTACTO",
+      "idioma": "IDIOMA"
+    },
     "hero": {
       "subtitle": "Apartamento vacacional en el Casco Antiguo de Villajoyosa",
       "location_info": "Dentro del recinto amurallado y a un paso de la Playa Centro",
@@ -17,6 +23,41 @@
         "detalle": "Detalle",
         "casco": "Casco"
       }
+    },
+    "DescriptionHouse": {
+      "title": "La esencia de La Vila desde su historia",
+      "p1": "<strong>Costera N1</strong> se ubica en el corazón del recinto amurallado, en la zona noble del Casco Antiguo. Disfruta de la tranquilidad de sus calles peatonales y la autenticidad de un barrio con un ritmo propio, a un paso de la Iglesia de la Asunción.",
+      "p2": "El acceso a la <strong>Playa Centro</strong> es un icono de nuestra casa: un breve paseo entre las famosas fachadas de colores te lleva del silencio de la muralla al ambiente vibrante del paseo marítimo en pocos minutos.",
+      "p3": "Desde nuestra ubicación elevada, ofrecemos una perspectiva única sin las aglomeraciones de los grandes bloques. Es el refugio ideal para sentirte parte de la comunidad, bajando a por el pan o compartiendo una caña con los locales.",
+      "p4": "Combinamos la estructura original con un <strong>interior moderno y funcional</strong>, pensado para el descanso. Con todos los servicios a mano y la parada del TRAM cerca, tendrás toda la Costa Blanca a tu alcance."
+    },
+    "HorizontalScroll": {
+      "sectionZero": {
+        "title": "COSTERETA n1 <br /> el corazón de La Vila",
+        "subtitle": "Un recorrido por lo que te espera a solo unos pasos"
+      },
+      "section1": {
+        "overtitle": "01. El Corazón del Color: Costera de la Mar",
+        "title": "Vive en el icono de la Costa Blanca",
+        "p1": "Te alojas en la Costera de la Mar, la calle más fotografiada y vibrante de Villajoyosa. Este eje histórico no es solo una dirección, es el puente que une el legado de la ciudad amurallada con el espíritu marinero.",
+        "p2": "Despierta rodeado de fachadas de colores y la brisa del Mediterráneo a solo unos pasos de tu puerta."
+      },
+      "section2": {
+        "overtitle": "02. Tu Conexión con el Mar",
+        "title": "A escasos metros de la arena",
+        "p1": "Olvida el coche y las vueltas innecesarias. Desde el corazón del casco antiguo, una bajada directa te guía hasta el Paseo Marítimo y la Playa Centro. En menos de 5 minutos pasarás del silencio de las calles empedradas al bullicio del Mediterráneo.",
+        "p2": "Ideal para ese primer baño de la mañana o un paseo al atardecer."
+      },
+      "section3": {
+        "overtitle": "03. Sabores y Tradición",
+        "title": "Un festín para los sentidos",
+        "p1": "La Vila sabe a sal y a cacao. Estás a la vuelta de la esquina de las mejores tabernas tradicionales y arrocerías del puerto. Además, el aroma a chocolate artesanal te guiará en un paseo hacia las fábricas históricas de la ciudad. Una ubicación privilegiada para los amantes de la buena mesa y la vida de barrio auténtica."
+      }
+    },
+    "BookingCTA": {
+      "title": "¿Tienes fechas para tu próxima escapada?",
+      "description": "Costera N1 te espera en el corazón del casco antiguo. Consulta disponibilidad y reserva de forma segura a través de nuestro gestor oficial.",
+      "button": "Ir a página de reservas"
     }
   }
 }

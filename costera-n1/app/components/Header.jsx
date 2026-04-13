@@ -4,6 +4,7 @@ import { motion, AnimatePresence, animate } from "framer-motion";
 import { NavElement } from "./NavElement";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useState } from "react";
+import { useI18n } from "../hooks/usei18n";
 
 const variantsLink = {
   initial: { y: 0 },
@@ -11,8 +12,11 @@ const variantsLink = {
 };
 
 export const Header = ({ showText }) => {
+  const { t } = useI18n();
   const pathname = usePathname();
   const { locale } = useParams();
+
+  const textsHeader = t.Index.header;
 
   const [langIsOpen, setLangIsOpen] = useState(false);
 
@@ -42,10 +46,10 @@ export const Header = ({ showText }) => {
                 active={pathname.startsWith(`/${locale}`)}
                 className="mt-1"
               >
-                INICIO
+                {textsHeader.inicio}
               </NavElement>
               <NavElement href="/" active={pathname.startsWith(`/${locale}`)}>
-                INICIO
+                {textsHeader.inicio}
               </NavElement>
             </motion.div>
           </li>
@@ -63,13 +67,13 @@ export const Header = ({ showText }) => {
                 active={pathname.startsWith(`/${locale}/detalles`)}
                 className="mt-1"
               >
-                DETALLES
+                {textsHeader.detalles}
               </NavElement>
               <NavElement
                 href="/detalles"
                 active={pathname.startsWith(`/${locale}/detalles`)}
               >
-                DETALLES
+                {textsHeader.detalles}
               </NavElement>
             </motion.div>
           </li>
@@ -86,13 +90,13 @@ export const Header = ({ showText }) => {
                 active={pathname.startsWith(`/${locale}/contacto`)}
                 className="mt-1"
               >
-                CONTACTO
+                {textsHeader.contacto}
               </NavElement>
               <NavElement
                 href="/contacto"
                 active={pathname.startsWith(`/${locale}/contacto`)}
               >
-                CONTACTO
+                {textsHeader.contacto}
               </NavElement>
             </motion.div>
           </li>
@@ -109,14 +113,14 @@ export const Header = ({ showText }) => {
                 as="button"
                 className="ring-2 mt-1 rounded-full"
               >
-                IDIOMA
+                {textsHeader.idioma}
               </NavElement>
               <NavElement
                 as="button"
                 onClick={handleLangOpen}
                 className="ring-2 rounded-full"
               >
-                IDIOMA
+                {textsHeader.idioma}
               </NavElement>
             </motion.div>
           </li>
