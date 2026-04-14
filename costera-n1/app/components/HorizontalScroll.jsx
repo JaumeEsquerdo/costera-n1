@@ -49,17 +49,17 @@ export const HorizontalScroll = () => {
           <HorizontalSection
             index={1} // Qué número de sección es (empezando desde 0 o 1)
             globalProgress={scrollYProgress}
-            bgColor={"bg-blue-300"}
+            bgColor={"bg-casas-blue"}
           >
             {({ xImage }) => (
               <>
                 <div
                   aria-label="hidden "
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-blue-300  bg-blue-300 z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-blue  bg-casas-blue z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
                 />
                 <div
                   aria-label="hidden"
-                  className="absolute inset-y-0 -right-14 w-8 -translate-x-full ring-1 ring-blue-300  bg-blue-300 z-1 inline lg:hidden"
+                  className="absolute inset-y-0 -right-14 w-8 -translate-x-full ring-1 ring-casas-blue  bg-casas-blue z-1 inline lg:hidden"
                 />
                 <div className=" flex flex-col justify-center items-start gap-4 md:gap-10 px-4 md:px-10 lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white text-balance">
@@ -100,17 +100,17 @@ export const HorizontalScroll = () => {
           <HorizontalSection
             index={2}
             globalProgress={scrollYProgress}
-            bgColor={"bg-orange-300"}
+            bgColor={"bg-casas-orange"}
           >
             {({ xImage }) => (
               <>
                 <div
                   aria-label="hidden"
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-orange-300  bg-orange-300 z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-orange  bg-casas-orange z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
                 />
                 <div
                   aria-label="hidden"
-                  className="absolute inset-y-0 -right-14 w-8 -translate-x-full ring-1 ring-orange-300  bg-orange-300 z-1 inline lg:hidden"
+                  className="absolute inset-y-0 -right-14 w-8 -translate-x-full ring-1 ring-casas-orange  bg-casas-orange z-1 inline lg:hidden"
                 />
                 <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
@@ -148,13 +148,13 @@ export const HorizontalScroll = () => {
           <HorizontalSection
             index={3}
             globalProgress={scrollYProgress}
-            bgColor={"bg-red-300"}
+            bgColor={"bg-casas-red"}
           >
             {({ xImage }) => (
               <>
                 <div
                   aria-label="hidden "
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-red-300  bg-red-300 z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-red  bg-casas-red z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
                 />
                 <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
@@ -165,7 +165,7 @@ export const HorizontalScroll = () => {
                       {textsHorizontalSections.section3.title}
                     </h2>
                     <div className="flex flex-col gap-4">
-                      <p className="text-balance">
+                      <p className="text-balance ">
                         {textsHorizontalSections.section3.p1}
                       </p>
                     </div>

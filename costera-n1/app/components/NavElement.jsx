@@ -50,7 +50,7 @@ export const NavElement = ({
 
   const commonProps = {
     ref: elementRef,
-    className: `${isOverDark ? "text-white" : "text-black"} ${noSpacing ? "" : "px-2 mx-1 lg:mx-2"} ${
+    className: `${isOverDark ? "text-white" : "text-neutral-800"} ${noSpacing ? "" : "px-2 mx-1 lg:mx-2"} ${
       active ? "font-bold" : ""
     } transition-colors duration-300 whitespace-nowrap cursor-pointer ${className}`,
   };
