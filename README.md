@@ -1,6 +1,6 @@
 # Costera N1 - Luxury Vacation Rental Landing
 
-Plataforma web de alto rendimiento diseñada para la promoción y captación de clientes para un alojamiento turístico premium en el **Casco Antiguo de Villajoyosa**.
+Plataforma web de alto rendimiento diseñada para la promoción y captación de clientes para un alojamiento turístico en el **Casco Antiguo de Villajoyosa**.
 
 El proyecto funciona como un **embudo de conversión (SEO Funnel)**, optimizando la visibilidad orgánica para redirigir tráfico cualificado hacia el portal de reservas oficial gestionado por la inmobiliaria.
 
