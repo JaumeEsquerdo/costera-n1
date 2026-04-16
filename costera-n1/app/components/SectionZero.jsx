@@ -86,7 +86,7 @@ export const SectionZero = () => {
           className="text-3xl font-bold mb-6 lg:text-7xl  text-center"
           dangerouslySetInnerHTML={{ __html: textsSectionZero.title }}
         />
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
             {textsSectionZero.subtitle}{" "}
           </p>
