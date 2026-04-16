@@ -1,3 +1,4 @@
+"use client";
 import { useI18n } from "../hooks/usei18n";
 
 export const Footer = () => {
