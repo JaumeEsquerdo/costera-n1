@@ -24,6 +24,8 @@ export const Header = ({ showText }) => {
     setLangIsOpen((prev) => !prev);
   };
 
+  const cleanPath = pathname.replace(/\/$/, "");
+
   return (
     <>
       <motion.header
@@ -37,23 +39,31 @@ export const Header = ({ showText }) => {
             <motion.div
               variants={variantsLink}
               initial="initial"
-              whileHover="hover"
+              whileHover={
+                pathname === `/${locale}` || pathname === `/${locale}/`
+                  ? undefined
+                  : "hover"
+              }
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className={`flex flex-col items-center gap-2 cursor-pointer`}
             >
               <NavElement
                 href="/"
-                active={pathname === `/${locale}` || pathname === `/${locale}/`}
+                active={cleanPath === `/${locale}`}
                 className="mt-1"
               >
                 {textsHeader.inicio}
               </NavElement>
-              <NavElement
-                href="/"
-                active={pathname === `/${locale}` || pathname === `/${locale}/`}
-              >
-                {textsHeader.inicio}
-              </NavElement>
+              {cleanPath !== `/${locale}` && (
+                <NavElement
+                  href="/"
+                  active={
+                    pathname === `/${locale}` || pathname === `/${locale}/`
+                  }
+                >
+                  {textsHeader.inicio}
+                </NavElement>
+              )}
             </motion.div>
           </li>
 
@@ -61,67 +71,66 @@ export const Header = ({ showText }) => {
             <motion.div
               variants={variantsLink}
               initial="initial"
-              whileHover="hover"
+              whileHover={
+                cleanPath.startsWith(`/${locale}/detalles`)
+                  ? undefined
+                  : "hover"
+              }
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="flex flex-col  items-center gap-2 cursor-pointer"
             >
               <NavElement
                 href="/detalles"
-                active={pathname.startsWith(`/${locale}/detalles`)}
+                active={cleanPath.startsWith(`/${locale}/detalles`)}
                 className="mt-1"
               >
                 {textsHeader.detalles}
               </NavElement>
-              <NavElement
-                href="/detalles"
-                active={pathname.startsWith(`/${locale}/detalles`)}
-              >
-                {textsHeader.detalles}
-              </NavElement>
+              {!cleanPath.startsWith(`/${locale}/detalles`) && (
+                <NavElement
+                  href="/detalles"
+                  active={cleanPath.startsWith(`/${locale}/detalles`)}
+                >
+                  {textsHeader.detalles}
+                </NavElement>
+              )}
             </motion.div>
           </li>
           <li className="h-8 overflow-hidden">
             <motion.div
               variants={variantsLink}
               initial="initial"
-              whileHover="hover"
+              whileHover={
+                cleanPath.startsWith(`/${locale}/contacto`)
+                  ? undefined
+                  : "hover"
+              }
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="flex flex-col  items-center gap-2 "
             >
               <NavElement
                 href="/contacto"
-                active={pathname.startsWith(`/${locale}/contacto`)}
+                active={cleanPath.startsWith(`/${locale}/contacto`)}
                 className="mt-1"
               >
                 {textsHeader.contacto}
               </NavElement>
-              <NavElement
-                href="/contacto"
-                active={pathname.startsWith(`/${locale}/contacto`)}
-              >
-                {textsHeader.contacto}
-              </NavElement>
+              {!cleanPath.startsWith(`/${locale}/contacto`) && (
+                <NavElement
+                  href="/contacto"
+                  active={cleanPath.startsWith(`/${locale}/contacto`)}
+                >
+                  {textsHeader.contacto}
+                </NavElement>
+              )}
             </motion.div>
           </li>
           <li className="h-8 overflow-hidden">
-            <motion.div
-              variants={variantsLink}
-              initial="initial"
-              whileHover="hover"
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="flex flex-col  items-center gap-2 cursor-pointer"
-            >
+            <motion.div className="flex flex-col  items-center gap-2 cursor-pointer">
               <NavElement
                 onClick={handleLangOpen}
                 as="button"
-                className="ring-2 mt-1 rounded-full"
-              >
-                {textsHeader.idioma}
-              </NavElement>
-              <NavElement
-                as="button"
-                onClick={handleLangOpen}
-                className="ring-2 rounded-full"
+                className={`ring-2 mt-1 rounded-full hover:bg-green-100 ${langIsOpen ? "bg-green-100" : ""} transition-colors duration-200`}
               >
                 {textsHeader.idioma}
               </NavElement>
