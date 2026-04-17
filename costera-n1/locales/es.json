@@ -1,12 +1,6 @@
 {
-  "Index": {
+  "Home": {
     "title": "COSTERETA n1",
-    "header": {
-      "inicio": "INICIO",
-      "detalles": "DETALLES",
-      "contacto": "CONTACTO",
-      "idioma": "IDIOMA"
-    },
     "hero": {
       "subtitle": "Apartamento vacacional en el Casco Antiguo de Villajoyosa",
       "location_info": "Dentro del recinto amurallado y a un paso de la Playa Centro",
@@ -58,10 +52,23 @@
       "title": "¿Tienes fechas para tu próxima escapada?",
       "description": "COSTERETA n1 te espera en el corazón del casco antiguo. Consulta disponibilidad y reserva de forma segura a través de nuestro gestor oficial.",
       "button": "Ir a página de reservas"
-    },
-    "Footer": {
-      "title": "COSTERETA n1",
-      "subtitle": "en Villajoyosa, Alicante"
     }
+  },
+  "Contact": {
+    "title": "Contáctanos",
+    "description": "Para garantizarte una atención profesional y segura, hemos delegado la gestión de consultas y reservas en una agencia especializada. Si quieres conocer más detalles sobre el alojamiento o confirmar disponibilidad, haz clic en el siguiente enlace para acceder a su portal oficial.",
+    "cta": "Ver disponibilidad y consultas",
+    "note": "(serás redirigido al portal oficial de nuestra agencia afiliada)",
+    "imageAlt": "Imagen en página de contacto"
+  },
+  "Footer": {
+    "title": "COSTERETA n1",
+    "subtitle": "en Villajoyosa, Alicante"
+  },
+  "Header": {
+    "inicio": "INICIO",
+    "detalles": "DETALLES",
+    "contacto": "CONTACTO",
+    "idioma": "IDIOMA"
   }
 }

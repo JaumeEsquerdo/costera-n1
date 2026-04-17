@@ -1,12 +1,7 @@
 {
-  "Index": {
+  "Home": {
     "title": "COSTERETA n1",
-    "header": {
-      "inicio": "HOME",
-      "detalles": "DETAILS",
-      "contacto": "CONTACT",
-      "idioma": "LANGUAGE"
-    },
+
     "hero": {
       "subtitle": "Vacation apartment in the Old Town of Villajoyosa",
       "location_info": "Inside the walled enclosure and a stone's throw from the Main Beach",
@@ -58,10 +53,23 @@
       "title": "Have you picked the dates for your next getaway?",
       "description": "COSTERETA n1 awaits you in the heart of the old town. Check availability and book securely through our official booking manager.",
       "button": "Go to booking page"
-    },
-    "Footer": {
-      "title": "COSTERETA n1",
-      "subtitle": "in Villajoyosa, Alicante"
     }
+  },
+  "Contact": {
+    "title": "Contact us",
+    "description": "To ensure professional and secure assistance, we have delegated inquiries and booking management to a specialized agency. If you want more details about the accommodation or to check availability, click the link below to access their official portal.",
+    "cta": "Check availability and inquiries",
+    "note": "(you will be redirected to our affiliated agency’s official portal)",
+    "imageAlt": "Image on contact page"
+  },
+  "Footer": {
+    "title": "COSTERETA n1",
+    "subtitle": "in Villajoyosa, Alicante"
+  },
+  "Header": {
+    "inicio": "HOME",
+    "detalles": "DETAILS",
+    "contacto": "CONTACT",
+    "idioma": "LANGUAGE"
   }
 }

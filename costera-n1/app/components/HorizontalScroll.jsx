@@ -29,7 +29,7 @@ const MotionImage = motion.create(Image);
 export const HorizontalScroll = () => {
   const targetRef = useRef(null);
   const { t } = useI18n();
-  const textsHorizontalSections = t.Index.HorizontalScroll;
+  const textsHorizontalSections = t.Home.HorizontalScroll;
 
   const { scrollYProgress } = useScroll({
     target: targetRef,

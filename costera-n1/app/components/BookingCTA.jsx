@@ -5,7 +5,7 @@ import { faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
 export const BookingCTA = () => {
   const { t } = useI18n();
 
-  const textsBookingCta = t.Index.BookingCTA;
+  const textsBookingCta = t.Home.BookingCTA;
 
   return (
     <section className="min-h-[60vh] flex flex-col justify-center items-center  p-8 pt-26">

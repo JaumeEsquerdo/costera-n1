@@ -4,7 +4,7 @@ import { useI18n } from "../hooks/usei18n";
 export const DescriptionHouse = () => {
   const { t } = useI18n();
 
-  const textsDescriptionHouse = t.Index.DescriptionHouse;
+  const textsDescriptionHouse = t.Home.DescriptionHouse;
 
   return (
     <section className="h-screen flex flex-col justify-center items-center p-8 lg:pt-26">

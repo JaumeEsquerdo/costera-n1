@@ -10,7 +10,7 @@ export const SectionZero = () => {
   const containerRef = useRef();
   const { t } = useI18n();
 
-  const textsSectionZero = t.Index.HorizontalScroll.sectionZero;
+  const textsSectionZero = t.Home.HorizontalScroll.sectionZero;
 
   const { scrollYProgress } = useScroll({
     target: containerRef,

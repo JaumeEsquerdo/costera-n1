@@ -9,7 +9,7 @@ import { useI18n } from "../hooks/usei18n";
 export const PresentationHouse = () => {
   const { t } = useI18n();
 
-  const texts = t.Index.PresentationHouse;
+  const texts = t.Home.PresentationHouse;
 
   const ref = useRef(null);
   const [imageRendered, setImageRendered] = useState("/hotel-fachada.webp");

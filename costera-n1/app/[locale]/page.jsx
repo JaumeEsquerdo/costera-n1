@@ -25,7 +25,7 @@ export default function Home() {
   const { scrollY } = useScroll();
   const [showText, setShowText] = useState(true);
 
-  const textsHero = t.Index.hero;
+  const textsHero = t.Home.hero;
 
   // Escucha los cambios del scroll vertical
   useEffect(() => {
@@ -81,7 +81,7 @@ export default function Home() {
                   className="text-center fixed top-6 lg:top-8 z-10 g-12 max-w-[90%]"
                 >
                   <h1 className="font-title text-5xl lg:text-9xl text-green-950">
-                    {t.Index.title}
+                    {t.Home.title}
                   </h1>
                   <h2 className="text-base lg:text-xl mt-4 [@media(max-height:720px)]:hidden">
                     {textsHero.subtitle}

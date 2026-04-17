@@ -16,7 +16,7 @@ export const Header = ({ showText }) => {
   const pathname = usePathname();
   const { locale } = useParams();
 
-  const textsHeader = t.Index.header;
+  const textsHeader = t.Header;
 
   const [langIsOpen, setLangIsOpen] = useState(false);
 
