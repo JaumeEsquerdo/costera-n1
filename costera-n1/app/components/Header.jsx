@@ -43,12 +43,15 @@ export const Header = ({ showText }) => {
             >
               <NavElement
                 href="/"
-                active={pathname.startsWith(`/${locale}`)}
+                active={pathname === `/${locale}` || pathname === `/${locale}/`}
                 className="mt-1"
               >
                 {textsHeader.inicio}
               </NavElement>
-              <NavElement href="/" active={pathname.startsWith(`/${locale}`)}>
+              <NavElement
+                href="/"
+                active={pathname === `/${locale}` || pathname === `/${locale}/`}
+              >
                 {textsHeader.inicio}
               </NavElement>
             </motion.div>
