@@ -12,6 +12,7 @@ export const NavElement = ({
   as = "link",
   className = "",
   onClick,
+  langIsOpen,
   noSpacing = false,
 }) => {
   const [isOverDark, setIsOverDark] = useState(false);
@@ -55,7 +56,7 @@ export const NavElement = ({
     } transition-colors duration-300 whitespace-nowrap cursor-pointer ${className}`,
   };
 
-  // Si es "as='p'", renderiza un párrafo, si no, un Link
+  // Si es "as='button'", renderiza un párrafo, si no, un Link
   if (as === "button") {
     return (
       <button onClick={onClick} {...commonProps}>

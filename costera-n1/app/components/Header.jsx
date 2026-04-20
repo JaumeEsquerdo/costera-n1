@@ -126,15 +126,17 @@ export const Header = ({ showText }) => {
             </motion.div>
           </li>
           <li className="h-8 overflow-hidden">
-            <motion.div className="flex flex-col  items-center gap-2 cursor-pointer">
-              <NavElement
-                onClick={handleLangOpen}
-                as="button"
-                className={`ring-2 mt-1 rounded-full hover:bg-green-100 ${langIsOpen ? "bg-green-100" : ""} transition-colors duration-200`}
-              >
-                {textsHeader.idioma}
-              </NavElement>
-            </motion.div>
+            {/* <motion.div className={`flex flex-col items-center cursor-pointer`}> */}
+            <NavElement
+              onClick={handleLangOpen}
+              langIsOpen={langIsOpen}
+              as="button"
+              isoverdark
+              className={`ring-2 mt-1 rounded-full hover:scale-105 active:scale-95 will-change-transform ${langIsOpen ? "scale-105" : ""} transition-transform duration-200`}
+            >
+              {textsHeader.idioma}
+            </NavElement>
+            {/* </motion.div> */}
           </li>
         </ul>
         <AnimatePresence>{langIsOpen && <LanguageSwitcher />}</AnimatePresence>
