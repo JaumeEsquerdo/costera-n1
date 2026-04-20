@@ -28,6 +28,7 @@ export default async function RootLayout({ children, params }) {
     >
       <body className="min-h-full flex flex-col bg-green-50 font-body text-neutral-800">
         {/* <SmoothScroll> */}
+
         {children}
         {/* </SmoothScroll> */}
       </body>

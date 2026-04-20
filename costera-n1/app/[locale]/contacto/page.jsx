@@ -14,12 +14,12 @@ export default function Contacto() {
     <>
       <Header />
       <main className="flex flex-col min-h-screen lg:h-screen w-[90%] max-w-400 mx-auto ">
-        <div className="pt-40 lg:w-full lg:flex-1 lg:flex lg:items-end">
+        <div className="pt-40 lg:w-full  lg:flex lg:h-[30vh] lg:pt-0 lg:items-end">
           <h1 className="text-4xl font-title text-center w-full  lg:text-start ">
             {textsContact.title}
           </h1>
         </div>
-        <div className="mt-auto py-8 flex flex-col gap-12 lg:flex-1 lg:mt-0 lg:flex-row">
+        <div className="py-8 flex flex-col gap-12 lg:flex-row">
           <div className="w-full flex flex-col items-center lg:items-start justify-end">
             <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-200 lg:w-full lg:max-w-160">
               <Image
