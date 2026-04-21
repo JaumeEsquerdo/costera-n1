@@ -61,6 +61,29 @@
     "note": "(serás redirigido al portal oficial de nuestra agencia afiliada)",
     "imageAlt": "Imagen en página de contacto"
   },
+  "Details": {
+    "title": "Detalles",
+    "location": "Localización: Villajoyosa, Alicante (03570)",
+    "street": "Calle: Costereta nº1",
+    "features": [
+      "Piso reformado",
+      "Bajada rápida a la playa centro de Villajoyosa",
+      "x metros cuadrados",
+      "Localizado en el casco antiguo"
+    ],
+    "description": "Un interior pensado para el día a día. Mobiliario práctico y funcional en un espacio luminoso que conserva la esencia de las casas de pescadores, pero adaptado a las necesidades actuales del viajero.",
+    "locationDescription": "La ubicación en la Costera garantiza una experiencia inmersiva. Es una zona peatonal y vibrante durante el día, pero tranquila y recogida al caer la noche, ideal para un descanso real.",
+    "practicalInfoTitle": "Información práctica para tu estancia",
+    "practicalInfo": [
+      "Acceso Peatonal: El apartamento se encuentra en una calle histórica peatonal. El acceso final es a pie, disfrutando del encanto del casco antiguo.",
+      "Parking Público: Recomendamos estacionar en el Parking del Río (zona baja) o en el Parking del Centro (zona alta). Ambos se encuentran a unos 5-7 minutos caminando de la casa.",
+      "Check-in Autónomo: Gestión ágil para que entres a tu ritmo.",
+      "Equipamiento Completo: Cocina con menaje, cafetera, microondas y kit de limpieza básico.",
+      "Climatización: Aire acondicionado y calefacción para garantizar tu confort en cualquier época del año.",
+      "Conectividad: Wi-Fi de alta velocidad incluido, ideal si necesitas teletrabajar entre chapuzón y chapuzón."
+    ],
+    "imageAlt": "Imagen del alojamiento"
+  },
   "Footer": {
     "title": "COSTERETA n1",
     "subtitle": "en Villajoyosa, Alicante"

@@ -62,6 +62,29 @@
     "note": "(you will be redirected to our affiliated agency’s official portal)",
     "imageAlt": "Image on contact page"
   },
+  "Details": {
+    "title": "Details",
+    "location": "Location: Villajoyosa, Alicante (03570)",
+    "street": "Street: Costereta nº1",
+    "features": [
+      "Renovated apartment",
+      "Quick access to Villajoyosa central beach",
+      "x square meters",
+      "Located in the old town"
+    ],
+    "description": "An interior designed for everyday living. Practical and functional furniture in a bright space that preserves the essence of traditional fishermen’s houses, adapted to the needs of modern travelers.",
+    "locationDescription": "The location in La Costera ensures a fully immersive experience. It is a pedestrian and vibrant area during the day, yet शांत and peaceful at night, ideal for true rest.",
+    "practicalInfoTitle": "Practical information for your stay",
+    "practicalInfo": [
+      "Pedestrian Access: The apartment is located on a historic pedestrian street. Final access is on foot, allowing you to enjoy the charm of the old town.",
+      "Public Parking: We recommend parking at Parking del Río (lower area) or Parking del Centro (upper area). Both are about a 5–7 minute walk from the house.",
+      "Self Check-in: Smooth and flexible access so you can arrive at your own pace.",
+      "Fully Equipped: Kitchen with utensils, coffee maker, microwave, and basic cleaning kit.",
+      "Climate Control: Air conditioning and heating to ensure comfort all year round.",
+      "Connectivity: High-speed Wi-Fi included, ideal if you need to work remotely between swims."
+    ],
+    "imageAlt": "Accommodation image"
+  },
   "Footer": {
     "title": "COSTERETA n1",
     "subtitle": "in Villajoyosa, Alicante"
