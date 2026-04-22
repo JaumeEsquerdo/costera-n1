@@ -88,7 +88,38 @@ export default function Detalles() {
           </ul>
         </div>
       </main>
-      <Footer />
+      <section
+        className="bg-green-950 h-[70vh] lg:[80vh] flex justify-center items-center"
+        data-is-dark="true"
+      >
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            maxWidth: "660px",
+
+            aspectRatio: "4 / 3",
+          }}
+        >
+          <iframe
+            src="https://www.google.com/maps?q=Carrer+de+la+Costereta+1,+La+Vila+Joiosa&hl=es&z=18&output=embed"
+            style={{
+              border: 0,
+              borderRadius: "14px",
+              width: "90%",
+              height: "100%",
+              margin: "0 auto",
+              boxShadow: `
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.2)
+      `,
+            }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
+      <Footer bgColor="bg-green-50" textColor="text-green-950" />
     </>
   );
 }
