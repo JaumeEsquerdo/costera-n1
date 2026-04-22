@@ -80,15 +80,24 @@ export const HorizontalScroll = () => {
                     </div>
                   </div>
                 </div>
-
-                <motion.div className=" w-2/3 h-[40vh] overflow-hidden lg:w-1/2 lg:h-[60vh] relative [@media(max-height:720px)]:hidden">
+                <motion.div className="w-70 h-100 overflow-hidden lg:w-90 lg:h-140 relative [@media(max-height:720px)]:hidden">
                   <MotionImage
-                    src="/hotel-fachada.webp"
-                    style={{ x: xImage, scale: 1.2 }}
+                    src="/imgs-sections/casas-colores-2.webp"
                     fill
-                    sizes="(max-width: 768px) 1400px, 65vw"
-                    alt="Fachada"
-                    priority
+                    style={{ x: xImage, scale: 1.2 }}
+                    alt=""
+                    sizes="(max-width: 768px) 700px, 1400px"
+                    className="object-cover"
+                  />
+                </motion.div>
+
+                <motion.div className="overflow-hidden hidden lg:block lg:w-120 lg:h-160 relative">
+                  <MotionImage
+                    src="/imgs-sections/casas-colores.webp"
+                    fill
+                    style={{ x: xImage, scale: 1.2 }}
+                    sizes="(max-width: 768px) 700px, 1800px"
+                    alt=""
                     className="object-cover"
                   />
                 </motion.div>
@@ -133,7 +142,7 @@ export const HorizontalScroll = () => {
                 </div>
                 <motion.div className=" w-2/3 h-[45vh] overflow-hidden lg:w-1/2 lg:h-[70vh] relative [@media(max-height:720px)]:hidden">
                   <MotionImage
-                    src="/hotel-fachada.webp"
+                    src="/imgs-sections/laVila-5.webp"
                     fill
                     sizes="(max-width: 768px) 67vw, 65vw"
                     style={{ x: xImage, scale: 1.2 }}
@@ -171,24 +180,15 @@ export const HorizontalScroll = () => {
                     </div>
                   </div>
                 </div>
-                <motion.div className="w-70 h-100 overflow-hidden lg:w-90 lg:h-140 relative [@media(max-height:720px)]:hidden">
-                  <MotionImage
-                    src="/hotel-fachada.webp"
-                    fill
-                    style={{ x: xImage, scale: 1.2 }}
-                    alt=""
-                    sizes="(max-width: 768px) 700px, 1400px"
-                    className="object-cover"
-                  />
-                </motion.div>
 
-                <motion.div className="overflow-hidden hidden lg:block lg:w-120 lg:h-160 relative">
+                <motion.div className=" w-2/3 h-[40vh] overflow-hidden lg:w-1/2 lg:h-[60vh] relative [@media(max-height:720px)]:hidden">
                   <MotionImage
-                    src="/hotel-fachada.webp"
-                    fill
+                    src="/imgs-sections/fideua-posit.webp"
                     style={{ x: xImage, scale: 1.2 }}
-                    sizes="(max-width: 768px) 700px, 1800px"
-                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 1400px, 65vw"
+                    alt="Fachada"
+                    priority
                     className="object-cover"
                   />
                 </motion.div>
