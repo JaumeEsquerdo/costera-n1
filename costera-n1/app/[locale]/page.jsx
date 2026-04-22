@@ -97,6 +97,7 @@ export default function Home() {
               <motion.div
                 style={{ width, height }}
                 className="relative overflow-hidden"
+                data-is-dark="true"
               >
                 <Image
                   src="/hotel-fachada.webp"
