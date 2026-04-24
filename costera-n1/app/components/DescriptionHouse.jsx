@@ -1,4 +1,3 @@
-import { text } from "@fortawesome/fontawesome-svg-core";
 import { useI18n } from "../hooks/usei18n";
 
 export const DescriptionHouse = () => {
