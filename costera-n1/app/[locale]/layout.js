@@ -2,7 +2,7 @@ import { DM_Sans, Archivo_Black } from "next/font/google";
 import "../globals.css";
 // import SmoothScroll from "../app/components/SmoothScroll.jsx";
 import es from "@/locales/es.json";
-import en from "@/locales/es.json";
+import en from "@/locales/en.json";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
