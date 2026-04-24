@@ -100,7 +100,7 @@ export default function Home() {
                 data-is-dark="true"
               >
                 <Image
-                  src="/hotel-fachada.webp"
+                  src="/imgs-casa/puerta-costera-2.png"
                   fill
                   sizes="100vw"
                   priority
