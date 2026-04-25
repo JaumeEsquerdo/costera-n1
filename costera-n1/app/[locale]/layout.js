@@ -77,10 +77,10 @@ export async function generateMetadata({ params }) {
     //     },
     //   ],
     // },
-    viewport: {
-      themeColor: "#f0fdf4", // El color bg-green-50 del body
-      width: "device-width",
-      initialScale: 1,
+    // 4. ICONS (Opcional pero recomendado)
+    icons: {
+      icon: "/icon.svg",
+      apple: "/apple-icon.png",
     },
   };
 }
