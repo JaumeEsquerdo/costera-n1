@@ -27,6 +27,7 @@ export async function generateMetadata({ params }) {
   const siteDescription = t.Home.DescriptionHouse.title;
 
   return {
+    // metadataBase: new URL("https://costeretan1.com"),
     title: siteTitle,
     description: siteDescription,
     keywords:
@@ -42,6 +43,7 @@ export async function generateMetadata({ params }) {
       languages: {
         "es-ES": "/es",
         "en-US": "/en",
+        "x-default": "/es",
       },
     },
     robots: {
@@ -50,8 +52,16 @@ export async function generateMetadata({ params }) {
       googleBot: {
         index: false,
         follow: false,
+        "max-image-preview": "large", // Permite a Google mostrar fotos grandes en los resultados
+        "max-snippet": -1, // Permite a Google mostrar descripciones largas
       },
     },
+    // 5. Verificación (Para cuando lo subas a Search Console)
+    /* Google Search Console: Subir el dominio ahí cuando esté lista (acceso a estadísticas)*/
+    verification: {
+      google: "google-site-verification-code",
+    },
+    referrer: "origin-when-cross-origin",
     // --- AÑADE ESTO PARA REDES SOCIALES ---
     // openGraph: {
     //   title: siteTitle,
@@ -67,6 +77,11 @@ export async function generateMetadata({ params }) {
     //     },
     //   ],
     // },
+    viewport: {
+      themeColor: "#f0fdf4", // El color bg-green-50 del body
+      width: "device-width",
+      initialScale: 1,
+    },
   };
 }
 
