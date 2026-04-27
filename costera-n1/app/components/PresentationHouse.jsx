@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { delay, useScroll } from "framer-motion";
+import { delay, easeOut, useScroll } from "framer-motion";
 import { ParallaxImage } from "./ParallaxImage";
 // import Link from "next/link";
 import { useI18n } from "../hooks/usei18n";
@@ -11,7 +11,7 @@ const itemVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.4, delay: 0.6 },
+    transition: { duration: 0.4, delay: 0.6, ease: easeOut },
   },
 };
 const containerVariants = {
