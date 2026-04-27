@@ -1,10 +1,28 @@
 "use client";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { useScroll } from "framer-motion";
+import { delay, useScroll } from "framer-motion";
 import { ParallaxImage } from "./ParallaxImage";
 // import Link from "next/link";
 import { useI18n } from "../hooks/usei18n";
+import { motion } from "framer-motion";
+
+const itemVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.4, delay: 0.6 },
+  },
+};
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      delay: 0.8,
+      staggerChildren: 0.08,
+    },
+  },
+};
 
 export const PresentationHouse = () => {
   const { t } = useI18n();
@@ -105,14 +123,43 @@ export const PresentationHouse = () => {
 
       <div className="sticky top-0 h-screen  flex flex-col lg:flex-row">
         <section className="flex flex-col flex-1 max-w-[90%] justify-end pb-4 mx-auto">
-          <h2 className="font-title text-5xl lg:text-7xl text-center text-green-950">
-            {texts.title}
-          </h2>
+          <motion.h2
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="font-title text-5xl lg:text-7xl text-center text-green-950"
+          >
+            {texts.title.split(" ").map((word, wordIndex) => (
+              // cada palabra en un span y después se mapea cada span por letra
+              <span key={wordIndex} className="whitespace-nowrap mr-6">
+                {word.split("").map((char, charIndex) => (
+                  <motion.span
+                    key={charIndex}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    className="inline-block"
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+          </motion.h2>
         </section>
         <section className="h-2/3 bg-white lg:h-screen lg:w-1/2">
           <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">
             <div className="flex flex-col items-center gap-4 lg:gap-8">
-              <h3 className="text-lg text-center">{texts.subtitle}</h3>
+              <motion.h3
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.9 }}
+                className="text-lg text-center"
+              >
+                {texts.subtitle}
+              </motion.h3>
               <div className="flex flex-wrap gap-4">
                 {images.map((img) => (
                   <div

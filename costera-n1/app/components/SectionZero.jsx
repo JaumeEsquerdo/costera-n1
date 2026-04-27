@@ -82,7 +82,7 @@ export const SectionZero = () => {
         </motion.div>
       </motion.div>
       <div className="flex flex-col justify-center items-center pb-16 px-15">
-        <h3
+        <motion.h3
           className="text-3xl font-bold mb-6 lg:text-7xl  text-center"
           dangerouslySetInnerHTML={{ __html: textsSectionZero.title }}
         />
