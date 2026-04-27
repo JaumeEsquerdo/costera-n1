@@ -24,6 +24,11 @@ const containerVariants = {
   },
 };
 
+const letterVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export const PresentationHouse = () => {
   const { t } = useI18n();
 
@@ -135,10 +140,7 @@ export const PresentationHouse = () => {
                 {word.split("").map((char, charIndex) => (
                   <motion.span
                     key={charIndex}
-                    variants={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: { opacity: 1, y: 0 },
-                    }}
+                    variants={letterVariants}
                     className="inline-block"
                   >
                     {char}
