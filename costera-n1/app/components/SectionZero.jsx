@@ -6,6 +6,23 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useI18n } from "../hooks/usei18n";
 const MotionImage = motion.create(Image);
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.6 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -400 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1.6 },
+  },
+};
+
 export const SectionZero = () => {
   const containerRef = useRef();
   const { t } = useI18n();
@@ -22,8 +39,8 @@ export const SectionZero = () => {
   // SPRING: hace que el progreso no sea "seco".
   // Si el scroll salta, el spring lo suaviza.
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 100, // rigidez
-    damping: 30, // amortiguación (evita que rebote)
+    stiffness: 40, // rigidez
+    damping: 40, // amortiguación (evita que rebote)
     restDelta: 0.001,
   });
 
@@ -81,12 +98,19 @@ export const SectionZero = () => {
           />
         </motion.div>
       </motion.div>
-      <div className="flex flex-col justify-center items-center pb-16 px-15">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        className="flex flex-col justify-center items-center pb-16 px-15"
+      >
         <motion.h3
+          variants={itemVariants}
           className="text-3xl font-bold mb-6 lg:text-7xl  text-center"
           dangerouslySetInnerHTML={{ __html: textsSectionZero.title }}
         />
-        <div className="flex items-center gap-2">
+        <motion.div variants={itemVariants} className="flex items-center gap-2">
           <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
             {textsSectionZero.subtitle}{" "}
           </p>
@@ -94,8 +118,8 @@ export const SectionZero = () => {
             icon={faAngleRight}
             className="text-3xl text-white"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
