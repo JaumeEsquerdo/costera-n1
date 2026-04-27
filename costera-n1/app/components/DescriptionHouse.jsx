@@ -1,4 +1,21 @@
 import { useI18n } from "../hooks/usei18n";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.4 },
+  },
+};
 
 export const DescriptionHouse = () => {
   const { t } = useI18n();
@@ -7,15 +24,39 @@ export const DescriptionHouse = () => {
 
   return (
     <section className="h-screen flex flex-col justify-center items-center p-8 lg:pt-26">
-      <h3 className="text-2xl font-bold mb-8 text-center">
+      <motion.h3
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-2xl font-bold mb-8 text-center"
+      >
         {textsDescriptionHouse.title}
-      </h3>
-      <div className="flex flex-col gap-4 lg:max-w-1/2 [@media(max-height:720px)]:text-sm">
-        <p dangerouslySetInnerHTML={{ __html: textsDescriptionHouse.p1 }} />
-        <p dangerouslySetInnerHTML={{ __html: textsDescriptionHouse.p2 }} />
-        <p dangerouslySetInnerHTML={{ __html: textsDescriptionHouse.p3 }} />
-        <p dangerouslySetInnerHTML={{ __html: textsDescriptionHouse.p4 }} />
-      </div>
+      </motion.h3>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }} //amount para: 0.2, en cuanto asome un 20% del contenedor, se hace la anim.
+        className="flex flex-col gap-4 lg:max-w-1/2 [@media(max-height:720px)]:text-sm"
+      >
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{ __html: textsDescriptionHouse.p1 }}
+        />
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{ __html: textsDescriptionHouse.p2 }}
+        />
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{ __html: textsDescriptionHouse.p3 }}
+        />
+        <motion.p
+          variants={itemVariants}
+          dangerouslySetInnerHTML={{ __html: textsDescriptionHouse.p4 }}
+        />
+      </motion.div>
     </section>
   );
 };
