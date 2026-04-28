@@ -1,4 +1,4 @@
-import { DM_Sans, Archivo_Black } from "next/font/google";
+import { DM_Sans, Archivo_Black, Playfair_Display } from "next/font/google";
 import "../globals.css";
 // import SmoothScroll from "../app/components/SmoothScroll.jsx";
 import es from "@/locales/es.json";
@@ -15,6 +15,13 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  style: ["italic"], // Importante para ese look elegante
+  weight: "400",
+  variable: "--font-playfair",
+});
+
 /**
  * GENERACIÓN DE METADATOS (Server Side)
  */
@@ -24,7 +31,7 @@ export async function generateMetadata({ params }) {
   const t = locale === "en" ? en : es;
 
   const siteTitle = `${t.Home.title} | ${t.Home.hero.subtitle}`;
-  const siteDescription = t.Home.DescriptionHouse.title;
+  const siteDescription = t.Home.hero.subtitle;
 
   return {
     // metadataBase: new URL("https://costeretan1.com"),
@@ -90,7 +97,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html
       lang={locale}
-      className={`${archivoBlack.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${archivoBlack.variable} ${dmSans.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-green-50 font-body text-neutral-800">
         {/* <SmoothScroll> */}

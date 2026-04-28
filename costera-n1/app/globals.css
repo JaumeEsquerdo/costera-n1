@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-/* :root {
-  --background: #e9effb;
-  --foreground: #171717;
-} */
-
 /* Forzar modo claro para mantener la UI consistente aunque el usuario tenga dark mode activo */
 html {
   color-scheme: light;
@@ -27,6 +22,7 @@ body {
   --color-foreground: var(--foreground); */
   --font-body: var(--font-dm-sans);
   --font-title: var(--font-archivo-black);
+  --font-subtitle: var(--font-playfair);
   --color-casas-red: #e77878;
   --color-casas-blue: #6fa9cf;
   --color-casas-orange: #e7a05a;

@@ -19,11 +19,35 @@
       }
     },
     "DescriptionHouse": {
-      "title": "La esencia de La Vila desde su historia",
-      "p1": "<strong>COSTERETA n1</strong> se ubica en el corazón del recinto amurallado, en la zona noble del Casco Antiguo. Disfruta de la tranquilidad de sus calles peatonales y la autenticidad de un barrio con un ritmo propio, a un paso de la Iglesia de la Asunción.",
-      "p2": "El acceso a la <strong>Playa Centro</strong> es un icono de nuestra casa: un breve paseo entre las famosas fachadas de colores te lleva del silencio de la muralla al ambiente vibrante del paseo marítimo en pocos minutos.",
-      "p3": "Desde nuestra ubicación elevada, ofrecemos una perspectiva única sin las aglomeraciones de los grandes bloques. Es el refugio ideal para sentirte parte de la comunidad, bajando a por el pan o compartiendo una caña con los locales.",
-      "p4": "Combinamos la estructura original con un <strong>interior moderno y funcional</strong>, pensado para el descanso. Con todos los servicios a mano y la parada del TRAM cerca, tendrás toda la Costa Blanca a tu alcance."
+      "p1": {
+        "title": "CASCO ANTIGUO",
+
+        "subtitle": "En el corazón del recinto amurallado"
+      },
+
+      "p2": {
+        "title": "BAJADA AL MAR",
+
+        "subtitle": "Un paseo corto entre fachadas de colores"
+      },
+
+      "p3": {
+        "title": "VISTAS LIMPIAS",
+
+        "subtitle": "Ubicación elevada lejos de los grandes bloques"
+      },
+
+      "p4": {
+        "title": "CALLE PEATONAL",
+
+        "subtitle": "Tranquilidad y ritmo de barrio"
+      },
+
+      "p5": {
+        "title": "CASA REAL",
+
+        "subtitle": "Esencia histórica con interior sencillo y cómodo"
+      }
     },
     "HorizontalScroll": {
       "sectionZero": {

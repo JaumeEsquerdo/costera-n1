@@ -20,11 +20,26 @@
       }
     },
     "DescriptionHouse": {
-      "title": "The essence of La Vila, rooted in history",
-      "p1": "<strong>Costereta N1</strong> is located in the heart of the historic walled old town. Enjoy the tranquility of its pedestrian streets and the authenticity of a neighborhood with its own rhythm, just steps away from the Church of the Assumption.",
-      "p2": "Access to the <strong>Main Beach</strong> (Playa Centro) is a signature feature of our home: a short stroll among the famous colorful facades takes you from the quiet of the city walls to the vibrant promenade in just minutes.",
-      "p3": "From our elevated location, we offer a unique perspective away from the crowds of large apartment blocks. It is the ideal retreat to feel like part of the community—whether popping out for fresh bread or sharing a drink with the locals.",
-      "p4": "We combine the original structure with a <strong>modern and functional interior</strong> designed for relaxation. With all amenities at hand and the TRAM station nearby, the entire Costa Blanca is within your reach."
+      "p1": {
+        "title": "OLD TOWN",
+        "subtitle": "In the heart of the historic city walls"
+      },
+      "p2": {
+        "title": "STROLL TO THE SEA",
+        "subtitle": "A short walk through the iconic colored houses"
+      },
+      "p3": {
+        "title": "CLEAR VIEWS",
+        "subtitle": "Elevated spot, away from the high-rise blocks"
+      },
+      "p4": {
+        "title": "PEDESTRIAN STREET",
+        "subtitle": "Peaceful vibes and authentic local rhythm"
+      },
+      "p5": {
+        "title": "AUTHENTIC HOME",
+        "subtitle": "Historic soul with a simple, cozy interior"
+      }
     },
     "HorizontalScroll": {
       "sectionZero": {
