@@ -50,13 +50,13 @@ export const DescriptionHouse = () => {
           className="flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-4 w-full lg:max-w-2/3 [@media(max-height:720px)]:text-sm"
         >
           <motion.h3
-            className="font-title text-3xl lg:text-5xl"
+            className="font-title text-2xl lg:text-5xl"
             variants={itemVariants}
           >
             {value.title}
           </motion.h3>
           <motion.p
-            className="text-xl lg:text-2xl font-subtitle italic"
+            className="text-lg lg:text-2xl font-subtitle italic"
             variants={itemVariants}
           >
             {value.subtitle.toLowerCase()}
