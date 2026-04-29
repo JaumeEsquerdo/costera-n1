@@ -18,6 +18,7 @@ export const NavElement = ({
   const [isOverDark, setIsOverDark] = useState(false);
   const { scrollY } = useScroll();
   const elementRef = useRef(null);
+  const isButton = as === "button";
 
   const checkIfOverDark = () => {
     const el = elementRef.current;
@@ -57,7 +58,15 @@ export const NavElement = ({
   };
 
   // Si es "as='button'", renderiza un párrafo, si no, un Link
-  if (as === "button") {
+  if (isButton) {
+    return (
+      <button onClick={onClick} {...commonProps}>
+        {children}
+      </button>
+    );
+  }
+
+  if (as === "div") {
     return (
       <button onClick={onClick} {...commonProps}>
         {children}
