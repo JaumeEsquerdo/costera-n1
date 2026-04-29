@@ -35,13 +35,41 @@ export default function Contacto() {
             <p>{textsContact.description}</p>
             <div className="flex flex-col w-full gap-2 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex flex-col w-full items-center justify-center gap-6 lg:gap-8 lg:w-fit">
-                <a className="border-2 border-green-950 bg-green-50 rounded-4xl cursor-pointer w-fit py-2 px-6 shadow-[4px_4px_0px_0px_rgba(5,46,7,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5 hover:bg-green-100 transition-all flex items-center gap-2">
-                  {" "}
-                  {textsContact.cta}
-                  <FontAwesomeIcon
-                    icon={faArrowTrendUp}
-                    className="w-4 h-4 lg:w-6 lg:h-6 shrink-0"
-                  />
+                <a
+                  className="   group cursor-pointer inline-flex items-stretch
+    border-2 border-green-950 
+    bg-green-950
+    text-green-50
+    rounded-b-4xl
+    rounded-tl-4xl
+    overflow-hidden
+    shadow-sm
+    hover:shadow-md
+    will-change-transform
+    transition-all duration-200
+    active:scale-95"
+                >
+                  <span className="flex items-center px-6 py-2 text-green-50">
+                    {textsContact.cta}
+                  </span>
+                  <span
+                    className="
+            
+      flex items-center justify-center
+      px-4
+      rounded-tl-4xl
+      bg-green-50
+      text-green-950
+      -ml-px
+      transition-transform duration-200
+      group-hover:translate-x-1.5
+    "
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowTrendUp}
+                      className="w-4 h-4 lg:w-5 lg:h-5"
+                    />
+                  </span>
                 </a>
                 <p className="text-sm text-center">{textsContact.note}</p>
               </div>

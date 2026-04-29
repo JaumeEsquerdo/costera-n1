@@ -132,7 +132,7 @@ export const Header = ({ showText }) => {
               langIsOpen={langIsOpen}
               as="button"
               isoverdark
-              className={`ring-2 mt-1 rounded-full hover:scale-105 active:scale-95 will-change-transform ${langIsOpen ? "scale-105" : ""} transition-transform duration-200`}
+              className={`mt-1 border-2 rounded-l-xl rounded-b-xl hover:rotate-2 active:scale-95 will-change-transform transition-transform duration-200`}
             >
               {textsHeader.idioma}
             </NavElement>
