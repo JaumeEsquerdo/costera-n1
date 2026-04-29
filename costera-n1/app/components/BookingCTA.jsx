@@ -28,7 +28,7 @@ export const BookingCTA = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         className="flex flex-col justify-center gap-6 items-center"
       >
         <motion.h3

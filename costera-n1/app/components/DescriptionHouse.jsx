@@ -46,7 +46,7 @@ export const DescriptionHouse = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }} //amount para: 0.2, en cuanto asome un 20% del contenedor, se hace la anim.
+          viewport={{ once: false, amount: 0.4 }} //amount para: 0.2, en cuanto asome un 20% del contenedor, se hace la anim.
           className="flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-4 w-full lg:max-w-2/3 [@media(max-height:720px)]:text-sm"
         >
           <motion.h3
