@@ -36,18 +36,18 @@ export default function LanguageSwitcher() {
       className="absolute top-10 right-6 lg:right-9 flex gap-2"
     >
       <NavElement
-        as="button"
+        as="div"
         noSpacing
         onClick={() => switchLanguage("es")}
-        className={`cursor-pointer mx-0 px-0 ${locale === "es" ? "font-bold" : ""}`}
+        className={`cursor-pointer mx-0 px-0 ${locale === "es" ? "font-bold" : ""} ${locale === "es" ? "" : "hover:rotate-3"} transition-transform duration-100`}
       >
         ES
       </NavElement>
       <NavElement
-        as="button"
+        as="div"
         noSpacing
         onClick={() => switchLanguage("en")}
-        className={`cursor-pointer mx-0 px-0 ${locale === "en" ? "font-bold" : ""}`}
+        className={`cursor-pointer mx-0 px-0 ${locale === "en" ? "font-bold" : ""} ${locale === "en" ? "" : "hover:rotate-3"} transition-transform duration-100`}
       >
         EN
       </NavElement>
