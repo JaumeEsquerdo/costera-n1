@@ -6,6 +6,7 @@ import { ParallaxImage } from "./ParallaxImage";
 // import Link from "next/link";
 import { useI18n } from "../hooks/usei18n";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const itemVariants = {
   hidden: { opacity: 0 },
@@ -162,7 +163,7 @@ export const PresentationHouse = () => {
               >
                 {texts.subtitle}
               </motion.h3>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 {images.map((img) => (
                   <div
                     key={img.id}
@@ -180,6 +181,12 @@ export const PresentationHouse = () => {
                     )}
                   </div>
                 ))}
+                <Link
+                  href="/detalles"
+                  className="hover:opacity-60 transition-opacity text-green-950 duration-100 w-fit h-fit text-center"
+                >
+                  (+)
+                </Link>
               </div>
               {/* <Link
                 href={"/detalles"}
