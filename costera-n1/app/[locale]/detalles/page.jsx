@@ -81,9 +81,9 @@ export default function Detalles() {
         </div>
         <div className="flex flex-col gap-8 pt-10 pb-20">
           <h2 className="text-2xl">{textsDetalles.practicalInfoTitle}</h2>
-          <ul className="flex flex-col gap-6 list-disc">
+          <ul className="flex flex-col gap-6 ">
             {textsDetalles.practicalInfo.map((info, i) => (
-              <li key={i}>{info}</li>
+              <li key={i}>- {info}</li>
             ))}
           </ul>
         </div>
