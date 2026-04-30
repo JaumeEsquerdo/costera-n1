@@ -101,7 +101,7 @@
     "imageAlt": "Accommodation image"
   },
   "Footer": {
-    "title": "COSTERETA n1",
+    "title": { "title-1": "COSTERETA", "title-2": "n1" },
     "subtitle": "in Villajoyosa, Alicante"
   },
   "Header": {
