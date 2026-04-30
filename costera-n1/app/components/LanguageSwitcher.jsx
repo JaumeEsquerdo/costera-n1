@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
         as="div"
         noSpacing
         onClick={() => switchLanguage("es")}
-        className={`cursor-pointer mx-0 px-0 ${locale === "es" ? "font-bold" : ""} ${locale === "es" ? "" : "hover:rotate-3"} transition-transform duration-100`}
+        className={`cursor-pointer mx-0 px-0 ${locale === "es" ? "font-bold" : ""} ${locale === "es" ? "" : "hover:opacity-80"} transition-opacity duration-100`}
       >
         ES
       </NavElement>
@@ -47,7 +47,7 @@ export default function LanguageSwitcher() {
         as="div"
         noSpacing
         onClick={() => switchLanguage("en")}
-        className={`cursor-pointer mx-0 px-0 ${locale === "en" ? "font-bold" : ""} ${locale === "en" ? "" : "hover:rotate-3"} transition-transform duration-100`}
+        className={`cursor-pointer mx-0 px-0 ${locale === "en" ? "font-bold" : ""} ${locale === "en" ? "" : "hover:opacity-80"} transition-opacity duration-100`}
       >
         EN
       </NavElement>
