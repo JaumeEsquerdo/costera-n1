@@ -4,6 +4,8 @@ import Image from "next/image";
 import { SectionZero } from "./SectionZero";
 import { HorizontalSection } from "./HorizontalSection";
 import { useI18n } from "../hooks/usei18n";
+import { formatText } from "../lib/formatText";
+
 const MotionImage = motion.create(Image);
 
 /**
@@ -71,11 +73,11 @@ export const HorizontalScroll = () => {
                     </h2>
                     <div className="flex flex-col gap-4">
                       <p className="text-balance">
-                        {textsHorizontalSections.section1.p1}
+                        {formatText(textsHorizontalSections.section1.p1)}
                       </p>
                       <p className="text-balance">
                         {" "}
-                        {textsHorizontalSections.section1.p2}
+                        {formatText(textsHorizontalSections.section1.p2)}
                       </p>
                     </div>
                   </div>
@@ -131,11 +133,11 @@ export const HorizontalScroll = () => {
                     </h2>
                     <div className="flex flex-col gap-4">
                       <p className="text-balance">
-                        {textsHorizontalSections.section2.p1}
+                        {formatText(textsHorizontalSections.section2.p1)}
                       </p>
                       <p className="text-balance">
                         {" "}
-                        {textsHorizontalSections.section2.p2}
+                        {formatText(textsHorizontalSections.section2.p2)}
                       </p>
                     </div>
                   </div>
@@ -175,7 +177,7 @@ export const HorizontalScroll = () => {
                     </h2>
                     <div className="flex flex-col gap-4">
                       <p className="text-balance ">
-                        {textsHorizontalSections.section3.p1}
+                        {formatText(textsHorizontalSections.section3.p1)}
                       </p>
                     </div>
                   </div>
