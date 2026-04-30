@@ -111,7 +111,7 @@ export const SectionZero = () => {
           dangerouslySetInnerHTML={{ __html: textsSectionZero.title }}
         />
         <motion.div variants={itemVariants} className="flex items-center gap-2">
-          <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
+          <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center font-subtitle">
             {textsSectionZero.subtitle}{" "}
           </p>
           <FontAwesomeIcon
