@@ -82,7 +82,7 @@ export const HorizontalScroll = () => {
                     </div>
                   </div>
                 </div>
-                <motion.div className="w-70 h-100 overflow-hidden lg:w-90 lg:h-140 relative [@media(max-height:720px)]:hidden">
+                <motion.div className="w-[90%] h-[42vh] overflow-hidden lg:w-90 lg:h-140 relative [@media(max-height:720px)]:hidden">
                   <MotionImage
                     src="/imgs-sections/casas-colores-2.webp"
                     fill
@@ -142,7 +142,7 @@ export const HorizontalScroll = () => {
                     </div>
                   </div>
                 </div>
-                <motion.div className=" w-2/3 h-[45vh] overflow-hidden lg:w-1/2 lg:h-[70vh] relative [@media(max-height:720px)]:hidden">
+                <motion.div className=" w-[90%] h-[45vh] overflow-hidden lg:w-1/2 lg:h-[70vh] relative [@media(max-height:720px)]:hidden">
                   <MotionImage
                     src="/imgs-sections/laVila-5.webp"
                     fill
@@ -183,7 +183,7 @@ export const HorizontalScroll = () => {
                   </div>
                 </div>
 
-                <motion.div className=" w-2/3 h-[40vh] overflow-hidden lg:w-1/2 lg:h-[60vh] relative [@media(max-height:720px)]:hidden">
+                <motion.div className=" w-[90%] h-[40vh] overflow-hidden lg:w-1/2 lg:h-[60vh] relative [@media(max-height:720px)]:hidden">
                   <MotionImage
                     src="/imgs-sections/fideua-posit.webp"
                     style={{ x: xImage, scale: 1.2 }}
