@@ -37,8 +37,8 @@ export default function Contacto() {
               <div className="flex flex-col w-full items-center justify-center gap-6 lg:gap-8 lg:w-fit">
                 <a
                   className="   group cursor-pointer inline-flex items-stretch
-    border-2 border-green-950 
-    bg-green-950
+    border-2 border-green-950/40
+    bg-green-950/80
     text-green-50
     rounded-b-4xl
     rounded-tl-4xl
@@ -59,7 +59,7 @@ export default function Contacto() {
       px-4
       rounded-tl-4xl
       bg-green-50
-      text-green-950
+      text-green-950/80
       -ml-px
       transition-transform duration-200
       group-hover:translate-x-1.5

@@ -48,8 +48,8 @@ export const BookingCTA = () => {
           variants={itemsVariants}
           className="
     group cursor-pointer inline-flex items-stretch
-    border-2 border-green-950 
-    bg-green-950
+    border-2 border-green-950/40
+    bg-green-950/80
     text-green-50
     rounded-b-4xl
     rounded-tl-4xl
@@ -72,7 +72,7 @@ export const BookingCTA = () => {
       px-4
       rounded-tl-4xl
       bg-green-50
-      text-green-950
+      text-green-950/80
       -ml-px
       transition-transform duration-200
       group-hover:translate-x-1.5
