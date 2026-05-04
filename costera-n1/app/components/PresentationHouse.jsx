@@ -112,10 +112,7 @@ export const PresentationHouse = () => {
   // const lg = useTransform(scrollYProgress, [Math.min(0.2 * i), 1], [0, -250]);
 
   return (
-    <div
-      ref={ref}
-      className="relative flex flex-col justify-between h-[400vh] pt-8 "
-    >
+    <div ref={ref} className="relative flex flex-col justify-between h-[400vh]">
       <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
         {images.map((img, i) => (
           <ParallaxImage

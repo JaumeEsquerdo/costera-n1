@@ -89,6 +89,11 @@ export async function generateMetadata({ params }) {
       icon: "/icon.svg",
       apple: "/apple-icon.png",
     },
+    other: {
+      rel: "preload",
+      as: "image",
+      href: "/bg-pattern.webp",
+    },
   };
 }
 

@@ -68,6 +68,7 @@ export default function Home() {
         {/* Header */}
         {/* Hero */}
         <div className="h-[300vh] relative">
+          <div className="absolute inset-0 z-0 opacity-[0.5] pointer-events-none bg-[url('/bg-noise.webp')] bg-repeat" />
           <motion.header className="h-screen sticky top-0 flex flex-col justify-between items-center overflow-x-hidden">
             <AnimatePresence>
               {/* Texto solo visible al inicio */}
