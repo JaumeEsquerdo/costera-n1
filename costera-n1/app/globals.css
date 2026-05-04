@@ -26,6 +26,19 @@ body {
   --color-casas-red: #e77878;
   --color-casas-blue: #6fa9cf;
   --color-casas-orange: #e7a05a;
+  --animate-buble: buble 1s infinite ease-in-out;
+
+  @keyframes buble {
+    0% {
+      top: 55;
+    }
+    50% {
+      top: 45;
+    }
+    100% {
+      top: 55;
+    }
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {

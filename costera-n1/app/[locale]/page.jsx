@@ -68,7 +68,7 @@ export default function Home() {
         {/* Header */}
         {/* Hero */}
         <div className="h-[300vh] relative">
-          <div className="absolute inset-0 z-0 opacity-[0.5] pointer-events-none bg-[url('/bg-noise.webp')] bg-repeat" />
+          <div className="absolute inset-0 z-0 opacity-[0.9] pointer-events-none bg-[url('/bg-noise.webp')] bg-repeat" />
           <motion.header className="h-screen sticky top-0 flex flex-col justify-between items-center overflow-x-hidden">
             <AnimatePresence>
               {/* Texto solo visible al inicio */}
@@ -97,7 +97,7 @@ export default function Home() {
             >
               <motion.div
                 style={{ width, height }}
-                className="relative overflow-hidden"
+                className={`relative overflow-hidden saturate-150`}
                 data-is-dark="true"
               >
                 <Image
@@ -113,19 +113,19 @@ export default function Home() {
             <AnimatePresence>
               {showText && (
                 <motion.div
-                  className="fixed bottom-4 lg:bottom-10 flex flex-col items-center justify-center gap-2 lg:gap-6 max-w-[90%]"
+                  className="fixed bottom-12 lg:bottom-20 flex flex-col items-center justify-center gap-2 lg:gap-6 max-w-[90%]"
                   variants={headerVariants}
                   transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
                   initial="init"
                   animate="open"
                   exit={showText ? "closed" : "open"}
                 >
-                  <h2 className="text-sm lg:text-lg text-center">
+                  <h2 className="relative text-sm lg:text-lg text-center">
                     {textsHero.location_info}
                   </h2>
                   <FontAwesomeIcon
                     icon={faAngleDown}
-                    className="text-3xl text-green-950"
+                    className="text-3xl text-green-950 left-1/2 -translate-x-1/2 absolute animate-buble transition-all duration-100"
                   />
                 </motion.div>
               )}
