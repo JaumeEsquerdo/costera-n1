@@ -63,12 +63,11 @@ export default function Home() {
 
   return (
     <>
-      <Header showText={showText} />
       <main className="min-h-screen relative flex flex-col">
         {/* Header */}
+        <Header showText={showText} />
         {/* Hero */}
         <div className="h-[300vh] relative">
-          <div className="absolute inset-0 z-0 opacity-[0.9] pointer-events-none bg-[url('/bg-noise.webp')] bg-repeat" />
           <motion.header className="h-screen sticky top-0 flex flex-col justify-between items-center overflow-x-hidden">
             <AnimatePresence>
               {/* Texto solo visible al inicio */}
