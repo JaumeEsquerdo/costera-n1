@@ -4,6 +4,7 @@ import {
   motion,
   useScroll,
   useTransform,
+  useSpring,
 } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -18,6 +19,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import { useI18n } from "../hooks/usei18n";
+const MotionImage = motion.create(Image);
 
 export default function Home() {
   const { t, locale } = useI18n();
@@ -55,9 +57,16 @@ export default function Home() {
 
   const maxScroll = windowSize.height * 2; // hero ocupa 2 veces la altura del viewport
   const progress = useTransform(scrollY, [0, maxScroll], [0, 1]);
+  //FILTRO DE SUAVIZADO
+  const smoothProgress = useSpring(progress, {
+    damping: 25, // Resistencia al movimiento
+    stiffness: 120, // Fuerza de atracción
+  });
   // Animar width/height
-  const width = useTransform(progress, [0, 1], [200, windowSize.width]);
-  const height = useTransform(progress, [0, 1], [400, windowSize.height]);
+  const width = useTransform(smoothProgress, [0, 1], [200, windowSize.width]);
+  const height = useTransform(smoothProgress, [0, 1], [400, windowSize.height]);
+  const moveY = useTransform(smoothProgress, [0, 1], ["-0%", "-19%"]);
+  const scaleImgHero = useTransform(smoothProgress, [0, 1], [1.1, 1.5]);
   // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   // const borderRadius = useTransform(progress, [0, 1], ["0px", "0px"]);
 
@@ -96,14 +105,18 @@ export default function Home() {
             >
               <motion.div
                 style={{ width, height }}
-                className={`relative overflow-hidden saturate-150`}
+                className={`relative overflow-hidden saturate-120`}
                 data-is-dark="true"
               >
-                <Image
+                <MotionImage
                   src="/imgs-casa/puerta-costera-2.png"
                   fill
                   sizes="100vw"
                   priority
+                  style={{
+                    y: moveY, // Efecto parallax interno
+                    scale: scaleImgHero,
+                  }}
                   alt={textsHero.image_alt}
                   className="object-cover object-center"
                 />
