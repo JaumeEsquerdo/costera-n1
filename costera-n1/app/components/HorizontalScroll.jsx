@@ -57,7 +57,7 @@ export const HorizontalScroll = () => {
               <>
                 <div
                   aria-label="hidden "
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-blue  bg-casas-blue z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-blue  bg-casas-blue z-10 rounded-l-full shadow-2xl lg:w-12 hidden lg:inline"
                 />
                 <div
                   aria-label="hidden"
@@ -117,7 +117,7 @@ export const HorizontalScroll = () => {
               <>
                 <div
                   aria-label="hidden"
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-orange  bg-casas-orange z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-orange  bg-casas-orange z-10 rounded-l-full shadow-2xl lg:w-12 hidden lg:inline"
                 />
                 <div
                   aria-label="hidden"
@@ -165,7 +165,7 @@ export const HorizontalScroll = () => {
               <>
                 <div
                   aria-label="hidden "
-                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-red  bg-casas-red z-10 rounded-l-2xl shadow-2xl lg:w-12 hidden lg:inline"
+                  className="absolute inset-y-0 left-0 w-8 -translate-x-full ring-1 ring-casas-red  bg-casas-red z-10 rounded-l-full shadow-2xl lg:w-12 hidden lg:inline"
                 />
                 <div className=" flex flex-col justify-center gap-4 md:gap-10 px-4 md:px-10  lg:gap-40 lg:px-20 lg:w-1/2">
                   <h3 className="text-lg font-black text-white">
