@@ -97,6 +97,7 @@ export default function Detalles() {
             position: "relative",
             width: "100%",
             maxWidth: "660px",
+            maxHeight: "400px",
 
             aspectRatio: "4 / 3",
           }}
