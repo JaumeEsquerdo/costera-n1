@@ -23,7 +23,7 @@ export default function Contacto() {
           <div className="w-full flex flex-col items-start justify-end">
             <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-200 lg:w-full lg:max-w-160">
               <Image
-                src="/hotel-fachada.webp"
+                src="/imgs-casa/img-piso-17.webp"
                 fill
                 priority
                 alt={textsContact.imageAlt}
@@ -75,11 +75,11 @@ export default function Contacto() {
               </div>
               <div className="hidden lg:inline relative  lg:w-65 lg:h-100 overflow-hidden">
                 <Image
-                  src="/hotel-fachada.webp"
+                  src="/imgs-casa/img-piso-1.webp"
                   fill
                   priority
                   alt={textsContact.imageAlt}
-                  className="object-cover"
+                  className="object-cover object-bottom"
                   sizes="(max-width: 768px) 600px, 1200px"
                 />
               </div>
