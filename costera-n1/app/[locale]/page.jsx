@@ -65,8 +65,8 @@ export default function Home() {
   // Animar width/height
   const width = useTransform(smoothProgress, [0, 1], [200, windowSize.width]);
   const height = useTransform(smoothProgress, [0, 1], [400, windowSize.height]);
-  const moveY = useTransform(smoothProgress, [0, 1], ["-0%", "-19%"]);
-  const scaleImgHero = useTransform(smoothProgress, [0, 1], [1.1, 1.5]);
+  const moveY = useTransform(smoothProgress, [0, 1], ["10%", "-0%"]);
+  const scaleImgHero = useTransform(smoothProgress, [0, 1], [1.6, 1]);
   // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   // const borderRadius = useTransform(progress, [0, 1], ["0px", "0px"]);
 
@@ -109,7 +109,7 @@ export default function Home() {
                 data-is-dark="true"
               >
                 <MotionImage
-                  src="/imgs-casa/puerta-costera-2.png"
+                  src="/imgs-casa/entrada-puerta.webp"
                   fill
                   sizes="100vw"
                   priority
