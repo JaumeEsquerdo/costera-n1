@@ -86,7 +86,7 @@
     "description": "Para garantizarte una atención profesional y segura, hemos delegado la gestión de consultas y reservas en una agencia especializada. Si quieres conocer más detalles sobre el alojamiento o confirmar disponibilidad, haz clic en el siguiente enlace para acceder a su portal oficial.",
     "cta": "Ver disponibilidad y consultas",
     "note": "(serás redirigido al portal oficial de nuestra agencia afiliada)",
-    "imageAlt": "Imagen en página de contacto"
+    "imageAlt": "Imagenes de las vistas del piso"
   },
   "Details": {
     "title": "Detalles",
@@ -127,7 +127,7 @@
         "description": "Wi-Fi de alta velocidad incluido, ideal si necesitas teletrabajar entre chapuzón y chapuzón."
       }
     ],
-    "imageAlt": "Imagen del alojamiento"
+    "imageAlt": "Imagen del interior del piso"
   },
   "Footer": {
     "title": { "title-1": "COSTERETA", "title-2": "n1" },
