@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
   const siteDescription = t.Home.hero.subtitle;
 
   return {
-    // metadataBase: new URL("https://costeretan1.com"),
+    // metadataBase: new URL("https://costera-n1.vercel.app/"),
     title: siteTitle,
     description: siteDescription,
     keywords:
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
             "vacaciones Costa Blanca",
           ],
     alternates: {
-      canonical: `https://tudominio.com/${locale}`,
+      canonical: `https://costera-n1.vercel.app/${locale}`,
       languages: {
         "es-ES": "/es",
         "en-US": "/en",
