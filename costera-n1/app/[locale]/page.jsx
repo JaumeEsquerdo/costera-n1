@@ -106,7 +106,7 @@ export default function Home() {
             >
               <motion.div
                 style={{ width, height }}
-                className={`relative overflow-hidden saturate-120`}
+                className={`relative overflow-hidden saturate-120 w-50 h-100`}
                 data-is-dark="true"
               >
                 <MotionImage
@@ -114,6 +114,8 @@ export default function Home() {
                   fill
                   sizes="100vw"
                   priority
+                  quality={70}
+                  fetchPriority="high"
                   placeholder="blur"
                   style={{
                     y: moveY, // Efecto parallax interno
