@@ -26,12 +26,12 @@ export default function Detalles() {
             ))}
           </ul>
         </div>
-        <div className="pt:8 lg:py-8 flex flex-col-reverse gap-8 lg:max-h-200 justify-between lg:h-100 lg:flex-row">
+        <div className="pt:8 lg:py-0 flex flex-col-reverse gap-8 lg:max-h-200 justify-between lg:h-100 lg:flex-row">
           <div className="flex flex-col gap-8 lg:max-w-1/2">
             <p>{textsDetalles.description}</p>
           </div>
 
-          <div className="relative w-90 max-w-full h-60 overflow-hidden lg:h-full lg:max-h-120 lg:w-full lg:max-w-full">
+          <div className="relative w-90 max-w-full h-60 overflow-hidden lg:h-full lg:max-h-160 lg:w-full lg:max-w-[50%]">
             <Image
               src={imgPortadaDetalles}
               fill
@@ -53,7 +53,7 @@ export default function Detalles() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-60 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-220">
+          <div className="relative w-60 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[60%] lg:max-w-340">
             <Image
               src={imgComedorDetalles}
               fill
