@@ -12,10 +12,13 @@
       "viewMore": "Ver más detalles",
       "mainImageAlt": "Imagen de presentación del piso ampliado",
       "imageAlts": {
-        "fachada": "Fachada",
-        "vista": "Vista",
-        "detalle": "Detalle",
-        "casco": "Casco"
+        "casco": "Calle del casco antiguo",
+        "cocina": "Cocina del piso",
+        "decoracion": "Decoración del piso",
+        "habitacion-compartida": "Habitación compartida",
+        "vistas": "Vistas del piso",
+        "habitacion-principal": "Habitación principal",
+        "vistas-aseo": "Vistas desde el aseo"
       }
     },
     "DescriptionHouse": {
@@ -99,12 +102,30 @@
     "locationDescription": "La ubicación en la Costera garantiza una experiencia inmersiva. Es una zona peatonal y vibrante durante el día, pero tranquila y recogida al caer la noche, ideal para un descanso real.",
     "practicalInfoTitle": "Información práctica para tu estancia",
     "practicalInfo": [
-      "Acceso Peatonal: El apartamento se encuentra en una calle histórica peatonal. El acceso final es a pie, disfrutando del encanto del casco antiguo.",
-      "Parking Público: Recomendamos estacionar en el Parking del Río (zona baja) o en el Parking del Centro (zona alta). Ambos se encuentran a unos 5-7 minutos caminando de la casa.",
-      "Check-in Autónomo: Gestión ágil para que entres a tu ritmo.",
-      "Equipamiento Completo: Cocina con menaje, cafetera, microondas y kit de limpieza básico.",
-      "Climatización: Aire acondicionado y calefacción para garantizar tu confort en cualquier época del año.",
-      "Conectividad: Wi-Fi de alta velocidad incluido, ideal si necesitas teletrabajar entre chapuzón y chapuzón."
+      {
+        "title": "Acceso Peatonal",
+        "description": "El apartamento se encuentra en una calle histórica peatonal. El acceso final es a pie, disfrutando del encanto del casco antiguo."
+      },
+      {
+        "title": "Parking Público",
+        "description": "Recomendamos estacionar en el Parking del Río (zona baja) o en el Parking del Centro (zona alta). Ambos se encuentran a unos 5-7 minutos caminando de la casa."
+      },
+      {
+        "title": "Check-in Autónomo",
+        "description": "Gestión ágil para que entres a tu ritmo."
+      },
+      {
+        "title": "Equipamiento Completo",
+        "description": "Cocina con menaje, cafetera, microondas y kit de limpieza básico."
+      },
+      {
+        "title": "Climatización",
+        "description": "Aire acondicionado y calefacción para garantizar tu confort en cualquier época del año."
+      },
+      {
+        "title": "Conectividad",
+        "description": "Wi-Fi de alta velocidad incluido, ideal si necesitas teletrabajar entre chapuzón y chapuzón."
+      }
     ],
     "imageAlt": "Imagen del alojamiento"
   },

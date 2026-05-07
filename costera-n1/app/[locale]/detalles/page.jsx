@@ -83,7 +83,10 @@ export default function Detalles() {
           <h2 className="text-2xl">{textsDetalles.practicalInfoTitle}</h2>
           <ul className="flex flex-col gap-6 ">
             {textsDetalles.practicalInfo.map((info, i) => (
-              <li key={i}>- {info}</li>
+              <li key={i}>
+                - <span className="font-bold">{info.title}: </span>
+                {info.description}
+              </li>
             ))}
           </ul>
         </div>

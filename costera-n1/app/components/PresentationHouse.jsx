@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { delay, easeOut, useScroll } from "framer-motion";
+import { easeOut, useScroll } from "framer-motion";
 import { ParallaxImage } from "./ParallaxImage";
 // import Link from "next/link";
 import { useI18n } from "../hooks/usei18n";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Fragment } from "react";
 
 const itemVariants = {
   hidden: { opacity: 0 },
@@ -36,7 +37,10 @@ export const PresentationHouse = () => {
   const texts = t.Home.PresentationHouse;
 
   const ref = useRef(null);
-  const [imageRendered, setImageRendered] = useState("/hotel-fachada.webp");
+  /* primera img renderizada */
+  const [imageRendered, setImageRendered] = useState(
+    "/imgs-casa/img-piso-8.webp",
+  );
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -50,56 +54,56 @@ export const PresentationHouse = () => {
   const images = [
     {
       id: 1,
-      src: "/hotel-fachada.webp",
-      alt: texts.imageAlts.fachada,
+      src: "/imgs-casa/img-piso-8.webp",
+      alt: texts.imageAlts.decoracion,
 
       top: "29%",
       left: "20%",
     },
     {
       id: 2,
-      src: "/hotel-fachada.webp",
-      alt: texts.imageAlts.vista,
+      src: "/imgs-casa/img-piso-2.webp",
+      alt: texts.imageAlts.vistas,
 
       top: "10%",
       left: "55%",
     },
     {
       id: 3,
-      src: "/hotel-fachada.webp",
-      alt: texts.imageAlts.detalle,
+      src: "/imgs-casa/img-piso-3.webp",
+      alt: texts.imageAlts.decoracion,
 
       top: "40%",
       left: "10%",
     },
     {
       id: 4,
-      src: "/hotel-fachada.webp",
-      alt: texts.imageAlts.casco,
+      src: "/imgs-casa/img-piso-20.webp",
+      alt: texts.imageAlts.cocina,
 
       top: "30%",
       left: "70%",
     },
     {
       id: 5,
-      src: "/hotel-fachada.webp",
-      alt: texts.imageAlts.vista,
+      src: "/imgs-casa/img-piso-5.webp",
+      alt: texts.imageAlts.vistas,
 
       top: "10%",
       left: "55%",
     },
     {
       id: 6,
-      src: "/hotel-fachada.webp",
-      alt: texts.imageAlts.detalle,
+      src: "/imgs-casa/img-piso-6.webp",
+      alt: texts.imageAlts["habitacion-principal"],
 
       top: "40%",
       left: "10%",
     },
     {
       id: 7,
-      src: "/hotel-fachada.webp",
-      alt: texts.imageAlts.casco,
+      src: "/imgs-casa/img-piso-19.webp",
+      alt: texts.imageAlts["vistas-aseo"],
 
       top: "30%",
       left: "70%",
@@ -115,12 +119,15 @@ export const PresentationHouse = () => {
     <div ref={ref} className="relative flex flex-col justify-between h-[400vh]">
       <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
         {images.map((img, i) => (
-          <ParallaxImage
-            key={img.id}
-            img={img}
-            i={i}
-            scrollYProgress={scrollYProgress}
-          />
+          <Fragment key={img.id}>
+            {img.src !== imageRendered && (
+              <ParallaxImage
+                img={img}
+                i={i}
+                scrollYProgress={scrollYProgress}
+              />
+            )}
+          </Fragment>
         ))}
       </div>
 
@@ -174,7 +181,7 @@ export const PresentationHouse = () => {
                       className={`object-cover object-center  hover:opacity-90 `}
                     />
                     {img.src === imageRendered && (
-                      <div className="absolute inset-0 bg-green-700/60 z-10" />
+                      <div className="absolute inset-0 bg-green-900/60 z-10" />
                     )}
                   </div>
                 ))}
