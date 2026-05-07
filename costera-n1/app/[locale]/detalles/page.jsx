@@ -63,7 +63,7 @@ export default function Detalles() {
             <Image
               src="/imgs-casa/img-piso-20.webp"
               fill
-              priority
+              loading="lazy"
               alt={textsDetalles.imageAlt}
               className="object-cover"
             />
@@ -72,7 +72,7 @@ export default function Detalles() {
             <Image
               src="/imgs-casa/img-piso-15.webp"
               fill
-              priority
+              loading="lazy"
               alt={textsDetalles.imageAlt}
               className="object-cover"
             />
