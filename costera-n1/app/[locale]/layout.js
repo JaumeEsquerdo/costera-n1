@@ -8,11 +8,13 @@ const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
 });
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const playfair = Playfair_Display({
@@ -20,6 +22,7 @@ const playfair = Playfair_Display({
   style: ["italic"], // Importante para ese look elegante
   weight: "400",
   variable: "--font-playfair",
+  display: "swap",
 });
 
 /**
