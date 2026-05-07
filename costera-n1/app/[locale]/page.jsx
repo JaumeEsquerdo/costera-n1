@@ -17,6 +17,7 @@ import { BookingCTA } from "../components/BookingCTA";
 import { Footer } from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import imgPortada from "@/public/imgs-casa/entrada-puerta.webp";
 
 import { useI18n } from "../hooks/usei18n";
 const MotionImage = motion.create(Image);
@@ -109,10 +110,11 @@ export default function Home() {
                 data-is-dark="true"
               >
                 <MotionImage
-                  src="/imgs-casa/entrada-puerta.webp"
+                  src={imgPortada}
                   fill
                   sizes="100vw"
                   priority
+                  placeholder="blur"
                   style={{
                     y: moveY, // Efecto parallax interno
                     scale: scaleImgHero,
