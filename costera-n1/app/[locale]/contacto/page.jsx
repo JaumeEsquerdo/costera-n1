@@ -5,6 +5,8 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
 import { useI18n } from "@/app/hooks/usei18n";
+import vistasMar from "@/public/imgs-casa/img-piso-17.webp";
+import vistasCalle from "@/public/imgs-casa/img-piso-1.webp";
 
 export default function Contacto() {
   const { t } = useI18n();
@@ -23,7 +25,8 @@ export default function Contacto() {
           <div className="w-full flex flex-col items-start justify-end">
             <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-200 lg:w-full lg:max-w-160">
               <Image
-                src="/imgs-casa/img-piso-17.webp"
+                src={vistasMar}
+                placeholder="blur"
                 fill
                 priority
                 alt={textsContact.imageAlt}
@@ -75,7 +78,8 @@ export default function Contacto() {
               </div>
               <div className="hidden lg:inline relative  lg:w-65 lg:h-100 overflow-hidden">
                 <Image
-                  src="/imgs-casa/img-piso-1.webp"
+                  src={vistasCalle}
+                  placeholder="blur"
                   fill
                   priority
                   alt={textsContact.imageAlt}
