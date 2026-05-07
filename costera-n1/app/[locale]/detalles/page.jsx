@@ -3,6 +3,9 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import Image from "next/image";
 import { useI18n } from "@/app/hooks/usei18n";
+import imgPortadaDetalles from "@/public/imgs-casa/img-piso-10.webp";
+import imgHabitacionDetalles from "@/public/imgs-casa/img-piso-3.webp";
+import imgComedorDetalles from "@/public/imgs-casa/img-piso-14.webp";
 
 export default function Detalles() {
   const { t } = useI18n();
@@ -28,10 +31,11 @@ export default function Detalles() {
             <p>{textsDetalles.description}</p>
           </div>
 
-          <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-100 lg:w-full lg:max-w-160">
+          <div className="relative w-90 max-w-full h-60 overflow-hidden lg:h-full lg:max-h-120 lg:w-full lg:max-w-full">
             <Image
-              src="/imgs-casa/img-piso-10.webp"
+              src={imgPortadaDetalles}
               fill
+              placeholder="blur"
               priority
               alt={textsDetalles.imageAlt}
               className="object-cover"
@@ -39,19 +43,21 @@ export default function Detalles() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-120 max-w-[90%] h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-full lg:max-w-140">
+          <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-full lg:max-w-140">
             <Image
-              src="/imgs-casa/img-piso-3.webp"
+              src={imgHabitacionDetalles}
               fill
+              placeholder="blur"
               priority
               alt={textsDetalles.imageAlt}
               className="object-cover"
             />
           </div>
-          <div className="relative w-60 max-w-[90%] h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-220">
+          <div className="relative w-60 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-220">
             <Image
-              src="/imgs-casa/img-piso-14.webp"
+              src={imgComedorDetalles}
               fill
+              placeholder="blur"
               priority
               alt={textsDetalles.imageAlt}
               className="object-cover"
@@ -59,7 +65,7 @@ export default function Detalles() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-80 max-w-[90%] h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-full lg:max-w-140">
+          <div className="relative w-80 max-w-full h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-full lg:max-w-140">
             <Image
               src="/imgs-casa/img-piso-20.webp"
               fill
@@ -68,7 +74,7 @@ export default function Detalles() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-40 max-w-[90%] h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-120">
+          <div className="relative w-40 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-120">
             <Image
               src="/imgs-casa/img-piso-15.webp"
               fill
