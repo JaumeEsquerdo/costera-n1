@@ -23,7 +23,7 @@ export default function Contacto() {
         </div>
         <div className="py-8 flex flex-col gap-12 lg:flex-row">
           <div className="w-full flex flex-col items-start justify-end">
-            <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-200 lg:w-full lg:max-w-160">
+            <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-200 lg:w-full lg:max-w-160 rounded-2xl">
               <Image
                 src={vistasMar}
                 placeholder="blur"
@@ -76,7 +76,7 @@ export default function Contacto() {
                 </a>
                 <p className="text-sm text-center">{textsContact.note}</p>
               </div>
-              <div className="hidden lg:inline relative  lg:w-65 lg:h-100 overflow-hidden">
+              <div className="hidden lg:inline relative  lg:w-65 lg:h-100 overflow-hidden rounded-2xl">
                 <Image
                   src={vistasCalle}
                   placeholder="blur"

@@ -106,7 +106,7 @@ export default function Home() {
             >
               <motion.div
                 style={{ width, height }}
-                className={`relative overflow-hidden saturate-120 w-50 h-100`}
+                className={`relative overflow-hidden saturate-120 w-50 h-100 rounded-2xl`}
                 data-is-dark="true"
               >
                 <MotionImage
@@ -122,7 +122,7 @@ export default function Home() {
                     scale: scaleImgHero,
                   }}
                   alt={textsHero.image_alt}
-                  className="object-cover object-center"
+                  className="object-cover object-center "
                 />
               </motion.div>
             </div>

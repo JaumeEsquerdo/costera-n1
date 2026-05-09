@@ -31,7 +31,7 @@ export default function Detalles() {
             <p>{textsDetalles.description}</p>
           </div>
 
-          <div className="relative w-90 max-w-full h-60 overflow-hidden lg:h-full lg:max-h-160 lg:w-full lg:max-w-[50%]">
+          <div className="relative w-90 max-w-full h-60 overflow-hidden lg:h-full lg:max-h-160 lg:w-full lg:max-w-[50%] rounded-2xl">
             <Image
               src={imgPortadaDetalles}
               fill
@@ -43,7 +43,7 @@ export default function Detalles() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-[40%] lg:max-w-160">
+          <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-[40%] lg:max-w-160 rounded-2xl">
             <Image
               src={imgHabitacionDetalles}
               fill
@@ -53,7 +53,7 @@ export default function Detalles() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-60 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[60%] lg:max-w-340">
+          <div className="relative w-60 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[60%] lg:max-w-340 rounded-2xl">
             <Image
               src={imgComedorDetalles}
               fill
@@ -65,7 +65,7 @@ export default function Detalles() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-80 max-w-full h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-full lg:max-w-140">
+          <div className="relative w-80 max-w-full h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-full lg:max-w-140 rounded-2xl">
             <Image
               src="/imgs-casa/img-piso-20.webp"
               fill
@@ -74,7 +74,7 @@ export default function Detalles() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-40 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-120">
+          <div className="relative w-40 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-120 rounded-2xl">
             <Image
               src="/imgs-casa/img-piso-15.webp"
               fill

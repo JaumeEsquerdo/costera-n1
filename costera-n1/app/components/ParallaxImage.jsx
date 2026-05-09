@@ -43,7 +43,7 @@ export const ParallaxImage = ({ img, i, scrollYProgress }) => {
         opacity: opacity,
       }}
       // El contenedor corta la imagen que sobra
-      className="absolute w-40 h-60 md:w-52 md:h-80 overflow-hidden shadow-xl"
+      className="absolute w-40 h-60 md:w-52 md:h-80 overflow-hidden shadow-xl rounded-2xl"
     >
       <MotionImage
         src={img.src}

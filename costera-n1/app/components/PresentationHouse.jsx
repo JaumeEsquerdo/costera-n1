@@ -200,7 +200,7 @@ export const PresentationHouse = () => {
                 {texts.viewmore}
               </Link> */}
             </div>
-            <div className="relative overflow-hidden max-w-[80vw] lg:max-w-[40vw] w-260 aspect-video">
+            <div className="relative overflow-hidden max-w-[80vw] lg:max-w-[40vw] rounded-2xl w-260 aspect-video">
               <Image
                 src={imageRendered}
                 fill
