@@ -13,7 +13,7 @@ export default function Detalles() {
   return (
     <>
       <Header />
-      <main className="flex flex-col min-h-screen w-[90%] gap-8 lg:gap-14 max-w-400 mx-auto ">
+      <main className="flex flex-col min-h-screen w-[90%] gap-8 lg:gap-12 max-w-400 mx-auto ">
         <div className="pt-40 lg:w-full flex flex-col lg:flex-row h-[50vh] lg:h-[40vh] justify-between lg:pt-0 gap-8 lg:items-end">
           <h1 className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start">
             {textsDetalles.title}
