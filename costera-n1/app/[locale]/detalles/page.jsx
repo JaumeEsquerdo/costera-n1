@@ -6,10 +6,35 @@ import { useI18n } from "@/app/hooks/usei18n";
 import imgPortadaDetalles from "@/public/imgs-casa/img-piso-10.webp";
 import imgHabitacionDetalles from "@/public/imgs-casa/img-piso-3.webp";
 import imgComedorDetalles from "@/public/imgs-casa/img-piso-14.webp";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+
+const curvePath = "M0,320 C480,0 960,0 1440,320 Z";
+const flatPath = "M0,320 C480,320 960,320 1440,320 Z";
 
 export default function Detalles() {
   const { t } = useI18n();
   const textsDetalles = t.Details;
+  const mapRef = useRef(null);
+
+  const { scrollYProgress: scrollWaveMap } = useScroll({
+    target: mapRef,
+    offset: ["start end", "start start"],
+  });
+
+  const smoothEntrada = useSpring(scrollWaveMap, {
+    stiffness: 40, // rigidez
+    damping: 40, // amortiguación (evita que rebote)
+    restDelta: 0.001,
+  });
+
+  /* PARA ANIM DE LA OLA */
+  const pathAnim = useTransform(
+    smoothEntrada,
+    [0, 0.45], // Rango del scroll (de 0% a 100% de la entrada)
+    [flatPath, curvePath], // Rango de formas
+  );
+
   return (
     <>
       <Header />
@@ -85,7 +110,7 @@ export default function Detalles() {
           </div>
           <p>{textsDetalles.locationDescription}</p>
         </div>
-        <div className="flex flex-col gap-8 pt-10 pb-20">
+        <div className="flex flex-col gap-8 pt-10 pb-20 lg:pb-50">
           <h2 className="text-2xl">{textsDetalles.practicalInfoTitle}</h2>
           <ul className="flex flex-col gap-6 ">
             {textsDetalles.practicalInfo.map((info, i) => (
@@ -98,9 +123,31 @@ export default function Detalles() {
         </div>
       </main>
       <section
-        className="bg-green-950 h-[70vh] lg:[80vh] flex justify-center items-center"
+        ref={mapRef}
+        className="relative bg-green-950 h-[70vh] lg:[80vh] flex justify-center items-center"
         data-is-dark="true"
       >
+        {/* FALSO TECHO ANIMADO */}
+        <motion.div
+          aria-label="hidden"
+          style={{ y: "-100%" }}
+          className="hidden absolute top-0 left-0 w-full z-0 md:flex flex-col"
+        >
+          <svg
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+            className="w-full h-42 fill-green-950"
+          >
+            <motion.path
+              data-is-dark="true"
+              /* M0,320: Empieza abajo a la izquierda
+                C480,0 960,0 1440,320: Dibuja la curva hacia arriba (el techo de la ola)
+                Z: Cierra la forma volviendo al inicio por la base
+              */
+              d={pathAnim}
+            />
+          </svg>
+        </motion.div>
         <div
           style={{
             position: "relative",

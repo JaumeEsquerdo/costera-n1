@@ -68,7 +68,7 @@ export const HorizontalScroll = () => {
       <motion.div
         aria-label="hidden"
         style={{ y: "-100%" }}
-        className="hidden absolute top-0 left-0 w-[99vw] z-0 md:flex flex-col"
+        className="hidden absolute top-0 left-0 w-full z-0 md:flex flex-col"
       >
         <svg
           viewBox="0 0 1440 320"
