@@ -43,7 +43,7 @@ export default function Detalles() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-[40%] lg:max-w-160 rounded-2xl">
+          <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[40%] lg:max-w-160 rounded-2xl">
             <Image
               src={imgHabitacionDetalles}
               fill
@@ -65,7 +65,7 @@ export default function Detalles() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-80 max-w-full h-60 overflow-hidden lg:h-100 lg:max-h-200 lg:w-full lg:max-w-140 rounded-2xl">
+          <div className="relative w-80 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-140 rounded-2xl">
             <Image
               src="/imgs-casa/img-piso-20.webp"
               fill
