@@ -29,28 +29,28 @@ export const SectionZero = () => {
 
   const textsSectionZero = t.Home.HorizontalScroll.sectionZero;
 
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress: scrollGlobal } = useScroll({
     target: containerRef,
-    // "Comienza cuando el FINAL de la sección toca el FINAL de la pantalla"
+    // "Comienza cuando el INICIO de la sección toca el FINAL de la pantalla"
     // "Termina cuando el FINAL de la sección toca el INICIO de la pantalla"
     offset: ["start end", "end start"],
   });
 
   // SPRING: hace que el progreso no sea "seco".
   // Si el scroll salta, el spring lo suaviza.
-  const smoothProgress = useSpring(scrollYProgress, {
+  const smoothProgress = useSpring(scrollGlobal, {
     stiffness: 40, // rigidez
     damping: 40, // amortiguación (evita que rebote)
     restDelta: 0.001,
   });
 
   const xFrame = useTransform(smoothProgress, [0, 1], ["-60vw", "80vw"]);
-  const xImage = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
+  const xImage = useTransform(smoothProgress, [0, 1], ["-15%", "15%"]);
 
   return (
     <section
       ref={containerRef}
-      className="w-screen h-screen shrink-0 flex flex-col justify-center items-center text-white"
+      className="relative w-screen h-screen shrink-0 flex flex-col justify-center items-center text-white"
       data-is-dark="true"
     >
       <motion.div

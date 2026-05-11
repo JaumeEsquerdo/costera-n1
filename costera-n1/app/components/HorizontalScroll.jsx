@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { SectionZero } from "./SectionZero";
@@ -7,6 +7,9 @@ import { useI18n } from "../hooks/usei18n";
 import { formatText } from "../lib/formatText";
 
 const MotionImage = motion.create(Image);
+
+const curvePath = "M0,320 C480,0 960,0 1440,320 Z";
+const flatPath = "M0,320 C480,320 960,320 1440,320 Z";
 
 /**
  * FLOW DE ANIMACIÓN "SCROLL-TO-HORIZONTAL":
@@ -37,16 +40,56 @@ export const HorizontalScroll = () => {
     target: targetRef,
   });
 
+  const { scrollYProgress: scrollEntrada } = useScroll({
+    target: targetRef,
+    offset: ["start end", "start start"],
+  });
+
   // Transformamos el scroll vertical (0 a 1) en movimiento horizontal (-200%)
   const x = useTransform(scrollYProgress, [0, 1], ["0vw", "-360vw"]);
 
+  const smoothEntrada = useSpring(scrollEntrada, {
+    stiffness: 40, // rigidez
+    damping: 40, // amortiguación (evita que rebote)
+    restDelta: 0.001,
+  });
+
+  /* PARA ANIM DE LA OLA */
+  const pathAnim = useTransform(
+    smoothEntrada,
+    [0, 0.45], // Rango del scroll (de 0% a 100% de la entrada)
+    [flatPath, curvePath], // Rango de formas
+  );
+
   return (
-    <section ref={targetRef} className="relative h-[460vh] bg-slate-900">
+    <section ref={targetRef} className="relative h-[460vh] bg-slate-800 ">
+      {/* AQUI iría la ola miediendo 100vh y pegado a la izq, q corresponde al area de SectionZero*/}
+      {/* FALSO TECHO ANIMADO */}
+      <motion.div
+        aria-label="hidden"
+        style={{ y: "-100%" }}
+        className="hidden absolute top-0 left-0 w-[99vw] z-0 md:flex flex-col"
+      >
+        <svg
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+          className="w-full h-42 fill-slate-800"
+        >
+          <motion.path
+            data-is-dark="true"
+            /* M0,320: Empieza abajo a la izquierda
+                C480,0 960,0 1440,320: Dibuja la curva hacia arriba (el techo de la ola)
+                Z: Cierra la forma volviendo al inicio por la base
+              */
+            d={pathAnim}
+          />
+        </svg>
+      </motion.div>
+
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex">
           {/* SECCIÓN 0: El texto que ya tenemos */}
           <SectionZero />
-
           {/* SECCIÓN 1: Galería o fotos */}
           <HorizontalSection
             index={1} // Qué número de sección es (empezando desde 0 o 1)
