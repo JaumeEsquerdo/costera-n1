@@ -119,7 +119,8 @@
         "description": "High-speed Wi-Fi included, ideal if you need to work remotely between swims."
       }
     ],
-    "imageAlt": "Accommodation image"
+    "imageAlt": "Accommodation image",
+    "titleMap": "So you don't get lost with so much color"
   },
   "Footer": {
     "title": { "title-1": "COSTERETA", "title-2": "n1" },

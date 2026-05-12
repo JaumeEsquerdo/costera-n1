@@ -127,7 +127,8 @@
         "description": "Wi-Fi de alta velocidad incluido, ideal si necesitas teletrabajar entre chapuzón y chapuzón."
       }
     ],
-    "imageAlt": "Imagen del interior del piso"
+    "imageAlt": "Imagen del interior del piso",
+    "titleMap": "Para que no te pierdas con tanto color"
   },
   "Footer": {
     "title": { "title-1": "COSTERETA", "title-2": "n1" },
