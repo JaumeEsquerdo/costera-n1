@@ -21,7 +21,7 @@ export default function Contacto() {
           <motion.h1
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1] }}
+            transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
             className="text-4xl font-title text-left w-full  lg:text-start "
           >
             {textsContact.title}
