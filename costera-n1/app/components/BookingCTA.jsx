@@ -51,14 +51,14 @@ export const BookingCTA = () => {
     border-2 border-green-950/40
     bg-green-950/80
     text-green-50
-    rounded-b-4xl
-    rounded-tl-4xl
+    rounded-4xl
     overflow-hidden
     shadow-sm
     hover:shadow-md
+    hover:scale-95
     will-change-transform
     transition-all duration-200
-    active:scale-95
+    active:scale-90
   "
         >
           <span className="flex items-center px-6 py-2 text-green-50">
@@ -70,7 +70,7 @@ export const BookingCTA = () => {
             
       flex items-center justify-center
       px-4
-      rounded-tl-4xl
+      rounded-4xl
       bg-green-50
       text-green-950/80
       -ml-px
