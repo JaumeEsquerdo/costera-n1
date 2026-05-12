@@ -40,9 +40,14 @@ export default function Detalles() {
       <Header />
       <main className="flex flex-col min-h-screen w-[90%] gap-8 lg:gap-12 max-w-400 mx-auto ">
         <div className="pt-40 lg:w-full flex flex-col lg:flex-row h-[50vh] lg:h-[40vh] justify-between lg:pt-0 gap-8 lg:items-end">
-          <h1 className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start">
+          <motion.h1
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1] }}
+            className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start"
+          >
             {textsDetalles.title}
-          </h1>
+          </motion.h1>
           <ul className="flex flex-col w-full gap-2 lg:max-w-1/3 lg:text-start">
             <li> {textsDetalles.location}</li>
             <li>{textsDetalles.street}</li>
@@ -124,9 +129,17 @@ export default function Detalles() {
       </main>
       <section
         ref={mapRef}
-        className="relative bg-green-950 h-[70vh] lg:[80vh] flex justify-center items-center"
+        className="relative bg-green-950 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-20 justify-center items-center"
         data-is-dark="true"
       >
+        <motion.h2
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2.2, ease: [0.33, 1, 0.68, 1] }}
+          className="text-white text-2xl text-center lg:text-3xl px-4"
+        >
+          {textsDetalles.titleMap}
+        </motion.h2>
         {/* FALSO TECHO ANIMADO */}
         <motion.div
           aria-label="hidden"

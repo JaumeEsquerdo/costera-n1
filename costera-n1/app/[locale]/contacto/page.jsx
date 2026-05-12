@@ -7,6 +7,7 @@ import { faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
 import { useI18n } from "@/app/hooks/usei18n";
 import vistasMar from "@/public/imgs-casa/img-piso-17.webp";
 import vistasCalle from "@/public/imgs-casa/img-piso-1.webp";
+import { motion } from "framer-motion";
 
 export default function Contacto() {
   const { t } = useI18n();
@@ -17,9 +18,14 @@ export default function Contacto() {
       <Header />
       <main className="flex flex-col min-h-screen lg:h-screen w-[90%] max-w-400 mx-auto ">
         <div className="pt-40 lg:w-full  lg:flex lg:h-[30vh] lg:pt-0 lg:items-end">
-          <h1 className="text-4xl font-title text-left w-full  lg:text-start ">
+          <motion.h1
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1] }}
+            className="text-4xl font-title text-left w-full  lg:text-start "
+          >
             {textsContact.title}
-          </h1>
+          </motion.h1>
         </div>
         <div className="py-8 flex flex-col gap-12 lg:flex-row">
           <div className="w-full flex flex-col items-start justify-end">
