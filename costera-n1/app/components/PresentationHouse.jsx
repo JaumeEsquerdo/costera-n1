@@ -177,6 +177,7 @@ export const PresentationHouse = () => {
                       src={img.src}
                       alt={img.alt}
                       fill
+                      sizes="(max-width: 1024px) 24px, 48px"
                       onClick={() => handleMainImg(img.src)}
                       className={`object-cover object-center  hover:opacity-90 `}
                     />
@@ -204,6 +205,7 @@ export const PresentationHouse = () => {
               <Image
                 src={imageRendered}
                 fill
+                sizes="(max-width: 1024px) 80vw, 40vw"
                 priority
                 alt={texts.mainImageAlt}
                 className="object-cover"
