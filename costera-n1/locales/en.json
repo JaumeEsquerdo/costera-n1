@@ -124,7 +124,8 @@
   },
   "Footer": {
     "title": { "title-1": "COSTERETA", "title-2": "n1" },
-    "subtitle": "in Villajoyosa, Alicante"
+    "subtitle": "in Villajoyosa, Alicante",
+    "backtotop": "back"
   },
   "Header": {
     "inicio": "HOME",

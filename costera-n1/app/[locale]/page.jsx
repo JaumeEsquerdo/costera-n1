@@ -114,7 +114,7 @@ export default function Home() {
                   fill
                   sizes="100vw"
                   priority
-                  quality={70}
+                  quality={75}
                   fetchPriority="high"
                   placeholder="blur"
                   style={{

@@ -23,7 +23,7 @@ export const DescriptionHouse = () => {
   const textsDescriptionHouse = t.Home.DescriptionHouse;
 
   return (
-    <section className="h-screen flex flex-col gap-4 lg:gap-10 justify-center items-center p-8 lg:pt-26">
+    <section className="h-screen flex flex-col gap-4 lg:gap-10 justify-center items-center max-w-[90%] mx-auto lg:pt-26">
       {/* <motion.h3
         variants={itemVariants}
         initial="hidden"
@@ -46,7 +46,7 @@ export const DescriptionHouse = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.4 }} //amount para: 0.2, en cuanto asome un 20% del contenedor, se hace la anim.
-          className="flex flex-col z-10 lg:flex-row lg:items-end gap-2 lg:gap-4 w-full lg:max-w-9/10 [@media(max-height:720px)]:text-sm white-space: nowrap;
+          className="flex flex-col z-10 lg:flex-row lg:items-end gap-2 lg:gap-4 w-full lg:max-w-400 [@media(max-height:720px)]:text-sm white-space: nowrap;
 "
         >
           <motion.h3
