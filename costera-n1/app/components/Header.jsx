@@ -132,7 +132,7 @@ export const Header = ({ showText }) => {
               langIsOpen={langIsOpen}
               as="button"
               isoverdark
-              className={`mt-1 border-2  rounded-2xl hover:opacity-80 hover:scale-95 flex justify-center items-center gap-1 md:gap-2 active:scale-90 will-change-transform transition-transform duration-200`}
+              className={`mt-1 border-2  rounded-2xl hover:opacity-80 hover:scale-95 flex justify-center items-center gap-1 active:scale-90 will-change-transform transition-transform duration-200`}
             >
               {textsHeader.idioma}{" "}
               <span className="w-2 h-2 rounded-full border-2 bg-transparent inline-block" />
