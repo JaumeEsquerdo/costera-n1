@@ -49,22 +49,28 @@ export default function Detalles() {
     <>
       <Header />
       <main className="flex flex-col min-h-screen w-[90%] gap-8 lg:gap-12 max-w-400 mx-auto ">
-        <div className="pt-40 lg:w-full flex flex-col lg:flex-row h-[50vh] lg:h-[40vh] justify-between lg:pt-0 gap-8 lg:items-end">
+        <div className="pt-40 lg:w-full flex flex-col lg:flex-row h-[50vh] lg:h-[40vh] justify-between lg:pt-0 gap-8 lg:items-end overflow-hidden">
           <motion.h1
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
             className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start text-neutral-800"
           >
             {textsDetalles.title}
           </motion.h1>
-          <ul className="flex flex-col w-full gap-2 lg:max-w-1/3 lg:text-start text-neutral-600">
+
+          <motion.ul
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
+            className="flex flex-col w-full gap-2 lg:max-w-1/3 lg:text-start text-neutral-600 "
+          >
             <li> {textsDetalles.location}</li>
             <li>{textsDetalles.street}</li>
             {textsDetalles.features.map((feature, i) => (
               <li key={i}>{feature}</li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
 
         <motion.div
@@ -130,7 +136,12 @@ export default function Detalles() {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-8 pt-10 pb-20 lg:pb-50 md:max-w-5/8 mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
+          className="flex flex-col gap-8 pt-10 pb-20 lg:pb-50 md:max-w-5/8 mx-auto"
+        >
           <h2 className="text-2xl text-neutral-800 font-semibold text-center">
             {textsDetalles.practicalInfoTitle}
           </h2>
@@ -142,7 +153,7 @@ export default function Detalles() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </main>
       <section
         ref={mapRef}
