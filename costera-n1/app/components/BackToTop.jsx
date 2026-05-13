@@ -23,7 +23,7 @@ export const BackToTop = ({ textBackToTop }) => {
       onClick={scrollToTop}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 2.2, ease: "easeIn" }}
+      transition={{ duration: 1.8, ease: "easeIn" }}
       viewBox="-120 -120 240 240"
       className="w-30 h-30 md:w-40 md:h-40 mt:20 md:mt-0 md:absolute md:bottom-8 md:right-8 cursor-pointer hover:scale-95 active:scale-90 transition-transform duration-200"
     >
