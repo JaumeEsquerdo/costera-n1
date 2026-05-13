@@ -22,14 +22,18 @@ const variantsTextSplit = {
 
 export function AnimatedText({ text }) {
   return (
-    <motion.span variants={variantsContainer} aria-label={text}>
-      {text.split("").map((char, i) => (
+    <motion.span
+      variants={variantsContainer}
+      className="flex flex-wrap"
+      aria-label={text}
+    >
+      {text.split(" ").map((word, i) => (
         <motion.span
           key={i}
           variants={variantsTextSplit}
-          className="inline-block animate-letter text-2xl md:text-4xl text-neutral-800 font-semibold"
+          className="inline-block mr-1 md:mr-2 text-lg md:text-4xl text-neutral-800 font-semibold"
         >
-          {char === " " ? "\u00A0" : char}
+          {word}
         </motion.span>
       ))}
     </motion.span>

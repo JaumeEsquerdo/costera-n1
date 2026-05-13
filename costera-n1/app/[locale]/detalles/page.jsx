@@ -17,7 +17,7 @@ const blockTextsVariants = {
   initial: {},
   show: {
     transition: {
-      staggerChildren: 1.3,
+      staggerChildren: 0.36,
     },
   },
 };
