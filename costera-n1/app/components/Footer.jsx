@@ -13,7 +13,7 @@ export const Footer = ({
 
   return (
     <footer
-      className={`relative h-[60vh] ${bgColor} w-full overflow-hidden`}
+      className={`relative h-[60vh] ${bgColor} w-full`}
       style={{ clipPath: "polygon(0% 0, 100% 0, 100% 100% , 0 100%)" }}
     >
       <div className="relative h-[calc(100vh+60vh)] -top-[100vh]">

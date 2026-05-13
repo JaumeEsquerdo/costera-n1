@@ -114,7 +114,7 @@ export const SectionZero = () => {
           // variants={itemVariants}
           className="flex items-center gap-2"
         >
-          <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center font-subtitle">
+          <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
             {textsSectionZero.subtitle}{" "}
           </p>
           <FontAwesomeIcon
