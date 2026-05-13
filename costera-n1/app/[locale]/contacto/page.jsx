@@ -43,12 +43,12 @@ export default function Contacto() {
           <div className="flex flex-col gap-12 lg:max-w-1/2">
             <p className="text-neutral-600">{textsContact.description}</p>
             <div className="flex flex-col w-full gap-2 lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex flex-col w-full items-center justify-center gap-6 lg:gap-8 lg:w-fit">
+              <div className="flex flex-col w-full items-center justify-center gap-2 lg:gap-4 lg:w-fit">
                 <a
                   className="   group cursor-pointer inline-flex items-stretch
-    border-2 border-green-950/40
-    bg-green-950/80
-    text-green-50
+    border-2 border-yellow-950/40
+    bg-yellow-50
+    text-neutral-800
     rounded-4xl
     overflow-hidden
     shadow-sm
@@ -56,9 +56,9 @@ export default function Contacto() {
     hover:scale-95
     will-change-transform
     transition-all duration-200
-    active:scale-90"
+    active:scale-85"
                 >
-                  <span className="flex items-center px-6 py-2 text-green-50">
+                  <span className="flex items-center px-4 py-2 text-neutral-800">
                     {textsContact.cta}
                   </span>
                   <span
@@ -67,8 +67,8 @@ export default function Contacto() {
       flex items-center justify-center
       px-4
       rounded-4xl
-      bg-green-50
-      text-green-950/80
+    
+      text-neutral-800
       -ml-px
       transition-transform duration-200
       group-hover:translate-x-1.5

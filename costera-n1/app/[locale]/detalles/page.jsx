@@ -146,7 +146,7 @@ export default function Detalles() {
       </main>
       <section
         ref={mapRef}
-        className="relative bg-green-950 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-20 justify-center items-center"
+        className="relative bg-neutral-800 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-20 justify-center items-center"
         data-is-dark="true"
       >
         <motion.h2
@@ -166,7 +166,7 @@ export default function Detalles() {
           <svg
             viewBox="0 0 1440 320"
             preserveAspectRatio="none"
-            className="w-full h-42 fill-green-950"
+            className="w-full h-42 fill-neutral-800"
           >
             <motion.path
               data-is-dark="true"
@@ -206,7 +206,7 @@ export default function Detalles() {
           />
         </div>
       </section>
-      <Footer bgColor="bg-green-50" textColor="text-green-950" />
+      <Footer bgColor="bg-neutral-50" textColor="text-neutral-950" />
     </>
   );
 }

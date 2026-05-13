@@ -92,11 +92,11 @@ export async function generateMetadata({ params }) {
       icon: "/icon.svg",
       apple: "/apple-icon.png",
     },
-    other: {
-      rel: "preload",
-      as: "image",
-      href: "/bg-pattern.webp",
-    },
+    // other: {
+    //   rel: "preload",
+    //   as: "image",
+    //   href: "/bg-pattern.webp",
+    // },
   };
 }
 
@@ -107,11 +107,11 @@ export default async function RootLayout({ children, params }) {
       lang={locale}
       className={`${archivoBlack.variable} ${dmSans.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="relative min-h-full flex flex-col bg-green-50 font-body text-neutral-800 ">
-        <div
+      <body className="relative min-h-full flex flex-col bg-[#fffdf6] font-body text-neutral-800 ">
+        {/* <div
           aria-hidden="true"
           className="fixed inset-0 -z-10 opacity-[0.6] pointer-events-none bg-[url('/bg-noise.webp')] bg-repeat"
-        />
+        /> */}
         {/* <SmoothScroll> */}
 
         {children}

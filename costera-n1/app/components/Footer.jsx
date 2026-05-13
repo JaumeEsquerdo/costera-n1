@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { BackToTop } from "./BackToTop";
 
 export const Footer = ({
-  bgColor = "bg-green-950",
+  bgColor = "bg-neutral-800",
   textColor = "text-white",
 }) => {
   const { t } = useI18n();

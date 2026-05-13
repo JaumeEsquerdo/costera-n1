@@ -5,10 +5,6 @@ html {
   color-scheme: light;
 }
 
-body {
-  background-color: #f0fdf4; /* mismo bg q el bg-green-50 */
-}
-
 /* Base typography rendering: texto más suave y limpio */
 html,
 body {

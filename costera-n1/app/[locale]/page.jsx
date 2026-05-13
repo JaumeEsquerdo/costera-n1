@@ -90,7 +90,7 @@ export default function Home() {
                   exit="closed"
                   className="text-center fixed top-6 lg:top-8 z-10 g-12 max-w-[90%]"
                 >
-                  <h1 className="font-title text-5xl lg:text-9xl text-green-950">
+                  <h1 className="font-title text-5xl lg:text-9xl text-neutral-800">
                     {t.Home.title}
                   </h1>
                   <h2 className="text-base lg:text-xl mt-4 text-neutral-800 [@media(max-height:720px)]:hidden">
@@ -141,7 +141,7 @@ export default function Home() {
                   </h2>
                   <FontAwesomeIcon
                     icon={faAngleDown}
-                    className="text-3xl text-green-950 left-1/2 -translate-x-1/2 absolute animate-buble transition-all duration-100"
+                    className="text-3xl text-neutral-800 left-1/2 -translate-x-1/2 absolute animate-buble transition-all duration-100"
                   />
                 </motion.div>
               )}

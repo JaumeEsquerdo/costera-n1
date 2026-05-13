@@ -136,7 +136,7 @@ export const PresentationHouse = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            className="font-title text-5xl lg:text-7xl text-center text-green-950"
+            className="font-title text-5xl lg:text-7xl text-center text-neutral-800"
           >
             {texts.title.split(" ").map((word, wordIndex) => (
               // cada palabra en un span y después se mapea cada span por letra
@@ -181,13 +181,13 @@ export const PresentationHouse = () => {
                       className={`object-cover object-center  hover:opacity-90 `}
                     />
                     {img.src === imageRendered && (
-                      <div className="absolute inset-0 bg-green-900/60 z-10" />
+                      <div className="absolute inset-0 bg-yellow-700/60 z-10" />
                     )}
                   </div>
                 ))}
                 <Link
                   href="/detalles"
-                  className="hover:opacity-60 transition-opacity text-green-950 duration-100 w-fit h-fit text-center"
+                  className="hover:opacity-60 transition-opacity text-yellow-700 duration-100 w-fit h-fit text-center"
                 >
                   (+)
                 </Link>

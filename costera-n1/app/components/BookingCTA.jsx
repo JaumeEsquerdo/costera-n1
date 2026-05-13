@@ -51,9 +51,9 @@ export const BookingCTA = () => {
           variants={itemsVariants}
           className="
     group cursor-pointer inline-flex items-stretch
-    border-2 border-green-950/40
-    bg-green-950/80
-    text-green-50
+    border-2 border-yellow-950/40
+    bg-yellow-50
+    text-neutral-800
     rounded-4xl
     overflow-hidden
     shadow-sm
@@ -61,21 +61,20 @@ export const BookingCTA = () => {
     hover:scale-95
     will-change-transform
     transition-all duration-200
-    active:scale-90
+    active:scale-85
   "
         >
-          <span className="flex items-center px-6 py-2 text-green-50">
+          <span className="flex items-center px-4 py-2 text-neutral-800">
             {textsBookingCta.button}
           </span>
 
           <span
             className="
-            
-      flex items-center justify-center
+    flex items-center justify-center
       px-4
       rounded-4xl
-      bg-green-50
-      text-green-950/80
+    
+      text-neutral-800
       -ml-px
       transition-transform duration-200
       group-hover:translate-x-1.5
