@@ -22,7 +22,7 @@ export default function Contacto() {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
-            className="text-4xl font-title text-left w-full  lg:text-start "
+            className="text-4xl font-title text-left w-full  lg:text-start text-neutral-800"
           >
             {textsContact.title}
           </motion.h1>
@@ -41,7 +41,7 @@ export default function Contacto() {
             </div>
           </div>
           <div className="flex flex-col gap-12 lg:max-w-1/2">
-            <p>{textsContact.description}</p>
+            <p className="text-neutral-600">{textsContact.description}</p>
             <div className="flex flex-col w-full gap-2 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex flex-col w-full items-center justify-center gap-6 lg:gap-8 lg:w-fit">
                 <a
@@ -80,7 +80,9 @@ export default function Contacto() {
                     />
                   </span>
                 </a>
-                <p className="text-sm text-center">{textsContact.note}</p>
+                <p className="text-sm text-center text-neutral-600">
+                  {textsContact.note}
+                </p>
               </div>
               <div className="hidden lg:inline relative  lg:w-65 lg:h-100 overflow-hidden rounded-2xl">
                 <Image

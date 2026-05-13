@@ -44,11 +44,11 @@ export default function Detalles() {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
-            className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start"
+            className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start text-neutral-800"
           >
             {textsDetalles.title}
           </motion.h1>
-          <ul className="flex flex-col w-full gap-2 lg:max-w-1/3 lg:text-start">
+          <ul className="flex flex-col w-full gap-2 lg:max-w-1/3 lg:text-start text-neutral-600">
             <li> {textsDetalles.location}</li>
             <li>{textsDetalles.street}</li>
             {textsDetalles.features.map((feature, i) => (
@@ -56,26 +56,30 @@ export default function Detalles() {
             ))}
           </ul>
         </div>
-        <div className="mt-8 lg:py-0 flex flex-col-reverse gap-8 lg:max-h-200 justify-between lg:h-100 lg:flex-row">
-          <div className="flex flex-col gap-8 lg:max-w-1/2">
-            <p>{textsDetalles.description}</p>
-          </div>
 
-          <div className="relative w-90 max-w-full h-60 overflow-hidden lg:h-full lg:max-h-160 lg:w-full lg:max-w-[50%] rounded-2xl">
+        <div className="mt-8 flex flex-col gap-4 lg:max-w-2/3">
+          <p className="text-2xl md:text-4xl text-neutral-800 font-semibold">
+            {textsDetalles.description}
+          </p>
+          <p className="text-2xl md:text-4xl text-neutral-800 font-semibold">
+            {textsDetalles.locationDescription}
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row justify-between gap-8">
+          <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[40%] lg:max-w-160 rounded-2xl">
             <Image
-              src={imgPortadaDetalles}
+              src={imgHabitacionDetalles}
               fill
               placeholder="blur"
               priority
               alt={textsDetalles.imageAlt}
               className="object-cover"
             />
-          </div>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[40%] lg:max-w-160 rounded-2xl">
+          </div>{" "}
+          <div className="relative w-90 max-w-full h-60 overflow-hidden lg:h-full lg:max-h-160 lg:w-full lg:max-w-[50%] rounded-2xl">
             <Image
-              src={imgHabitacionDetalles}
+              src={imgPortadaDetalles}
               fill
               placeholder="blur"
               priority
@@ -113,15 +117,16 @@ export default function Detalles() {
               className="object-cover"
             />
           </div>
-          <p>{textsDetalles.locationDescription}</p>
         </div>
         <div className="flex flex-col gap-8 pt-10 pb-20 lg:pb-50">
-          <h2 className="text-2xl">{textsDetalles.practicalInfoTitle}</h2>
+          <h2 className="text-2xl text-neutral-800">
+            {textsDetalles.practicalInfoTitle}
+          </h2>
           <ul className="flex flex-col gap-6 ">
             {textsDetalles.practicalInfo.map((info, i) => (
-              <li key={i}>
+              <li key={i} className="text-neutral-800">
                 - <span className="font-bold">{info.title}: </span>
-                {info.description}
+                <span className="text-neutral-600">{info.description}</span>
               </li>
             ))}
           </ul>

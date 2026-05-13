@@ -93,7 +93,7 @@ export default function Home() {
                   <h1 className="font-title text-5xl lg:text-9xl text-green-950">
                     {t.Home.title}
                   </h1>
-                  <h2 className="text-base lg:text-xl mt-4 [@media(max-height:720px)]:hidden">
+                  <h2 className="text-base lg:text-xl mt-4 text-neutral-800 [@media(max-height:720px)]:hidden">
                     {textsHero.subtitle}
                   </h2>
                 </motion.div>
@@ -136,7 +136,7 @@ export default function Home() {
                   animate="open"
                   exit={showText ? "closed" : "open"}
                 >
-                  <h2 className="relative text-sm lg:text-lg text-center">
+                  <h2 className="relative text-sm lg:text-lg text-center text-neutral-800">
                     {textsHero.location_info}
                   </h2>
                   <FontAwesomeIcon

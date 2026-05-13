@@ -163,7 +163,7 @@ export const PresentationHouse = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.9 }}
-                className="text-lg text-center"
+                className="text-lg text-center text-neutral-600"
               >
                 {texts.subtitle}
               </motion.h3>

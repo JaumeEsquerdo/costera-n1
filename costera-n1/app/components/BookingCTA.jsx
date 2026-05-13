@@ -41,7 +41,10 @@ export const BookingCTA = () => {
           variants={containerVariants}
           className="flex flex-col gap-4 lg:gap-6 items-center lg:max-w-2/3"
         > */}
-        <motion.p variants={itemsVariants} className="text-center lg:max-w-2/3">
+        <motion.p
+          variants={itemsVariants}
+          className="text-center lg:max-w-2/3 text-neutral-600"
+        >
           {textsBookingCta.description}
         </motion.p>
         <motion.a

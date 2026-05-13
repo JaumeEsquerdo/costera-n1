@@ -115,10 +115,10 @@ export const HorizontalScroll = () => {
                       {textsHorizontalSections.section1.title}
                     </h2>
                     <div className="flex flex-col gap-4">
-                      <p className="text-balance">
+                      <p className="text-balance text-neutral-800">
                         {formatText(textsHorizontalSections.section1.p1)}
                       </p>
-                      <p className="text-balance">
+                      <p className="text-balance text-neutral-800">
                         {" "}
                         {formatText(textsHorizontalSections.section1.p2)}
                       </p>
@@ -175,10 +175,10 @@ export const HorizontalScroll = () => {
                       {textsHorizontalSections.section2.title}
                     </h2>
                     <div className="flex flex-col gap-4">
-                      <p className="text-balance">
+                      <p className="text-balance text-neutral-800">
                         {formatText(textsHorizontalSections.section2.p1)}
                       </p>
-                      <p className="text-balance">
+                      <p className="text-balance text-neutral-800">
                         {" "}
                         {formatText(textsHorizontalSections.section2.p2)}
                       </p>
@@ -219,7 +219,7 @@ export const HorizontalScroll = () => {
                       {textsHorizontalSections.section3.title}
                     </h2>
                     <div className="flex flex-col gap-4">
-                      <p className="text-balance ">
+                      <p className="text-balance text-neutral-800">
                         {formatText(textsHorizontalSections.section3.p1)}
                       </p>
                     </div>

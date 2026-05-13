@@ -56,7 +56,7 @@ export const DescriptionHouse = () => {
             {value.title}
           </motion.h3>
           <motion.p
-            className="text-lg lg:text-2xl font-subtitle italic"
+            className="text-lg lg:text-2xl font-subtitle italic text-neutral-600"
             variants={itemVariants}
           >
             {value.subtitle.toLowerCase()}
