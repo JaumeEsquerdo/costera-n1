@@ -27,7 +27,7 @@ export default function Contacto() {
             {textsContact.title}
           </motion.h1>
         </div>
-        <div className="py-8 flex flex-col gap-12 lg:flex-row">
+        <div className="py-8 lg:py-12 flex flex-col gap-12 lg:flex-row">
           <div className="w-full flex flex-col items-start justify-end">
             <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-200 lg:w-full lg:max-w-160 rounded-2xl">
               <Image
@@ -45,7 +45,7 @@ export default function Contacto() {
             <div className="flex flex-col w-full gap-2 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex flex-col w-full items-center justify-center gap-2 lg:gap-4 lg:w-fit">
                 <a
-                  className="   group cursor-pointer inline-flex items-stretch
+                  className="cursor-pointer 
     border-2 border-yellow-950/40
     bg-yellow-50
     text-neutral-800
@@ -56,29 +56,19 @@ export default function Contacto() {
     hover:scale-95
     will-change-transform
     transition-all duration-200
-    active:scale-85"
-                >
-                  <span className="flex items-center px-4 py-2 text-neutral-800">
-                    {textsContact.cta}
-                  </span>
-                  <span
-                    className="
-            
-      flex items-center justify-center
-      px-4
-      rounded-4xl
-    
-      text-neutral-800
-      -ml-px
-      transition-transform duration-200
-      group-hover:translate-x-1.5
+    active:scale-90
+    flex items-center
+    gap-4
+    px-6
+    py-2
     "
-                  >
-                    <FontAwesomeIcon
-                      icon={faArrowTrendUp}
-                      className="w-4 h-4 lg:w-5 lg:h-5"
-                    />
-                  </span>
+                >
+                  <span className="  text-neutral-800">{textsContact.cta}</span>
+
+                  <FontAwesomeIcon
+                    icon={faArrowTrendUp}
+                    className=" text-neutral-800 inline-block w-4 h-4 lg:w-5 lg:h-5"
+                  />
                 </a>
                 <p className="text-sm text-center text-neutral-600">
                   {textsContact.note}

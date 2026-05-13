@@ -50,7 +50,7 @@ export const BookingCTA = () => {
         <motion.a
           variants={itemsVariants}
           className="
-    group cursor-pointer inline-flex items-stretch
+    cursor-pointer 
     border-2 border-yellow-950/40
     bg-yellow-50
     text-neutral-800
@@ -61,30 +61,19 @@ export const BookingCTA = () => {
     hover:scale-95
     will-change-transform
     transition-all duration-200
-    active:scale-85
+    active:scale-90
+    flex items-center
+    gap-4
+    px-6
+    py-2
   "
         >
-          <span className="flex items-center px-4 py-2 text-neutral-800">
-            {textsBookingCta.button}
-          </span>
+          <span className="text-neutral-800">{textsBookingCta.button}</span>
 
-          <span
-            className="
-    flex items-center justify-center
-      px-4
-      rounded-4xl
-    
-      text-neutral-800
-      -ml-px
-      transition-transform duration-200
-      group-hover:translate-x-1.5
-    "
-          >
-            <FontAwesomeIcon
-              icon={faArrowTrendUp}
-              className="w-4 h-4 lg:w-5 lg:h-5"
-            />
-          </span>
+          <FontAwesomeIcon
+            icon={faArrowTrendUp}
+            className="text-neutral-800 inline-block w-4 h-4 lg:w-5 lg:h-5"
+          />
         </motion.a>
       </motion.div>
       {/* </motion.div> */}
