@@ -8,9 +8,19 @@ import imgHabitacionDetalles from "@/public/imgs-casa/img-piso-3.webp";
 import imgComedorDetalles from "@/public/imgs-casa/img-piso-14.webp";
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { AnimatedText } from "@/app/components/AnimatedText";
 
 const curvePath = "M0,320 C480,0 960,0 1440,320 Z";
 const flatPath = "M0,320 C480,320 960,320 1440,320 Z";
+
+const blockTextsVariants = {
+  initial: {},
+  show: {
+    transition: {
+      staggerChildren: 1.3,
+    },
+  },
+};
 
 export default function Detalles() {
   const { t } = useI18n();
@@ -57,14 +67,16 @@ export default function Detalles() {
           </ul>
         </div>
 
-        <div className="mt-8 flex flex-col gap-4 lg:max-w-2/3">
-          <p className="text-2xl md:text-4xl text-neutral-800 font-semibold">
-            {textsDetalles.description}
-          </p>
-          <p className="text-2xl md:text-4xl text-neutral-800 font-semibold">
-            {textsDetalles.locationDescription}
-          </p>
-        </div>
+        <motion.div
+          variants={blockTextsVariants}
+          initial="initial"
+          animate="show"
+          className="mt-8 flex flex-col gap-4 lg:max-w-2/3"
+        >
+          {textsDetalles.descriptionTexts.map((t, i) => (
+            <AnimatedText key={i} text={t} />
+          ))}
+        </motion.div>
 
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[40%] lg:max-w-160 rounded-2xl">

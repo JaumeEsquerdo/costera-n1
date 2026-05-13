@@ -98,8 +98,10 @@
       "x metros cuadrados",
       "Localizado en el casco antiguo"
     ],
-    "description": "Un interior pensado para el día a día. Mobiliario práctico y funcional en un espacio luminoso que conserva la esencia de las casas de pescadores, pero adaptado a las necesidades actuales del viajero.",
-    "locationDescription": "La ubicación en la Costera garantiza una experiencia inmersiva. Es una zona peatonal y vibrante durante el día, pero tranquila y recogida al caer la noche, ideal para un descanso real.",
+    "descriptionTexts": [
+      "Un interior pensado para el día a día. Mobiliario práctico y funcional en un espacio luminoso que conserva la esencia de las casas de pescadores, pero adaptado a las necesidades actuales del viajero.",
+      "La ubicación en la Costera garantiza una experiencia inmersiva. Es una zona peatonal y vibrante durante el día, pero tranquila y recogida al caer la noche, ideal para un descanso real."
+    ],
     "practicalInfoTitle": "Información práctica para tu estancia",
     "practicalInfo": [
       {
