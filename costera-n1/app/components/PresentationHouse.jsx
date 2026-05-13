@@ -56,17 +56,16 @@ export const PresentationHouse = () => {
       id: 1,
       src: "/imgs-casa/img-piso-8.webp",
       alt: texts.imageAlts.decoracion,
-
-      top: "29%",
-      left: "20%",
+      top: "10%",
+      left: "55%",
     },
     {
       id: 2,
       src: "/imgs-casa/img-piso-2.webp",
       alt: texts.imageAlts.vistas,
 
-      top: "10%",
-      left: "55%",
+      top: "29%",
+      left: "20%",
     },
     {
       id: 3,
