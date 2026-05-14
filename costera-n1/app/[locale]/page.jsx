@@ -7,7 +7,7 @@ import {
   useSpring,
 } from "framer-motion";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useWindowSize } from "../hooks/useWindowSize";
 import { PresentationHouse } from "../components/PresentationHouse";
 import { Header } from "../components/Header";
@@ -22,13 +22,30 @@ import imgPortada from "@/public/imgs-casa/entrada-puerta.webp";
 import { useI18n } from "../hooks/usei18n";
 const MotionImage = motion.create(Image);
 
+const headerVariants = {
+  init: {
+    opacity: 0,
+  },
+  open: {
+    opacity: 1,
+  },
+  closed: {
+    opacity: 0,
+  },
+};
+
 export default function Home() {
   const { t, locale } = useI18n();
-  const windowSize = useWindowSize();
   const { scrollY } = useScroll();
   const [showText, setShowText] = useState(true);
+  const containerRef = useRef(null);
 
   const textsHero = t.Home.hero;
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
 
   // Escucha los cambios del scroll vertical
   useEffect(() => {
@@ -44,32 +61,18 @@ export default function Home() {
     return () => unsubscribe();
   }, [scrollY]);
 
-  const headerVariants = {
-    init: {
-      opacity: 0,
-    },
-    open: {
-      opacity: 1,
-    },
-    closed: {
-      opacity: 0,
-    },
-  };
-
-  const maxScroll = windowSize.height * 2; // hero ocupa 2 veces la altura del viewport
-  const progress = useTransform(scrollY, [0, maxScroll], [0, 1]);
   //FILTRO DE SUAVIZADO
-  const smoothProgress = useSpring(progress, {
+  const smoothProgress = useSpring(scrollYProgress, {
     damping: 25, // Resistencia al movimiento
     stiffness: 120, // Fuerza de atracción
   });
-  // Animar width/height
-  const width = useTransform(smoothProgress, [0, 1], [200, windowSize.width]);
-  const height = useTransform(smoothProgress, [0, 1], [400, windowSize.height]);
+
+  const width = useTransform(smoothProgress, [0, 0.6], ["35vw", "100vw"]);
+
+  const height = useTransform(smoothProgress, [0, 0.6], ["40vh", "100vh"]);
+
   const moveY = useTransform(smoothProgress, [0, 1], ["10%", "-0%"]);
   const scaleImgHero = useTransform(smoothProgress, [0, 1], [1.6, 1]);
-  // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  // const borderRadius = useTransform(progress, [0, 1], ["0px", "0px"]);
 
   return (
     <>
@@ -77,7 +80,7 @@ export default function Home() {
         {/* Header */}
         <Header showText={showText} />
         {/* Hero */}
-        <div className="h-[300vh] relative">
+        <div ref={containerRef} className="h-[300vh] relative">
           <motion.header className="h-screen sticky top-0 flex flex-col justify-between items-center overflow-x-hidden">
             <AnimatePresence>
               {/* Texto solo visible al inicio */}
@@ -93,7 +96,7 @@ export default function Home() {
                   <h1 className="font-title text-5xl lg:text-9xl text-neutral-800">
                     {t.Home.title}
                   </h1>
-                  <h2 className="text-base lg:text-xl mt-4 text-neutral-800 [@media(max-height:720px)]:hidden">
+                  <h2 className="text-base lg:text-xl mt-4 text-neutral-800 ">
                     {textsHero.subtitle}
                   </h2>
                 </motion.div>
@@ -105,11 +108,19 @@ export default function Home() {
               className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center overflow-hidden`}
             >
               <motion.div
-                style={{ width, height }}
-                className={`relative overflow-hidden saturate-120 w-50 h-100 rounded-2xl`}
+                style={{
+                  width,
+                  height,
+                }}
+                className={` relative overflow-hidden saturate-120 rounded-2xl
+      `}
                 data-is-dark="true"
               >
                 <MotionImage
+                  style={{
+                    y: moveY,
+                    scale: scaleImgHero,
+                  }}
                   src={imgPortada}
                   fill
                   sizes="100vw"
@@ -117,10 +128,6 @@ export default function Home() {
                   quality={75}
                   fetchPriority="high"
                   placeholder="blur"
-                  style={{
-                    y: moveY, // Efecto parallax interno
-                    scale: scaleImgHero,
-                  }}
                   alt={textsHero.image_alt}
                   className="object-cover object-center "
                 />
@@ -129,7 +136,7 @@ export default function Home() {
             <AnimatePresence>
               {showText && (
                 <motion.div
-                  className="fixed bottom-12 lg:bottom-20 flex flex-col items-center justify-center gap-2 lg:gap-6 max-w-[90%]"
+                  className="fixed bottom-24 md:bottom-12 lg:bottom-20 flex flex-col items-center justify-center gap-4 lg:gap-6 max-w-[90%]"
                   variants={headerVariants}
                   transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
                   initial="init"
