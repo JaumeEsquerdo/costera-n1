@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useI18n } from "../hooks/usei18n";
-const MotionImage = motion.create(Image);
+// const MotionImage = motion.create(Image);
 
 // const containerVariants = {
 //   hidden: { opacity: 0 },
@@ -64,38 +64,56 @@ export const SectionZero = () => {
         className="relative flex flex-col lg:flex-row items-center gap-4 lg:gap-6 pt-22 pb-6 lg:py-40 overflow-hidden"
       >
         <motion.div className="relative w-40 h-70 lg:w-56 lg:h-80 overflow-hidden rounded-2xl">
-          <MotionImage
-            alt=""
-            style={{ x: xImage, scale: 1.2 }}
-            src="/imgs-sections/casco-antiguo.webp"
-            fill
-            priority
-            className="object-cover"
-            sizes="(max-width: 768px) 600px, 1200px"
-          />
+          <motion.div
+            style={{
+              x: xImage,
+            }}
+            className="absolute inset-0"
+          >
+            <Image
+              alt=""
+              src="/imgs-sections/casco-antiguo.webp"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 600px, 1200px"
+            />
+          </motion.div>
         </motion.div>
 
         <motion.div className="hidden lg:inline relative w-70 h-50 lg:w-85 lg:h-50 overflow-hidden rounded-2xl">
-          <MotionImage
-            alt=""
-            src="/imgs-sections/laVila-3.webp"
-            style={{ x: xImage, scale: 1.2 }}
-            fill
-            priority
-            className="object-cover"
-            sizes="(max-width: 768px) 600px, 1200px"
-          />
+          <motion.div
+            style={{
+              x: xImage,
+            }}
+            className="absolute inset-0"
+          >
+            <Image
+              alt=""
+              src="/imgs-sections/laVila-3.webp"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 600px, 1200px"
+            />
+          </motion.div>
         </motion.div>
         <motion.div className="relative w-50 h-80 lg:w-80 lg:h-120 overflow-hidden rounded-2xl">
-          <MotionImage
-            alt=""
-            src="/imgs-sections/fideua-2.webp"
-            fill
-            style={{ x: xImage, scale: 1.2 }}
-            priority
-            className="object-cover"
-            sizes="(max-width: 768px) 600px, 1200px"
-          />
+          <motion.div
+            style={{
+              x: xImage,
+            }}
+            className="absolute inset-0"
+          >
+            <Image
+              alt=""
+              src="/imgs-sections/fideua-2.webp"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 600px, 1200px"
+            />
+          </motion.div>
         </motion.div>
       </motion.div>
       <div

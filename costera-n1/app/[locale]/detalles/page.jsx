@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { AnimatedText } from "@/app/components/AnimatedText";
 
-const curvePath = "M0,320 C480,0 960,0 1440,320 Z";
+const curvePath = "M0,320 C480,160 960,160 1440,320 Z";
 const flatPath = "M0,320 C480,320 960,320 1440,320 Z";
 
 const blockTextsVariants = {
