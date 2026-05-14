@@ -51,8 +51,8 @@ export default function Detalles() {
       <main className="flex flex-col min-h-screen w-[90%] gap-8 lg:gap-24 max-w-400 mx-auto overflow-hidden">
         <div className="pt-40 lg:w-full flex flex-col lg:flex-row h-[50vh] lg:h-[40vh] justify-between lg:pt-0 gap-8 lg:items-end ">
           <motion.h1
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -40, rotate: 2 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
             className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start text-neutral-800"
           >

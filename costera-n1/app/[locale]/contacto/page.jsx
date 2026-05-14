@@ -19,8 +19,8 @@ export default function Contacto() {
       <main className="flex flex-col min-h-screen lg:h-screen w-[90%] max-w-400 mx-auto ">
         <div className="pt-40 lg:w-full  lg:flex lg:h-[30vh] lg:pt-0 lg:items-end">
           <motion.h1
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -40, rotate: 2 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
             className="text-4xl font-title text-left w-full  lg:text-start text-neutral-800"
           >
@@ -28,7 +28,12 @@ export default function Contacto() {
           </motion.h1>
         </div>
         <div className="py-8 lg:py-12 flex flex-col gap-12 lg:flex-row">
-          <div className="w-full flex flex-col items-start justify-end">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
+            className="w-full flex flex-col items-start justify-end"
+          >
             <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-200 lg:w-full lg:max-w-160 rounded-2xl">
               <Image
                 src={vistasMar}
@@ -39,8 +44,13 @@ export default function Contacto() {
                 className="object-cover"
               />
             </div>
-          </div>
-          <div className="flex flex-col gap-12 lg:max-w-1/2">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
+            className="flex flex-col gap-12 lg:max-w-1/2"
+          >
             <p className="text-neutral-600">{textsContact.description}</p>
             <div className="flex flex-col w-full gap-2 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex flex-col w-full items-center justify-center gap-2 lg:gap-4 lg:w-fit">
@@ -86,7 +96,7 @@ export default function Contacto() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </main>
       <Footer />
