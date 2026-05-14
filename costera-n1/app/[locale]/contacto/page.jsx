@@ -19,8 +19,8 @@ export default function Contacto() {
       <main className="flex flex-col min-h-screen lg:h-screen w-[90%] max-w-400 mx-auto ">
         <div className="pt-40 lg:w-full  lg:flex lg:h-[30vh] lg:pt-0 lg:items-end">
           <motion.h1
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
             className="text-4xl font-title text-left w-full  lg:text-start text-neutral-800"
           >

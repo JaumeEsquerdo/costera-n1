@@ -4,7 +4,7 @@ const variantsContainer = {
   initial: {},
   show: {
     transition: {
-      staggerChildren: 0.006,
+      staggerChildren: 0.04,
     },
   },
 };

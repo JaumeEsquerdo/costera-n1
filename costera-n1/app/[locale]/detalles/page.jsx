@@ -17,7 +17,7 @@ const blockTextsVariants = {
   initial: {},
   show: {
     transition: {
-      staggerChildren: 0.36,
+      staggerChildren: 1.42,
     },
   },
 };
@@ -48,11 +48,11 @@ export default function Detalles() {
   return (
     <>
       <Header />
-      <main className="flex flex-col min-h-screen w-[90%] gap-8 lg:gap-12 max-w-400 mx-auto ">
-        <div className="pt-40 lg:w-full flex flex-col lg:flex-row h-[50vh] lg:h-[40vh] justify-between lg:pt-0 gap-8 lg:items-end overflow-hidden">
+      <main className="flex flex-col min-h-screen w-[90%] gap-8 lg:gap-24 max-w-400 mx-auto overflow-hidden">
+        <div className="pt-40 lg:w-full flex flex-col lg:flex-row h-[50vh] lg:h-[40vh] justify-between lg:pt-0 gap-8 lg:items-end ">
           <motion.h1
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
             className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start text-neutral-800"
           >
@@ -84,8 +84,8 @@ export default function Detalles() {
           ))}
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-120 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[40%] lg:max-w-160 rounded-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 grid-flow-dense auto-rows-[200px]">
+          <div className="lg:col-span-1 lg:row-span-3 relative overflow-hidden rounded-2xl">
             <Image
               src={imgHabitacionDetalles}
               fill
@@ -95,7 +95,7 @@ export default function Detalles() {
               className="object-cover"
             />
           </div>{" "}
-          <div className="relative w-90 max-w-full h-60 overflow-hidden lg:h-full lg:max-h-160 lg:w-full lg:max-w-[50%] rounded-2xl">
+          <div className="lg:col-span-1 lg:row-span-2 relative overflow-hidden rounded-2xl">
             <Image
               src={imgPortadaDetalles}
               fill
@@ -105,7 +105,25 @@ export default function Detalles() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-60 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-[60%] lg:max-w-340 rounded-2xl">
+          <div className="lg:col-span-1 lg:row-span-2 relative overflow-hidden rounded-2xl">
+            <Image
+              src="/imgs-casa/img-piso-15.webp"
+              fill
+              loading="lazy"
+              alt={textsDetalles.imageAlt}
+              className="object-cover"
+            />
+          </div>
+          <div className="lg:col-start-1 lg:col-span-1 lg:row-span-2 relative overflow-hidden rounded-2xl">
+            <Image
+              src="/imgs-casa/img-piso-20.webp"
+              fill
+              loading="lazy"
+              alt={textsDetalles.imageAlt}
+              className="object-cover"
+            />
+          </div>
+          <div className="md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-3 relative overflow-hidden rounded-2xl">
             <Image
               src={imgComedorDetalles}
               fill
@@ -116,30 +134,11 @@ export default function Detalles() {
             />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="relative w-80 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-140 rounded-2xl">
-            <Image
-              src="/imgs-casa/img-piso-20.webp"
-              fill
-              loading="lazy"
-              alt={textsDetalles.imageAlt}
-              className="object-cover"
-            />
-          </div>
-          <div className="relative w-40 max-w-full h-60 overflow-hidden lg:h-125 lg:max-h-200 lg:w-full lg:max-w-120 rounded-2xl">
-            <Image
-              src="/imgs-casa/img-piso-15.webp"
-              fill
-              loading="lazy"
-              alt={textsDetalles.imageAlt}
-              className="object-cover"
-            />
-          </div>
-        </div>
+
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
+          transition={{ duration: 2.6, ease: [0.33, 1, 0.68, 1] }}
           className="flex flex-col gap-8 pt-10 pb-20 lg:pb-50 md:max-w-5/8 mx-auto"
         >
           <h2 className="text-2xl text-neutral-800 font-semibold text-center">
