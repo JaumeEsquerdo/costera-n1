@@ -100,7 +100,7 @@ export const SectionZero = () => {
             />
           </motion.div>
         </motion.div>
-        <motion.div className="relative w-50 h-80 lg:w-80 lg:h-120 overflow-hidden rounded-2xl">
+        <motion.div className="relative w-50 h-80 lg:w-80 lg:h-100 overflow-hidden rounded-2xl">
           <motion.div
             style={{
               x: xImage,
