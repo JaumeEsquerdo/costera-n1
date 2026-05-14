@@ -67,12 +67,12 @@ export default function Home() {
     stiffness: 120, // Fuerza de atracción
   });
 
-  const width = useTransform(smoothProgress, [0, 0.6], ["12vw", "100vw"]);
+  const width = useTransform(smoothProgress, [0, 0.6], ["30vw", "100vw"]);
 
   const height = useTransform(smoothProgress, [0, 0.6], ["42vh", "100vh"]);
 
   const moveY = useTransform(smoothProgress, [0, 1], ["10%", "-0%"]);
-  const scaleImgHero = useTransform(smoothProgress, [0, 1], [1.6, 1]);
+  const scaleImgHero = useTransform(smoothProgress, [0, 0.6], [1.6, 1]);
 
   return (
     <>
