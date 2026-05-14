@@ -19,9 +19,9 @@ body {
   --font-body: var(--font-dm-sans);
   --font-title: var(--font-archivo-black);
   --font-subtitle: var(--font-playfair);
-  --color-casas-red: #e77878;
-  --color-casas-blue: #6fa9cf;
-  --color-casas-orange: #e7a05a;
+  --color-casas-red: #fdf0ef;
+  --color-casas-blue: #fff3e6;
+  --color-casas-orange: #ebf4f6;
   --animate-buble: buble 1s infinite ease-in-out;
 
   @keyframes buble {
