@@ -211,7 +211,6 @@ export const HorizontalScroll = () => {
                       src="/imgs-sections/laVila-5.webp"
                       fill
                       sizes="(max-width: 768px) 67vw, 65vw"
-                      style={{ x: xImage, scale: 1.2 }}
                       alt=""
                       className="object-cover"
                     />
@@ -258,7 +257,6 @@ export const HorizontalScroll = () => {
                   >
                     <Image
                       src="/imgs-sections/fideua-posit.webp"
-                      style={{ x: xImage, scale: 1.2 }}
                       fill
                       sizes="(max-width: 768px) 1400px, 65vw"
                       alt="Fachada"
