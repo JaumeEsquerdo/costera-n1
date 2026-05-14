@@ -129,7 +129,7 @@ export const HorizontalScroll = () => {
                   <motion.div
                     style={{
                       x: xImage,
-                      scale: 1.2,
+                      scale: 1.4,
                     }}
                     className="absolute inset-0"
                   >
@@ -147,7 +147,7 @@ export const HorizontalScroll = () => {
                   <motion.div
                     style={{
                       x: xImage,
-                      scale: 1.2,
+                      scale: 1.4,
                     }}
                     className="absolute inset-0"
                   >
@@ -203,7 +203,7 @@ export const HorizontalScroll = () => {
                   <motion.div
                     style={{
                       x: xImage,
-                      scale: 1.2,
+                      scale: 1.4,
                     }}
                     className="absolute inset-0"
                   >
@@ -252,7 +252,7 @@ export const HorizontalScroll = () => {
                   <motion.div
                     style={{
                       x: xImage,
-                      scale: 1.2,
+                      scale: 1.4,
                     }}
                     className="absolute inset-0"
                   >
