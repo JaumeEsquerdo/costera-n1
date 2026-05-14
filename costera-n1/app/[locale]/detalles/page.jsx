@@ -41,7 +41,7 @@ export default function Detalles() {
   /* PARA ANIM DE LA OLA */
   const pathAnim = useTransform(
     smoothEntrada,
-    [0, 0.45], // Rango del scroll (de 0% a 100% de la entrada)
+    [0, 0.65], // Rango del scroll (de 0% a 100% de la entrada)
     [flatPath, curvePath], // Rango de formas
   );
 
@@ -171,7 +171,7 @@ export default function Detalles() {
         <motion.div
           aria-label="hidden"
           style={{ y: "-100%" }}
-          className="hidden absolute top-0 left-0 w-full z-0 md:flex flex-col"
+          className="hidden absolute md:top-[0.6px] lg:top-0 left-0 w-full z-0 md:flex flex-col"
         >
           <svg
             viewBox="0 0 1440 320"

@@ -34,7 +34,7 @@ export default function Contacto() {
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
             className="w-full flex flex-col items-start justify-end"
           >
-            <div className="relative w-90 max-w-[90%] h-60 overflow-hidden lg:h-full lg:max-h-200 lg:w-full lg:max-w-160 rounded-2xl">
+            <div className="relative w-90 max-w-[90%] h-60 overflow-hidden md:h-120  md:w-full lg:h-full lg:max-h-200 lg:max-w-160 rounded-2xl">
               <Image
                 src={vistasMar}
                 placeholder="blur"
