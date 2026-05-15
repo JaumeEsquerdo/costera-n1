@@ -156,14 +156,14 @@ export default function Detalles() {
       </main>
       <section
         ref={mapRef}
-        className="relative bg-neutral-800 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-20 justify-center items-center 4k:gap-40!"
+        className="relative bg-neutral-800 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-20 justify-center items-center 2xl:pb-20 4k:gap-40!"
         data-is-dark="true"
       >
         <motion.h2
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 2.2, ease: [0.33, 1, 0.68, 1] }}
-          className="text-white text-2xl text-center lg:text-3xl px-4 4k:text-6xl!"
+          className="text-white text-2xl text-center lg:text-3xl px-4 2xl:text-6xl"
         >
           {textsDetalles.titleMap}
         </motion.h2>
@@ -171,7 +171,7 @@ export default function Detalles() {
         <motion.div
           aria-label="hidden"
           style={{ y: "-100%" }}
-          className="hidden absolute md:top-[0.6px] lg:top-0 left-0 w-full z-0 md:flex  4k:top-0.5!"
+          className="hidden absolute md:top-[0.6px] lg:top-0 left-0 w-full z-0 md:flex 2xl:top-0.5"
         >
           <svg
             viewBox="0 0 1440 320"
