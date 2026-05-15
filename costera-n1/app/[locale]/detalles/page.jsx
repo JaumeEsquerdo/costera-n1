@@ -54,7 +54,7 @@ export default function Detalles() {
             initial={{ opacity: 0, y: -40, rotate: 2 }}
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
-            className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start text-neutral-800"
+            className="text-4xl font-title text-left w-full lg:max-w-1/2  lg:text-start text-neutral-800 4k:text-6xl"
           >
             {textsDetalles.title}
           </motion.h1>
@@ -63,7 +63,7 @@ export default function Detalles() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
-            className="flex flex-col w-full gap-2 lg:max-w-1/3 lg:text-start text-neutral-600 "
+            className="flex flex-col w-full gap-2 lg:max-w-1/3 lg:text-start text-neutral-600 4k:text-3xl"
           >
             <li> {textsDetalles.location}</li>
             <li>{textsDetalles.street}</li>
@@ -77,7 +77,7 @@ export default function Detalles() {
           variants={blockTextsVariants}
           initial="initial"
           animate="show"
-          className="mt-8 flex flex-col gap-4 lg:max-w-2/3"
+          className="max-[380]:mt-30 min-[380]:mt-12 flex flex-col gap-4 lg:max-w-2/3 "
         >
           {textsDetalles.descriptionTexts.map((t, i) => (
             <AnimatedText key={i} text={t} />
@@ -139,14 +139,14 @@ export default function Detalles() {
           initial={{ opacity: 0, y: -100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2.6, ease: [0.33, 1, 0.68, 1] }}
-          className="flex flex-col gap-8 pt-10 pb-20 lg:pb-50 md:max-w-5/8 mx-auto"
+          className="flex flex-col gap-8 pt-10 pb-20 lg:pb-50 md:max-w-5/8 mx-auto 4k:max-w-6/8 4k:gap-20"
         >
-          <h2 className="text-2xl text-neutral-800 font-semibold text-center">
+          <h2 className="text-2xl text-neutral-800 font-semibold text-center 4k:text-6xl">
             {textsDetalles.practicalInfoTitle}
           </h2>
-          <ul className="flex flex-col gap-6 ">
+          <ul className="flex flex-col gap-6 4k:gap-10">
             {textsDetalles.practicalInfo.map((info, i) => (
-              <li key={i} className="text-neutral-800">
+              <li key={i} className="text-neutral-800 4k:text-2xl">
                 <span className="font-semibold">{info.title}: </span>
                 <span className="text-neutral-600">{info.description}</span>
               </li>
@@ -156,14 +156,14 @@ export default function Detalles() {
       </main>
       <section
         ref={mapRef}
-        className="relative bg-neutral-800 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-20 justify-center items-center"
+        className="relative bg-neutral-800 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-20 justify-center items-center 4k:gap-40!"
         data-is-dark="true"
       >
         <motion.h2
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 2.2, ease: [0.33, 1, 0.68, 1] }}
-          className="text-white text-2xl text-center lg:text-3xl px-4"
+          className="text-white text-2xl text-center lg:text-3xl px-4 4k:text-6xl!"
         >
           {textsDetalles.titleMap}
         </motion.h2>
@@ -171,7 +171,7 @@ export default function Detalles() {
         <motion.div
           aria-label="hidden"
           style={{ y: "-100%" }}
-          className="hidden absolute md:top-[0.6px] lg:top-0 left-0 w-full z-0 md:flex flex-col"
+          className="hidden absolute md:top-[0.6px] lg:top-0 left-0 w-full z-0 md:flex  4k:top-0.5!"
         >
           <svg
             viewBox="0 0 1440 320"
@@ -192,11 +192,10 @@ export default function Detalles() {
           style={{
             position: "relative",
             width: "100%",
-            maxWidth: "660px",
-            maxHeight: "400px",
 
             aspectRatio: "4 / 3",
           }}
+          className="max-w-165 max-h-100 4k:max-w-300 4k:max-h-160"
         >
           <iframe
             src="https://www.google.com/maps?q=Carrer+de+la+Costereta+1,+La+Vila+Joiosa&hl=es&z=18&output=embed"

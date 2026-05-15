@@ -54,7 +54,7 @@ export const NavElement = ({
     ref: elementRef,
     className: `${isOverDark ? "text-white" : "text-neutral-800"} ${noSpacing ? "" : "px-2 mx-1 lg:mx-2"} ${
       active ? "font-bold" : "font-medium"
-    } transition-colors duration-300 whitespace-nowrap cursor-pointer ${className}`,
+    } transition-colors duration-300 whitespace-nowrap cursor-pointer 4k:text-2xl ${className}`,
   };
 
   // Si es "as='button'", renderiza un párrafo, si no, un Link

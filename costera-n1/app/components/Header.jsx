@@ -29,7 +29,7 @@ export const Header = ({ showText }) => {
   return (
     <>
       <motion.header
-        className="fixed top-10 left-1/2 -translate-x-1/2 z-99 lg:left-1/12 lg:translate-x-0"
+        className="fixed top-10  left-1/2 -translate-x-1/2 z-99 lg:left-1/12 lg:translate-x-0 4k:top-20 4k:left-4/12"
         initial={false}
         animate={{ opacity: showText ? 0 : 1, y: showText ? -100 : 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -45,7 +45,7 @@ export const Header = ({ showText }) => {
                   : "hover"
               }
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className={`flex flex-col items-center gap-2 cursor-pointer`}
+              className={`flex flex-col items-center gap-2 cursor-pointer 4k:gap-0`}
             >
               <NavElement
                 href="/"
@@ -77,7 +77,7 @@ export const Header = ({ showText }) => {
                   : "hover"
               }
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="flex flex-col  items-center gap-2 cursor-pointer"
+              className="flex flex-col  items-center gap-2 4k:gap-0 cursor-pointer"
             >
               <NavElement
                 href="/detalles"
@@ -106,7 +106,7 @@ export const Header = ({ showText }) => {
                   : "hover"
               }
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="flex flex-col  items-center gap-2 "
+              className="flex flex-col  items-center gap-2 4k:gap-0 "
             >
               <NavElement
                 href="/contacto"
@@ -125,7 +125,7 @@ export const Header = ({ showText }) => {
               )}
             </motion.div>
           </li>
-          <li className="h-8 overflow-hidden">
+          <li className="h-8 overflow-hidden 4k:h-20">
             {/* <motion.div className={`flex flex-col items-center cursor-pointer`}> */}
             <NavElement
               onClick={handleLangOpen}

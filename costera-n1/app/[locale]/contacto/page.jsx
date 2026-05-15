@@ -16,25 +16,25 @@ export default function Contacto() {
   return (
     <>
       <Header />
-      <main className="flex flex-col min-h-screen lg:h-screen w-[90%] max-w-400 mx-auto ">
+      <main className="flex flex-col min-h-screen lg:h-screen w-[90%] max-w-400 4k:max-w-500 mx-auto ">
         <div className="pt-40 lg:w-full  lg:flex lg:h-[30vh] lg:pt-0 lg:items-end">
           <motion.h1
             initial={{ opacity: 0, y: -40, rotate: 2 }}
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
-            className="text-4xl font-title text-left w-full  lg:text-start text-neutral-800"
+            className="text-4xl font-title text-left w-full lg:text-start text-neutral-800 4k:text-6xl"
           >
             {textsContact.title}
           </motion.h1>
         </div>
-        <div className="py-8 lg:py-12 flex flex-col gap-12 lg:flex-row">
+        <div className="py-8 lg:py-12 flex flex-col gap-12 lg:flex-row 4k:h-300 4k:max-h-[40%] overflow-hidden">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
             className="w-full flex flex-col items-start justify-end"
           >
-            <div className="relative w-90 max-w-[90%] h-60 overflow-hidden md:h-120  md:w-full lg:h-full lg:max-h-200 lg:max-w-160 rounded-2xl">
+            <div className="relative w-90 max-w-[90%] h-60 overflow-hidden md:h-120  md:w-full lg:h-full lg:max-h-200 lg:max-w-160 4k:max-w-260 4k:max-h-300 rounded-2xl">
               <Image
                 src={vistasMar}
                 placeholder="blur"
@@ -49,11 +49,11 @@ export default function Contacto() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.8, ease: [0.33, 1, 0.68, 1] }}
-            className="flex flex-col gap-12 lg:max-w-1/2"
+            className="flex flex-col gap-12 w-full lg:max-w-1/2 4k:h-full "
           >
             <p className="text-neutral-600">{textsContact.description}</p>
-            <div className="flex flex-col w-full gap-2 lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex flex-col w-full items-center justify-center gap-2 lg:gap-4 lg:w-fit">
+            <div className="flex flex-col w-full gap-2 lg:flex-row lg:items-center lg:justify-between 4k:h-full 4k:gap-12 ">
+              <div className="flex flex-col w-full items-center justify-center gap-2 lg:gap-4 lg:w-fit 4k:gap-8">
                 <a
                   className="cursor-pointer 
     border-2 border-yellow-950/40
@@ -73,7 +73,9 @@ export default function Contacto() {
     py-2
     "
                 >
-                  <span className="  text-neutral-800">{textsContact.cta}</span>
+                  <span className="  text-neutral-800 inline-block text-nowrap">
+                    {textsContact.cta}
+                  </span>
 
                   <FontAwesomeIcon
                     icon={faArrowTrendUp}
@@ -84,7 +86,7 @@ export default function Contacto() {
                   {textsContact.note}
                 </p>
               </div>
-              <div className="hidden lg:inline relative  lg:w-65 lg:h-100 overflow-hidden rounded-2xl">
+              <div className="hidden lg:inline-block relative lg:min-w-65 lg:min-h-100 rounded-2xl overflow-hidden 4k:w-full 4k:h-full">
                 <Image
                   src={vistasCalle}
                   placeholder="blur"

@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@theme {
+  --breakpoint-4k: 2480px;
+}
+
 /* design tokens */
 @theme inline {
   /* --color-background: var(--background);
@@ -22,6 +26,8 @@ body {
   --color-casas-red: #fdf0ef;
   --color-casas-blue: #fff3e6;
   --color-casas-orange: #ebf4f6;
+  /* --breakpoint-4k: 2020px; */
+
   --animate-buble: buble 1s infinite ease-in-out;
 
   @keyframes buble {

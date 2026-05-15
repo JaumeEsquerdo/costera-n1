@@ -25,7 +25,7 @@ export const BackToTop = ({ textBackToTop }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.8, ease: "easeIn" }}
       viewBox="-120 -120 240 240"
-      className="w-30 h-30 md:w-40 md:h-40 mt:20 md:mt-0 md:absolute md:bottom-8 md:right-8 cursor-pointer hover:scale-95 active:scale-90 transition-transform duration-200"
+      className="w-30 h-30 md:w-40 md:h-40 2xl:w-80 2xl:h-80 mt:20 md:mt-0 md:absolute md:bottom-8 md:right-8 2xl:bottom-12 2xl:right-22 cursor-pointer hover:scale-95 active:scale-90 transition-transform duration-200"
     >
       {/* BLOB */}
       <path
