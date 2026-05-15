@@ -46,17 +46,16 @@ export const DescriptionHouse = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.4 }} //amount para: 0.2, en cuanto asome un 20% del contenedor, se hace la anim.
-          className="flex flex-col z-10 lg:flex-row lg:items-end gap-2 lg:gap-4 w-full lg:max-w-400 [@media(max-height:720px)]:text-sm white-space: nowrap;
-"
+          className="flex flex-col z-10 lg:flex-row lg:items-end gap-2 lg:gap-4 w-full lg:max-w-400 2xl:gap-12 4k:max-w-800! 4k:pt-6"
         >
           <motion.h3
-            className="font-title text-2xl lg:text-5xl"
+            className="font-title text-2xl lg:text-5xl 2xl:text-6xl 4k:text-7xl!"
             variants={itemVariants}
           >
             {value.title}
           </motion.h3>
           <motion.p
-            className="text-lg lg:text-2xl font-subtitle italic text-neutral-600"
+            className="text-lg lg:text-2xl font-subtitle italic text-neutral-600 2xl:text-3xl 4k:text-4xl!"
             variants={itemVariants}
           >
             {value.subtitle.toLowerCase()}

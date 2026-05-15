@@ -136,7 +136,7 @@ export const PresentationHouse = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            className="font-title text-5xl lg:text-7xl text-center text-neutral-800"
+            className="font-title text-5xl lg:text-7xl text-center text-neutral-800 4k:text-9xl!"
           >
             {texts.title.split(" ").map((word, wordIndex) => (
               // cada palabra en un span y después se mapea cada span por letra
@@ -156,21 +156,21 @@ export const PresentationHouse = () => {
         </section>
         <section className="h-2/3 bg-white lg:h-screen lg:w-1/2">
           <div className="max-w-[90%] mx-auto h-full pt-4 pb-4 flex flex-col items-center justify-between">
-            <div className="flex flex-col items-center gap-4 lg:gap-8">
+            <div className="flex flex-col items-center gap-4 lg:gap-8 4k:py-10">
               <motion.h3
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.9 }}
-                className="text-lg text-center text-neutral-600"
+                className="text-lg text-center text-neutral-600 4k:text-2xl"
               >
                 {texts.subtitle}
               </motion.h3>
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4 4k:gap-8">
                 {images.map((img) => (
                   <div
                     key={img.id}
-                    className={`relative h-10 w-6 cursor-pointer lg:w-12 lg:h-20`}
+                    className={`relative h-10 w-6 cursor-pointer lg:w-12 lg:h-20 4k:w-20! 4k:h-30!`}
                   >
                     <Image
                       src={img.src}
@@ -187,7 +187,7 @@ export const PresentationHouse = () => {
                 ))}
                 <Link
                   href="/detalles"
-                  className="hover:opacity-60 transition-opacity text-yellow-700 duration-100 w-fit h-fit text-center"
+                  className="hover:opacity-60 transition-opacity text-yellow-700 duration-100 w-fit h-fit text-center 4k:text-2xl"
                 >
                   (+)
                 </Link>

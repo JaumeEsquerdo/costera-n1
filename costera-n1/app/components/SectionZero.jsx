@@ -61,9 +61,9 @@ export const SectionZero = () => {
           backfaceVisibility: "hidden", // Evita artefactos visuales
           perspective: 1000,
         }}
-        className="relative flex flex-col lg:flex-row items-center gap-4 lg:gap-16 pt-22 pb-6 lg:py-40 overflow-hidden"
+        className="relative flex flex-col lg:flex-row items-center gap-4 md:gap-8 lg:gap-16 pt-22 pb-6 lg:py-40 overflow-hidden"
       >
-        <motion.div className="relative w-40 h-70 lg:w-56 lg:h-80 overflow-hidden rounded-2xl">
+        <motion.div className="relative w-30 h-40 md:w-40 md:h-54 xl:w-56 xl:h-80 overflow-hidden rounded-2xl 4k:w-120! 4k:h-160!">
           <motion.div
             style={{
               x: xImage,
@@ -82,7 +82,7 @@ export const SectionZero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div className="hidden lg:inline relative w-70 h-50 lg:w-85 lg:h-50 overflow-hidden rounded-2xl">
+        <motion.div className="hidden lg:inline relative w-70 h-50 xl:w-85 xl:h-50 overflow-hidden rounded-2xl 4k:w-140! 4k:h-100!">
           <motion.div
             style={{
               x: xImage,
@@ -100,7 +100,7 @@ export const SectionZero = () => {
             />
           </motion.div>
         </motion.div>
-        <motion.div className="relative w-50 h-80 lg:w-80 lg:h-100 overflow-hidden rounded-2xl">
+        <motion.div className="relative w-34 h-50 md:h-64 xl:w-80 xl:h-100 overflow-hidden rounded-2xl 4k:w-140! 4k:h-200!">
           <motion.div
             style={{
               x: xImage,
@@ -124,23 +124,23 @@ export const SectionZero = () => {
         // initial="hidden"
         // whileInView="visible"
         // viewport={{ once: true, amount: 0.5 }}
-        className="flex flex-col justify-center items-center pb-16 px-15"
+        className="flex flex-col justify-center items-center gap-2 px-15 py-6 xl:py-10"
       >
         <h3
           // variants={itemVariants}
-          className="text-3xl font-bold mb-6 lg:text-7xl  text-center"
+          className="text-3xl font-bold lg:text-7xl text-center 4k:text-9xl!"
           dangerouslySetInnerHTML={{ __html: textsSectionZero.title }}
         />
         <div
           // variants={itemVariants}
           className="flex items-center gap-2"
         >
-          <p className="max-w-xl text-lg opacity-80 lg:text-xl text-center">
+          <p className="w-fit text-lg opacity-80 lg:text-xl text-center 4k:text-4xl!">
             {textsSectionZero.subtitle}{" "}
           </p>
           <FontAwesomeIcon
             icon={faAngleRight}
-            className="text-3xl text-white"
+            className="text-3xl text-white 4k:text-5xl!"
           />
         </div>
       </div>

@@ -31,7 +31,7 @@ export function AnimatedText({ text }) {
         <motion.span
           key={i}
           variants={variantsTextSplit}
-          className="inline-block mr-1 md:mr-2 text-lg md:text-4xl text-neutral-800 font-semibold 2xl:text-6xl"
+          className="inline-block mr-1 md:mr-2 text-lg md:text-4xl text-neutral-800 font-semibold 4k:text-6xl!"
         >
           {word}
         </motion.span>

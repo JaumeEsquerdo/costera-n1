@@ -77,7 +77,7 @@ export default function Detalles() {
           variants={blockTextsVariants}
           initial="initial"
           animate="show"
-          className="max-[380]:mt-30 min-[380]:mt-12 flex flex-col gap-4 lg:max-w-2/3 "
+          className="max-[379]:mt-30 min-[380]:mt-12 flex flex-col gap-4 lg:max-w-2/3 "
         >
           {textsDetalles.descriptionTexts.map((t, i) => (
             <AnimatedText key={i} text={t} />
@@ -156,7 +156,7 @@ export default function Detalles() {
       </main>
       <section
         ref={mapRef}
-        className="relative bg-neutral-800 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-20 justify-center items-center 2xl:pb-20 4k:gap-40!"
+        className="relative bg-neutral-800 h-[70vh] lg:[80vh] flex flex-col gap-12 lg:gap-18 justify-center items-center 2xl:pb-20 4k:gap-34!"
         data-is-dark="true"
       >
         <motion.h2

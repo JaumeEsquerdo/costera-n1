@@ -8,7 +8,6 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import { useWindowSize } from "../hooks/useWindowSize";
 import { PresentationHouse } from "../components/PresentationHouse";
 import { Header } from "../components/Header";
 import { DescriptionHouse } from "../components/DescriptionHouse";
@@ -67,7 +66,7 @@ export default function Home() {
     stiffness: 120, // Fuerza de atracción
   });
 
-  const width = useTransform(smoothProgress, [0, 0.6], ["30vw", "100vw"]);
+  const width = useTransform(smoothProgress, [0, 0.6], ["23vw", "100vw"]);
 
   const height = useTransform(smoothProgress, [0, 0.6], ["42vh", "100vh"]);
 
@@ -91,12 +90,12 @@ export default function Home() {
                   initial="init"
                   animate="open"
                   exit="closed"
-                  className="text-center fixed top-6 lg:top-8 z-10 g-12 max-w-[90%]"
+                  className="text-center fixed top-6 lg:top-8 z-10 g-12 flex flex-col max-w-[90%] 4k:gap-16! 4k:top-32!"
                 >
-                  <h1 className="font-title text-5xl lg:text-9xl text-neutral-800">
+                  <h1 className="max-[380px]:text-4xl font-title min-[380px]:text-5xl md:text-6xl lg:text-8xl 4k:text-9xl! text-neutral-800">
                     {t.Home.title}
                   </h1>
-                  <h2 className="text-base lg:text-xl mt-4 text-neutral-800 ">
+                  <h2 className="text-base lg:text-xl mt-4 text-neutral-800 2xl:text-4xl">
                     {textsHero.subtitle}
                   </h2>
                 </motion.div>
@@ -136,14 +135,14 @@ export default function Home() {
             <AnimatePresence>
               {showText && (
                 <motion.div
-                  className="fixed bottom-24 md:bottom-12 lg:bottom-20 flex flex-col items-center justify-center gap-4 lg:gap-6 max-w-[90%]"
+                  className="fixed max-[379px]:bottom-14 min-[380px]:bottom-24  md:bottom-32 lg:bottom-24 2xl:bottom-30 flex flex-col items-center justify-center gap-4 lg:gap-6 2xl:gap-12 max-w-[90%]"
                   variants={headerVariants}
                   transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
                   initial="init"
                   animate="open"
                   exit={showText ? "closed" : "open"}
                 >
-                  <h2 className="relative text-sm lg:text-lg text-center text-neutral-800">
+                  <h2 className="relative text-sm lg:text-lg text-center 2xl:text-2xl text-neutral-800">
                     {textsHero.location_info}
                   </h2>
                   <FontAwesomeIcon

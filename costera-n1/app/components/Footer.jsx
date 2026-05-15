@@ -26,7 +26,7 @@ export const Footer = ({
                   whileInView={{ x: 0 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                   viewport={{ amount: 0.2 }}
-                  className={`text-5xl md:text-7xl lg:text-9xl 4k:text-[12rem] ${textColor} inline-block font-bold`}
+                  className={`text-5xl md:text-7xl lg:text-9xl 4k:text-[12rem]! ${textColor} inline-block font-bold`}
                 >
                   {textsFooter.title["title-1"]}{" "}
                 </motion.span>
@@ -35,7 +35,7 @@ export const Footer = ({
                   whileInView={{ x: 0 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                   viewport={{ amount: 0.2 }}
-                  className={`inline-block text-5xl md:text-7xl lg:text-9xl 4k:text-[12rem] font-bold ${textColor}`}
+                  className={`inline-block text-5xl md:text-7xl lg:text-9xl 4k:text-[12rem]! font-bold ${textColor}`}
                 >
                   {textsFooter.title["title-2"]}
                 </motion.span>

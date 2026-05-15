@@ -71,6 +71,7 @@ export default function Contacto() {
     gap-4
     px-6
     py-2
+    4k:text-2xl
     "
                 >
                   <span className="  text-neutral-800 inline-block text-nowrap">
@@ -86,7 +87,7 @@ export default function Contacto() {
                   {textsContact.note}
                 </p>
               </div>
-              <div className="hidden lg:inline-block relative lg:min-w-65 lg:min-h-100 rounded-2xl overflow-hidden 4k:w-full 4k:h-full">
+              <div className="hidden lg:inline-block relative lg:min-w-65 lg:min-h-100 rounded-2xl overflow-hidden 4k:w-full! 4k:h-full!">
                 <Image
                   src={vistasCalle}
                   placeholder="blur"

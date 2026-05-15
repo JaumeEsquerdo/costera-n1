@@ -33,7 +33,7 @@ export const BookingCTA = () => {
       >
         <motion.h3
           variants={itemsVariants}
-          className="text-2xl font-bold text-center"
+          className="text-2xl font-bold text-center 4k:text-4xl"
         >
           {textsBookingCta.title}
         </motion.h3>
@@ -43,7 +43,7 @@ export const BookingCTA = () => {
         > */}
         <motion.p
           variants={itemsVariants}
-          className="text-center lg:max-w-2/3 text-neutral-600"
+          className="text-center lg:max-w-2/3 text-neutral-600 4k:text-xl"
         >
           {textsBookingCta.description}
         </motion.p>
@@ -66,6 +66,7 @@ export const BookingCTA = () => {
     gap-4
     px-6
     py-2
+    4k:text-2xl
   "
         >
           <span className="text-neutral-800">{textsBookingCta.button}</span>

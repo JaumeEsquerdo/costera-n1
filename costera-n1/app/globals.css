@@ -13,7 +13,7 @@ body {
 }
 
 @theme {
-  --breakpoint-4k: 2480px;
+  --breakpoint-4k: 3000px;
 }
 
 /* design tokens */
