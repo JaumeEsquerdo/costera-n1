@@ -142,7 +142,7 @@ export default function Home() {
                   animate="open"
                   exit={showText ? "closed" : "open"}
                 >
-                  <h2 className="relative text-sm lg:text-lg text-center xl:text-xl 2xl:text-2xl text-neutral-800">
+                  <h2 className="relative text-sm text-center lg:text-xl 2xl:text-2xl text-neutral-800">
                     {textsHero.location_info}
                   </h2>
                   <FontAwesomeIcon
