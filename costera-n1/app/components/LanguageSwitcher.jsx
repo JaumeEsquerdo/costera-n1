@@ -33,7 +33,7 @@ export default function LanguageSwitcher() {
       animate="animate"
       exit="exit"
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="absolute top-10 right-6 2xl:top-14 lg:right-9 flex gap-2"
+      className="absolute top-10 right-6 4k:top-12! lg:right-9 flex gap-2"
     >
       <NavElement
         as="div"
