@@ -23,6 +23,7 @@ export const BookingCTA = () => {
   const [mostrarAviso, setMostrarAviso] = useTemporalState(3000);
 
   const textsBookingCta = t.Home.BookingCTA;
+  const warningContact = t.Warning;
 
   return (
     <section className="min-h-[60vh] flex flex-col justify-center items-center  p-8 pt-10 lg:pt-26">
@@ -83,8 +84,7 @@ export const BookingCTA = () => {
 
           {mostrarAviso && (
             <div className="absolute -top-26 z-20 bg-gray-200 border-2 py-2 px-4 md:py-4 md:px-8 rounded-2xl max-w-[45ch] mx-4 text-center font-medium">
-              ¡Actualmente no estamos prestando el servicio, estate atento a
-              nuevas actualizaciones!
+              {warningContact.description}
             </div>
           )}
         </div>

@@ -142,5 +142,8 @@
     "detalles": "DETALLES",
     "contacto": "CONTACTO",
     "idioma": "IDIOMA"
+  },
+  "Warning": {
+    "description": "¡Actualmente no estamos prestando el servicio, estate atento a nuevas actualizaciones!"
   }
 }

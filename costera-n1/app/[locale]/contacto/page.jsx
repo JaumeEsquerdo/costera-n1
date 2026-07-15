@@ -16,6 +16,7 @@ export default function Contacto() {
   const [mostrarAviso, setMostrarAviso] = useTemporalState(3000);
 
   const textsContact = t.Contact;
+  const warningContact = t.Warning;
 
   return (
     <>
@@ -91,8 +92,7 @@ export default function Contacto() {
 
                 {mostrarAviso && (
                   <div className="absolute -top-26 z-20 bg-gray-200 border-2 py-2 px-4 md:py-4 md:px-8 rounded-2xl max-w-[45ch] mx-4 text-center font-medium">
-                    ¡Actualmente no estamos prestando el servicio, estate atento
-                    a nuevas actualizaciones!
+                    {warningContact.description}
                   </div>
                 )}
                 <p className="text-[0.8rem] text- text-center text-neutral-600">

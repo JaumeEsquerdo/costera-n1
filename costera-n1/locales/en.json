@@ -134,5 +134,8 @@
     "detalles": "DETAILS",
     "contacto": "CONTACT",
     "idioma": "LANGUAGE"
+  },
+  "Warning": {
+    "description": "This service is not available at the moment, but we expect it to be back soon. Stay tuned for updates!"
   }
 }
