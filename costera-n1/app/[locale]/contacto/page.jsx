@@ -91,7 +91,7 @@ export default function Contacto() {
                 </a>
 
                 {mostrarAviso && (
-                  <div className="absolute -top-26 z-20 bg-gray-200 border-2 py-2 px-4 md:py-4 md:px-8 rounded-2xl max-w-[45ch] mx-4 text-center font-medium">
+                  <div className="absolute -top-26 md:-top-40 z-20 bg-gray-200 border-2 py-2 px-4 md:py-4 md:px-8 rounded-2xl max-w-[45ch] w-full mx-4 text-center font-medium">
                     {warningContact.description}
                   </div>
                 )}
