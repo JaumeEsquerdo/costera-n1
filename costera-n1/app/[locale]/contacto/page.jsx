@@ -8,11 +8,15 @@ import { useI18n } from "@/app/hooks/usei18n";
 import vistasMar from "@/public/imgs-casa/img-piso-17.webp";
 import vistasCalle from "@/public/imgs-casa/img-piso-1.webp";
 import { motion } from "framer-motion";
+import { useTemporalState } from "@/app/hooks/useTemporalState";
 
 export default function Contacto() {
   const { t } = useI18n();
 
+  const [mostrarAviso, setMostrarAviso] = useTemporalState(3000);
+
   const textsContact = t.Contact;
+
   return (
     <>
       <Header />
@@ -53,9 +57,10 @@ export default function Contacto() {
           >
             <p className="text-neutral-600">{textsContact.description}</p>
             <div className="flex flex-col w-full gap-2 lg:flex-row lg:items-center lg:justify-between 4k:h-full 4k:gap-12 ">
-              <div className="flex flex-col w-full items-center justify-center gap-2 lg:gap-4 lg:w-fit 4k:gap-8">
+              <div className="relative flex flex-col w-full items-center justify-center gap-4 lg:gap-6 lg:w-fit 4k:gap-8">
                 <a
-                  className="cursor-pointer 
+                  onClick={setMostrarAviso}
+                  className=" cursor-pointer 
     border-2 border-yellow-950/40
     bg-yellow-50
     text-neutral-800
@@ -83,7 +88,14 @@ export default function Contacto() {
                     className=" text-neutral-800 inline-block w-4 h-4 lg:w-5 lg:h-5"
                   />
                 </a>
-                <p className="text-sm text-center text-neutral-600">
+
+                {mostrarAviso && (
+                  <div className="absolute -top-26 z-20 bg-gray-200 border-2 py-2 px-4 md:py-4 md:px-8 rounded-2xl max-w-[45ch] mx-4 text-center font-medium">
+                    ¡Actualmente no estamos prestando el servicio, estate atento
+                    a nuevas actualizaciones!
+                  </div>
+                )}
+                <p className="text-[0.8rem] text- text-center text-neutral-600">
                   {textsContact.note}
                 </p>
               </div>
