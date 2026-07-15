@@ -32,13 +32,13 @@ body {
 
   @keyframes buble {
     0% {
-      top: 45;
+      top: 60;
     }
     50% {
-      top: 35;
+      top: 45;
     }
     100% {
-      top: 45;
+      top: 60;
     }
   }
 }

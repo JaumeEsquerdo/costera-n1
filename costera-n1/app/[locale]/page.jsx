@@ -66,7 +66,7 @@ export default function Home() {
     stiffness: 120, // Fuerza de atracción
   });
 
-  const width = useTransform(smoothProgress, [0, 0.6], ["23vw", "100vw"]);
+  const width = useTransform(smoothProgress, [0, 0.6], ["25vw", "100vw"]);
 
   const height = useTransform(smoothProgress, [0, 0.6], ["42vh", "100vh"]);
 
@@ -147,7 +147,8 @@ export default function Home() {
                   </h2>
                   <FontAwesomeIcon
                     icon={faAngleDown}
-                    className="text-3xl text-neutral-800 left-1/2 -translate-x-1/2 absolute animate-buble transition-all duration-100"
+                    className="text-3xl text-neutral-800 
+                    left-1/2 -translate-x-1/2 absolute animate-buble transition-all duration-100"
                   />
                 </motion.div>
               )}
