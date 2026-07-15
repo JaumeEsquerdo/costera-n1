@@ -2,6 +2,7 @@ import { useI18n } from "../hooks/usei18n";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import { useTemporalState } from "../hooks/useTemporalState";
 
 const containerVariants = {
   hidden: {},
@@ -19,6 +20,7 @@ const itemsVariants = {
 
 export const BookingCTA = () => {
   const { t } = useI18n();
+  const [mostrarAviso, setMostrarAviso] = useTemporalState(3000);
 
   const textsBookingCta = t.Home.BookingCTA;
 
@@ -47,35 +49,45 @@ export const BookingCTA = () => {
         >
           {textsBookingCta.description}
         </motion.p>
-        <motion.a
-          variants={itemsVariants}
-          className="
-    cursor-pointer 
-    border-2 border-yellow-950/40
-    bg-yellow-50
-    text-neutral-800
-    rounded-4xl
-    overflow-hidden
-    shadow-sm
-    hover:shadow-md
-    hover:scale-95
-    will-change-transform
-    transition-all duration-200
-    active:scale-90
-    flex items-center
-    gap-4
-    px-6
-    py-2
-    4k:text-2xl
-  "
-        >
-          <span className="text-neutral-800">{textsBookingCta.button}</span>
+        <div className="relative flex flex-col w-full items-center justify-center gap-4 lg:gap-6 lg:w-fit 4k:gap-8">
+          <motion.a
+            onClick={setMostrarAviso}
+            variants={itemsVariants}
+            className="
+          cursor-pointer 
+          border-2 border-yellow-950/40
+          bg-yellow-50
+          text-neutral-800
+          rounded-4xl
+          overflow-hidden
+          shadow-sm
+          hover:shadow-md
+          hover:scale-95
+          will-change-transform
+          transition-all duration-200
+          active:scale-90
+          flex items-center
+          gap-4
+          px-6
+          py-2
+          4k:text-2xl
+          "
+          >
+            <span className="text-neutral-800">{textsBookingCta.button}</span>
 
-          <FontAwesomeIcon
-            icon={faArrowTrendUp}
-            className="text-neutral-800 inline-block w-4 h-4 lg:w-5 lg:h-5"
-          />
-        </motion.a>
+            <FontAwesomeIcon
+              icon={faArrowTrendUp}
+              className="text-neutral-800 inline-block w-4 h-4 lg:w-5 lg:h-5"
+            />
+          </motion.a>
+
+          {mostrarAviso && (
+            <div className="absolute -top-26 z-20 bg-gray-200 border-2 py-2 px-4 md:py-4 md:px-8 rounded-2xl max-w-[45ch] mx-4 text-center font-medium">
+              ¡Actualmente no estamos prestando el servicio, estate atento a
+              nuevas actualizaciones!
+            </div>
+          )}
+        </div>
       </motion.div>
       {/* </motion.div> */}
     </section>
